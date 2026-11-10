@@ -22,7 +22,7 @@ def build_launcher(repo, output, executable_name=None):
     if compiler is None:
         raise RuntimeError("The .NET Framework C# compiler was not found")
     output.mkdir(parents=True, exist_ok=True)
-    destination = output / "启动汉化版.exe"
+    destination = output / "MobaXterm.exe"
     if destination.exists():
         raise FileExistsError("Choose a new output directory; the existing launcher is preserved")
     source = (repo / "launcher" / "MenuLauncher.cs").read_text(encoding="utf-8")

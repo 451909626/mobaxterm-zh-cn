@@ -4,7 +4,7 @@ import hashlib
 import re
 import zipfile
 
-TOOL_VERSION = "2.6.0"
+TOOL_VERSION = "2.6.1"
 TAG = re.compile(r"v(\d+\.\d+)\Z")
 
 
@@ -73,7 +73,7 @@ def audit_portable_archive(path, version, launcher_sha256):
     required = {version["upstream_main_name"]: version["localized_exe_sha256"],
                 "CygUtils.plugin": version["files"]["CygUtils.plugin"],
                 "CygUtils64.plugin": version["files"]["CygUtils64.plugin"],
-                "启动汉化版.exe": launcher_sha256}
+                "MobaXterm.exe": launcher_sha256}
     with zipfile.ZipFile(path) as archive:
         names = archive.namelist()
         if len(set(names)) != len(names) or archive.testzip() is not None:

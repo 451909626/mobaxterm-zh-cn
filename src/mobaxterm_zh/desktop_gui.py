@@ -76,7 +76,7 @@ def run_gui(payload, initial_zip=None, initial_output=None):
 
     target_button = ttk.Button(outer, text="选择位置…", command=choose_target)
     target_button.grid(row=5, column=1, sticky="ew", pady=(6, 14))
-    ttk.Label(outer, text="生成后双击新目录中的“启动汉化版.exe”。已有会话需要另行迁移。",
+    ttk.Label(outer, text="生成后双击新目录中的“MobaXterm.exe”。已有会话需要另行迁移。",
               wraplength=int(650 * scale)).grid(row=6, column=0, columnspan=2, sticky="w")
     status = tk.StringVar(value="请选择官方原包和保存位置。")
     ttk.Label(outer, textvariable=status, wraplength=int(650 * scale), foreground="#225785").grid(
@@ -131,7 +131,7 @@ def run_gui(payload, initial_zip=None, initial_output=None):
                 control.configure(state="normal")
             if kind == "done":
                 completed, _ = value
-                status.set("汉化完成。请点击“打开汉化目录”，再双击“启动汉化版.exe”。")
+                status.set("汉化完成。请点击“打开汉化目录”，再双击“MobaXterm.exe”。")
                 open_button.configure(state="normal")
             else:
                 status.set("未生成汉化目录，原版文件已保留。")

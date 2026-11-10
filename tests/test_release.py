@@ -7,6 +7,8 @@ import sys
 import tempfile
 import unittest
 import zipfile
+import importlib.util
+from types import SimpleNamespace
 
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
@@ -14,6 +16,10 @@ from mobaxterm_zh.desktop import UserError, apply_package, inspect_package, rele
 from mobaxterm_zh.release import (PORTABLE_NOTICES, asset_name, portable_asset_name, audit_archive,
                                  audit_portable_archive, parse_tag, upstream_for_tag)
 from mobaxterm_zh.download import download_upstream
+
+spec = importlib.util.spec_from_file_location("release_publisher", REPO / "scripts" / "publish_release.py")
+publisher = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(publisher)
 
 
 class ReleaseArchiveTests(unittest.TestCase):
@@ -47,7 +53,7 @@ class ReleaseArchiveTests(unittest.TestCase):
     def test_portable_archive_requires_reviewed_bytes_and_excludes_user_files(self):
         main = "MobaXterm_Personal_26.6.exe"
         core = {main: b"synthetic-localized", "CygUtils.plugin": b"original32",
-                "CygUtils64.plugin": b"original64", "启动汉化版.exe": b"our-launcher"}
+                "CygUtils64.plugin": b"original64", "MobaXterm.exe": b"our-launcher"}
         sha = lambda b: hashlib.sha256(b).hexdigest()
         spec = {"upstream_main_name": main, "localized_exe_sha256": sha(core[main]),
                 "files": {n: sha(core[n]) for n in ("CygUtils.plugin", "CygUtils64.plugin")}}
@@ -60,15 +66,15 @@ class ReleaseArchiveTests(unittest.TestCase):
                     for name in PORTABLE_NOTICES:
                         z.writestr(name, "notice".encode("utf-8"))
             write(core)
-            self.assertEqual(audit_portable_archive(archive, spec, sha(core["启动汉化版.exe"]))["files"], 8)
+            self.assertEqual(audit_portable_archive(archive, spec, sha(core["MobaXterm.exe"]))["files"], 8)
             for extra in ("MobaXterm.ini", "session.mxtsessions", "debug.log", "folder/extra.txt"):
                 write({**core, extra: b"private"})
                 with self.assertRaises(ValueError):
-                    audit_portable_archive(archive, spec, sha(core["启动汉化版.exe"]))
+                    audit_portable_archive(archive, spec, sha(core["MobaXterm.exe"]))
             for name in core:
                 write({**core, name: b"changed"})
                 with self.assertRaisesRegex(ValueError, "SHA-256 mismatch"):
-                    audit_portable_archive(archive, spec, sha(core["启动汉化版.exe"]))
+                    audit_portable_archive(archive, spec, sha(core["MobaXterm.exe"]))
 
     def test_cached_download_is_verified_and_never_overwritten(self):
         original = b"synthetic-official-archive"
@@ -97,7 +103,7 @@ class DesktopPackageTests(unittest.TestCase):
         folder.mkdir(parents=True)
         (self.payload / "launcher").mkdir()
         self.launcher = b"synthetic-launcher"
-        (self.payload / "launcher" / "启动汉化版.exe").write_bytes(self.launcher)
+        (self.payload / "launcher" / "MobaXterm.exe").write_bytes(self.launcher)
         info = {"tool_version": "2.6.0", "upstream_version": "26.6.0.5560", "main_file": "MobaXterm_Personal_26.6_zh.exe",
                 "launcher_sha256": hashlib.sha256(self.launcher).hexdigest()}
         (self.payload / "release.json").write_text(json.dumps(info), encoding="utf-8")
@@ -111,7 +117,7 @@ class DesktopPackageTests(unittest.TestCase):
         self.output = self.root / "new-output"
 
     def test_modified_embedded_launcher_is_rejected(self):
-        (self.payload / "launcher" / "启动汉化版.exe").write_bytes(b"changed")
+        (self.payload / "launcher" / "MobaXterm.exe").write_bytes(b"changed")
         with self.assertRaises(UserError):
             release_info(self.payload)
 
@@ -156,6 +162,40 @@ class DesktopPackageTests(unittest.TestCase):
                 apply_package(self.payload, self.source, self.output)
         self.assertEqual(list(p.name for p in self.output.iterdir()), ["keep.txt"])
         self.assertEqual((self.output / "keep.txt").read_text(encoding="utf-8"), "user-created")
+
+
+class ReleaseUpdateTests(unittest.TestCase):
+    def test_immutable_release_cannot_be_replaced(self):
+        response = SimpleNamespace(returncode=0, stdout=json.dumps({"immutable": True}), stderr="")
+        with patch.object(publisher.subprocess, "run", return_value=response) as run:
+            with self.assertRaisesRegex(RuntimeError, "immutable"):
+                publisher.update_release(["gh", "release", "create", "v26.5"], "v26.5", "owner/repo", Path("unused"))
+            self.assertEqual(run.call_count, 1)
+
+    def test_corrupt_backup_prevents_any_asset_upload(self):
+        with tempfile.TemporaryDirectory(prefix="moba-publish-test-") as temporary:
+            assets = Path(temporary) / "assets"
+            assets.mkdir()
+            names = ["tool.zip", "portable.zip", "SHA256SUMS.txt"]
+            release = {"immutable": False, "assets": [
+                {"id": i + 1, "name": name, "digest": "sha256:" + hashlib.sha256(b"original").hexdigest()}
+                for i, name in enumerate(names)]}
+            commands = []
+            def simulate(command, **kwargs):
+                commands.append(command)
+                if command[1] == "api":
+                    return SimpleNamespace(returncode=0, stdout=json.dumps(release), stderr="")
+                if command[1:3] == ["release", "download"]:
+                    directory = Path(command[command.index("--dir") + 1])
+                    for name in names:
+                        (directory / name).write_bytes(b"corrupt")
+                    return SimpleNamespace(returncode=0)
+                self.fail("An upload/edit ran before a verified backup")
+            command = ["gh", "release", "create", "v26.5", *[str(assets / n) for n in names]]
+            with patch.object(publisher.subprocess, "run", side_effect=simulate):
+                with self.assertRaisesRegex(ValueError, "backup failed verification"):
+                    publisher.update_release(command, "v26.5", "owner/repo", assets)
+            self.assertEqual(len(commands), 2)
 
 
 if __name__ == "__main__":

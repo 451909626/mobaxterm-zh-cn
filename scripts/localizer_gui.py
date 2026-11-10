@@ -42,7 +42,7 @@ def main():
             root.destroy()
             with tempfile.TemporaryDirectory(prefix="moba-zh-selftest-") as temporary:
                 catalog = Path(temporary) / "catalog.json"
-                subprocess.run([str(payload / "launcher" / "启动汉化版.exe"), "--catalog", str(catalog)],
+                subprocess.run([str(payload / "launcher" / "MobaXterm.exe"), "--catalog", str(catalog)],
                                check=True, timeout=15)
                 actual = json.loads(catalog.read_text(encoding="utf-8-sig"))
                 expected = json.loads((payload / "translations" / "terminal-menu.json").read_text(encoding="utf-8"))

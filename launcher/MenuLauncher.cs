@@ -10,10 +10,11 @@ using System.Web.Script.Serialization;
 using System.Windows.Forms;
 using System.Reflection;
 
-[assembly: AssemblyTitle("MobaXterm 中文菜单启动器")]
+[assembly: AssemblyTitle("MobaXterm")]
+[assembly: AssemblyProduct("MobaXterm Chinese Launcher")]
 [assembly: AssemblyDescription("Local terminal-menu label localization; preserves menu command IDs and state")]
-[assembly: AssemblyVersion("2.6.0.0")]
-[assembly: AssemblyFileVersion("2.6.0.0")]
+[assembly: AssemblyVersion("2.6.1.0")]
+[assembly: AssemblyFileVersion("2.6.1.0")]
 
 internal static class MenuLauncher {
     const string MainFile = "";
@@ -118,6 +119,8 @@ internal static class MenuLauncher {
     static string MenuText(IntPtr menu,uint pos) { var b=new StringBuilder(1024);GetMenuString(menu,pos,b,b.Capacity,ByPosition);return b.ToString(); }
 
     static Version ValidateTarget(string path) {
+        if(String.Equals(Path.GetFullPath(path),Path.GetFullPath(Assembly.GetExecutingAssembly().Location),StringComparison.OrdinalIgnoreCase))
+            throw new InvalidOperationException("不能将 MobaXterm.exe 启动入口自身选作主程序。");
         if(!File.Exists(path))throw new FileNotFoundException("请将启动器与 MobaXterm 程序放在同一目录。");
         var info=FileVersionInfo.GetVersionInfo(path);
         if(!String.Equals(info.ProductName,"MobaXterm",StringComparison.OrdinalIgnoreCase))
@@ -286,7 +289,7 @@ internal static class MenuLauncher {
         } catch(Exception ex) {
             if(inspection!=null) {
                 File.WriteAllText(inspection,new JavaScriptSerializer().Serialize(new {ok=false,error=ex.Message}),new UTF8Encoding(false));
-            } else MessageBox.Show(ex.Message,"汉化版启动提示",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            } else MessageBox.Show(ex.Message,"MobaXterm",MessageBoxButtons.OK,MessageBoxIcon.Information);
             return 1;
         }
     }

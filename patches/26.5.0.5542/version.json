@@ -17,5 +17,6 @@
   "terminal_menu_labels": 36,
   "total_display_locations": 1662,
   "main_output_name": "MobaXterm_Personal_26.5.exe",
-  "upstream_main_name": "MobaXterm_Personal_26.5.exe"
+  "upstream_main_name": "MobaXterm_Personal_26.5.exe",
+  "visual_validation": {"status": "pending", "report": "docs/VALIDATION.md"}
 }

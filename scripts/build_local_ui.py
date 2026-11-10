@@ -25,7 +25,7 @@ def main():
     report["distribution"] = "Local build only. Upstream redistribution rights are separate."
     (args.output / "build-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (args.output / "使用说明.txt").write_text(
-        "请使用“启动汉化版.exe”运行，以自动提供终端右键菜单中文。\n"
+        "请使用“MobaXterm.exe”运行，以自动提供终端右键菜单中文。\n"
         "本目录由使用者自备的官方 " + report["upstream_version"] + " 便携包在本机生成。\n"
         "此构建不会改写原始输入文件，配置为默认空白配置。\n"
         "保留旧版历史记录时，请使用仓库提供的独立配置迁移工具。\n"

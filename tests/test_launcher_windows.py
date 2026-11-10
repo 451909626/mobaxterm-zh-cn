@@ -45,7 +45,7 @@ class LauncherSelectionTests(unittest.TestCase):
     def setUp(self):
         self.directory = self.root / self._testMethodName
         self.directory.mkdir()
-        self.program = self.directory / "启动汉化版.exe"
+        self.program = self.directory / "MobaXterm.exe"
         shutil.copyfile(self.launcher, self.program)
 
     def supply(self, version):
@@ -90,6 +90,10 @@ class LauncherSelectionTests(unittest.TestCase):
     def test_target_cannot_escape_the_launcher_directory(self):
         self.supply("26.5.0.5542")
         self.assertFalse(self.inspect("--exe", "..\\MobaXterm_26.5.0.5542.exe")["ok"])
+
+    def test_launcher_cannot_select_itself(self):
+        self.supply("26.5.0.5542")
+        self.assertFalse(self.inspect("--exe", "MobaXterm.exe")["ok"])
 
 
 if __name__ == "__main__":
