@@ -1,0 +1,190 @@
+{
+  "schema": 1,
+  "encoding": "GBK / CP936",
+  "literals": [
+    {
+      "offset": 6071572,
+      "english": "  UNREGISTERED VERSION",
+      "chinese": "  未注册版本",
+      "before_hex": "160000002020554e524547495354455245442056455253494f4e00",
+      "after_hex": "0c0000002020ceb4d7a2b2e1b0e6b1be0000000000000000000000",
+      "references": [
+        6063463
+      ]
+    },
+    {
+      "offset": 6071604,
+      "english": "  -  Please support MobaXterm by subscribing to the professional edition here:  ",
+      "chinese": "  -  欢迎订阅专业版以支持 MobaXterm：  ",
+      "before_hex": "5000000020202d2020506c6561736520737570706f7274204d6f6261587465726d206279207375627363726962696e6720746f207468652070726f66657373696f6e616c2065646974696f6e20686572653a202000",
+      "after_hex": "2700000020202d2020bbb6d3adb6a9d4c4d7a8d2b5b0e6d2d4d6a7b3d6204d6f6261587465726da3ba2020000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        6063482
+      ]
+    },
+    {
+      "offset": 6442808,
+      "english": " days",
+      "chinese": " 天",
+      "before_hex": "05000000206461797300",
+      "after_hex": "0300000020ccec000000",
+      "references": [
+        6438897
+      ]
+    },
+    {
+      "offset": 6442824,
+      "english": " hours",
+      "chinese": " 小时",
+      "before_hex": "0600000020686f75727300",
+      "after_hex": "0500000020d0a1cab10000",
+      "references": [
+        6439000
+      ]
+    },
+    {
+      "offset": 6442840,
+      "english": " min",
+      "chinese": " 分",
+      "before_hex": "04000000206d696e00",
+      "after_hex": "0300000020b7d60000",
+      "references": [
+        6439100
+      ]
+    },
+    {
+      "offset": 6442856,
+      "english": " sec",
+      "chinese": " 秒",
+      "before_hex": "040000002073656300",
+      "after_hex": "0300000020c3eb0000",
+      "references": [
+        6439161
+      ]
+    },
+    {
+      "offset": 5549056,
+      "english": "Start local terminal",
+      "chinese": "启动本地终端",
+      "references": [
+        5547239
+      ],
+      "before_hex": "140000005374617274206c6f63616c207465726d696e616c00",
+      "after_hex": "0c000000c6f4b6afb1beb5d8d6d5b6cb000000000000000000"
+    },
+    {
+      "offset": 5549204,
+      "english": "Recover previous sessions",
+      "chinese": "恢复上次会话",
+      "references": [
+        5547731
+      ],
+      "before_hex": "190000005265636f7665722070726576696f75732073657373696f6e7300",
+      "after_hex": "0c000000bbd6b8b4c9cfb4cebbe1bbb00000000000000000000000000000"
+    },
+    {
+      "offset": 5549088,
+      "english": "New session",
+      "chinese": "新建会话",
+      "references": [
+        5547276,
+        5547800
+      ],
+      "before_hex": "0b0000004e65772073657373696f6e00",
+      "after_hex": "08000000d0c2bda8bbe1bbb000000000"
+    },
+    {
+      "offset": 5978564,
+      "english": "User sessions",
+      "chinese": "用户会话",
+      "references": [
+        5972798,
+        5973042
+      ],
+      "before_hex": "0d000000557365722073657373696f6e7300",
+      "after_hex": "08000000d3c3bba7bbe1bbb0000000000000"
+    },
+    {
+      "offset": 6072052,
+      "english": "User sessions",
+      "chinese": "用户会话",
+      "references": [
+        6064391
+      ],
+      "before_hex": "0d000000557365722073657373696f6e7300",
+      "after_hex": "08000000d3c3bba7bbe1bbb0000000000000"
+    },
+    {
+      "offset": 6152444,
+      "english": "User sessions",
+      "chinese": "用户会话",
+      "references": [
+        6145054,
+        6145085
+      ],
+      "before_hex": "0d000000557365722073657373696f6e7300",
+      "after_hex": "08000000d3c3bba7bbe1bbb0000000000000"
+    },
+    {
+      "offset": 6162780,
+      "english": "User sessions",
+      "chinese": "用户会话",
+      "references": [
+        6162623
+      ],
+      "before_hex": "0d000000557365722073657373696f6e7300",
+      "after_hex": "08000000d3c3bba7bbe1bbb0000000000000"
+    },
+    {
+      "offset": 6163384,
+      "english": "User sessions",
+      "chinese": "用户会话",
+      "references": [
+        6163163,
+        6163191
+      ],
+      "before_hex": "0d000000557365722073657373696f6e7300",
+      "after_hex": "08000000d3c3bba7bbe1bbb0000000000000"
+    },
+    {
+      "offset": 5544252,
+      "english": "New session...",
+      "chinese": "新建会话...",
+      "references": [
+        5543733
+      ],
+      "before_hex": "0e0000004e65772073657373696f6e2e2e2e00",
+      "after_hex": "0b000000d0c2bda8bbe1bbb02e2e2e00000000"
+    },
+    {
+      "offset": 6301624,
+      "english": "New session...",
+      "chinese": "新建会话...",
+      "references": [
+        6301291
+      ],
+      "before_hex": "0e0000004e65772073657373696f6e2e2e2e00",
+      "after_hex": "0b000000d0c2bda8bbe1bbb02e2e2e00000000"
+    },
+    {
+      "offset": 5544276,
+      "english": "Help",
+      "chinese": "帮助",
+      "references": [
+        5543798
+      ],
+      "before_hex": "0400000048656c7000",
+      "after_hex": "04000000b0efd6fa00"
+    },
+    {
+      "offset": 6301648,
+      "english": "Help",
+      "chinese": "帮助",
+      "references": [
+        6301356
+      ],
+      "before_hex": "0400000048656c7000",
+      "after_hex": "04000000b0efd6fa00"
+    }
+  ]
+}

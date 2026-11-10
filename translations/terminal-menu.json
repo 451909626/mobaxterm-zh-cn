@@ -1,0 +1,182 @@
+[
+  {
+    "id": 400,
+    "english": "Copy",
+    "chinese": "复制"
+  },
+  {
+    "id": 368,
+    "english": "Copy All",
+    "chinese": "复制全部"
+  },
+  {
+    "id": 832,
+    "english": "Copy formatted text (RTF)",
+    "chinese": "复制带格式文本 (RTF)"
+  },
+  {
+    "id": 416,
+    "english": "Paste\tShift+INSERT",
+    "chinese": "粘贴\tShift+INSERT"
+  },
+  {
+    "id": 624,
+    "english": "Find\tCtrl+Shift+F",
+    "chinese": "查找\tCtrl+Shift+F"
+  },
+  {
+    "id": 4294967295,
+    "english": "Font settings",
+    "chinese": "字体设置"
+  },
+  {
+    "id": 5648,
+    "english": "Use internal font \"MobaFont\"",
+    "chinese": "使用内置字体 \"MobaFont\""
+  },
+  {
+    "id": 5680,
+    "english": "Use internal font \"MobaFira\"",
+    "chinese": "使用内置字体 \"MobaFira\""
+  },
+  {
+    "id": 5664,
+    "english": "Use internal font \"MobaFanta\"",
+    "chinese": "使用内置字体 \"MobaFanta\""
+  },
+  {
+    "id": 5632,
+    "english": "Display font ligatures",
+    "chinese": "显示字体连字"
+  },
+  {
+    "id": 800,
+    "english": "Increase font size\tCtrl+MousewheelUp",
+    "chinese": "增大字号\tCtrl+MousewheelUp"
+  },
+  {
+    "id": 816,
+    "english": "Decrease font size\tCtrl+MousewheelDown",
+    "chinese": "减小字号\tCtrl+MousewheelDown"
+  },
+  {
+    "id": 864,
+    "english": "Reset font size to default\tCtrl+0",
+    "chinese": "恢复默认字号\tCtrl+0"
+  },
+  {
+    "id": 4294967295,
+    "english": "Terminal display",
+    "chinese": "终端显示"
+  },
+  {
+    "id": 112,
+    "english": "Reset terminal output",
+    "chinese": "重置终端输出"
+  },
+  {
+    "id": 96,
+    "english": "Clear terminal scrollback",
+    "chinese": "清空终端滚动缓冲区"
+  },
+  {
+    "id": 768,
+    "english": "Set terminal title",
+    "chinese": "设置终端标题"
+  },
+  {
+    "id": 688,
+    "english": "Toggle terminal scrollbar",
+    "chinese": "显示或隐藏终端滚动条"
+  },
+  {
+    "id": 384,
+    "english": "Fullscreen terminal\tF11",
+    "chinese": "终端全屏\tF11"
+  },
+  {
+    "id": 4992,
+    "english": "Read-only terminal",
+    "chinese": "只读终端"
+  },
+  {
+    "id": 4294967295,
+    "english": "Syntax highlighting",
+    "chinese": "语法高亮"
+  },
+  {
+    "id": 4096,
+    "english": "Default",
+    "chinese": "默认"
+  },
+  {
+    "id": 4112,
+    "english": "Error/Warning/Success keywords",
+    "chinese": "错误/警告/成功关键字"
+  },
+  {
+    "id": 4128,
+    "english": "Unix shell script",
+    "chinese": "Unix Shell 脚本"
+  },
+  {
+    "id": 4144,
+    "english": "Cisco (network configuration)",
+    "chinese": "Cisco（网络配置）"
+  },
+  {
+    "id": 4160,
+    "english": "Perl syntax",
+    "chinese": "Perl 语法"
+  },
+  {
+    "id": 4176,
+    "english": "SQL syntax",
+    "chinese": "SQL 语法"
+  },
+  {
+    "id": 592,
+    "english": "Execute macro\tCtrl+SPACE",
+    "chinese": "执行宏\tCtrl+SPACE"
+  },
+  {
+    "id": 608,
+    "english": "Record new macro",
+    "chinese": "录制新宏"
+  },
+  {
+    "id": 5008,
+    "english": "Record terminal output to file",
+    "chinese": "录制终端输出到文件"
+  },
+  {
+    "id": 640,
+    "english": "Save to file\tCtrl+Shift+S",
+    "chinese": "保存到文件\tCtrl+Shift+S"
+  },
+  {
+    "id": 656,
+    "english": "Print\tCtrl+Shift+P",
+    "chinese": "打印\tCtrl+Shift+P"
+  },
+  {
+    "id": 288,
+    "english": "Receive file using Z-modem",
+    "chinese": "使用 Z-modem 接收文件"
+  },
+  {
+    "id": 304,
+    "english": "Send file using Z-modem",
+    "chinese": "使用 Z-modem 发送文件"
+  },
+  {
+    "id": 80,
+    "english": "Change current terminal settings...",
+    "chinese": "更改当前终端设置..."
+  },
+  {
+    "id": 16,
+    "english": "Event Log",
+    "chinese": "事件日志"
+  }
+]
