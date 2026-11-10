@@ -79,7 +79,7 @@ class ReleaseArchiveTests(unittest.TestCase):
             archive = cache / "MobaXterm_Portable_v26.6.zip"
             archive.write_bytes(original)
             with patch("mobaxterm_zh.download.load_spec", return_value=(spec, {}, {})), patch("mobaxterm_zh.download.subprocess.run") as run:
-                self.assertEqual(download_upstream(REPO, "26.6.0.5560", cache), archive)
+                self.assertTrue(download_upstream(REPO, "26.6.0.5560", cache).samefile(archive))
                 run.assert_not_called()
                 archive.write_bytes(b"changed")
                 with self.assertRaisesRegex(ValueError, "SHA-256 mismatch"):
