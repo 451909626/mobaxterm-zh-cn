@@ -45,7 +45,7 @@ def release_command(tag, repository, assets):
             raise ValueError("Tool and portable launcher do not match")
     latest = upstream == manifests(REPO)[-1]["upstream_version"]
     command = ["gh", "release", "create", tag, str(archive), str(portable), str(checksum), "--repo", repository,
-               "--verify-tag", "--title", "MobaXterm " + short + " 简体中文汉化",
+               "--verify-tag", "--title", short,
                "--notes-file", str(assets / "release-notes.md"), "--latest=" + str(latest).lower()]
     if version.get("visual_validation", {}).get("status") != "passed":
         command.append("--prerelease")
