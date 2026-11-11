@@ -207,6 +207,17 @@
         6107197
       ],
       "purpose": "session_close_confirmation"
+    },
+    {
+      "offset": 6111496,
+      "english": "Yes",
+      "chinese": "是",
+      "before_hex": "0300000059657300",
+      "after_hex": "02000000cac70000",
+      "references": [
+        6106820
+      ],
+      "purpose": "session_close_confirmation_button"
     }
   ]
 }

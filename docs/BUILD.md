@@ -58,10 +58,10 @@ python scripts/build_local_ui.py --source-zip "D:\Downloads\MobaXterm_Portable_v
 
 | 输出主程序 | SHA-256 |
 |---|---|
-| MobaXterm_Personal_26.5.exe | `9538335054e8cfaca4eeeb0a762c9ed7b88115afd898b96b0b5969bb2e4146b7` |
-| MobaXterm_Personal_26.6.exe | `1350b0b9e5419b6708f9bb0486a198d641aedb8e7ca53a55579e1445413c538e` |
+| MobaXterm_Personal_26.5.exe | `7a45e33e995ebc46a11288a178e2f42d8c5c42b8c6094a35a65326244c951bda` |
+| MobaXterm_Personal_26.6.exe | `095f779b9a14bb8733479568d245b484da26f3123940a1f79f7e9ffb6807307e` |
 
-R2.6 在此前版本基础上补齐关闭运行中会话的确认正文及“终端”前缀。两版新增修改仅涉及两处显示字符串及 PE 校验和，其余字节和窗体资源与各自此前汉化主程序一致。新增提示的实屏复核及 26.5 整体验收进度见[验证记录](VALIDATION.md)。启动器不嵌入厂商图标，编译后的 36 项菜单数据会独立核对。
+R2.7 在此前版本基础上补齐关闭运行中会话的确认正文、“终端”前缀及运行时确认按钮。两版新增修改仅涉及三处显示字符串及 PE 校验和，其余字节和窗体资源与各自 R2.5 汉化主程序一致。新增提示的实屏复核及 26.5 整体验收进度见[验证记录](VALIDATION.md)。启动器不嵌入厂商图标，编译后的 36 项菜单数据会独立核对。
 
 完整构建会移除已失效的厂商签名数据并重新计算 PE 校验和，不会伪装原厂签名。官方原始输入保留原样。
 

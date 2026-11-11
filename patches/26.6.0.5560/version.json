@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "upstream_version": "26.6.0.5560",
-  "localization_release": "R2.6",
+  "localization_release": "R2.7",
   "official_download_page": "https://mobaxterm.mobatek.net/download-home-edition.html",
   "official_archive_url": "https://download.mobatek.net/2662026100713843/MobaXterm_Portable_v26.6.zip",
   "upstream_license_url": "https://mobaxterm.mobatek.net/license.html",
@@ -11,11 +11,11 @@
     "CygUtils.plugin": "65c17f095ecbbab4c8015e24aa02bc7de1c098704aec3d8b4b7ec81b28a56602",
     "CygUtils64.plugin": "4750dc32ba3372fa7f4b8ca38583f98d9d0477d9b0686966fee40aa181bff915"
   },
-  "localized_exe_sha256": "1350b0b9e5419b6708f9bb0486a198d641aedb8e7ca53a55579e1445413c538e",
+  "localized_exe_sha256": "095f779b9a14bb8733479568d245b484da26f3123940a1f79f7e9ffb6807307e",
   "resource_display_locations": 1613,
-  "literal_display_locations": 20,
+  "literal_display_locations": 21,
   "terminal_menu_labels": 36,
-  "total_display_locations": 1669,
+  "total_display_locations": 1670,
   "main_output_name": "MobaXterm_Personal_26.6.exe",
   "upstream_main_name": "MobaXterm_Personal_26.6.exe",
   "visual_validation": {

@@ -149,7 +149,7 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
         pending = "\n" + short + " 已通过构建及静态校验，完整实屏回归仍待补做。\n" if version.get("visual_validation", {}).get("status") != "passed" else ""
         notes = ("# MobaXterm " + short + " 简体中文汉化\n\n"
                  "对应官方 Home 便携版 **" + upstream_version + "**。发行版本跟随官方版本。\n\n"
-                 "汉化修订 **" + version["localization_release"] + "**，工具构建 **" + tool_version + "**。补齐关闭运行中会话确认框的正文及“终端”前缀，保留会话名称。\n\n"
+                 "汉化修订 **" + version["localization_release"] + "**，工具构建 **" + tool_version + "**。补齐关闭运行中会话确认框的正文、“终端”前缀及运行时确认按钮，保留会话名称。\n\n"
                  "| 附件 | 用途 |\n|---|---|\n"
                  "| `" + portable_archive.name + "` | 已汉化便携包，解压后双击 `MobaXterm.exe` |\n"
                  "| `" + archive.name + "` | 预编译图形化工具，可自行选择官方原包生成汉化副本 |\n"

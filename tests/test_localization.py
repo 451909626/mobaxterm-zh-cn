@@ -26,7 +26,7 @@ class ManifestTests(unittest.TestCase):
         changes = [item for form in forms["forms"] for item in form["patches"]]
         self.assertEqual(sum(isinstance(item["target"], str) for item in changes), count)
         self.assertEqual(sum(type(item["target"]) is int for item in changes), 1)
-        self.assertEqual(len(literals["literals"]), 20)
+        self.assertEqual(len(literals["literals"]), 21)
         self.assertEqual(version["literal_display_locations"], len(literals["literals"]))
         self.assertEqual(version["total_display_locations"], count + len(literals["literals"]) + 36)
         spans = []
@@ -57,8 +57,25 @@ class ManifestTests(unittest.TestCase):
                     self.assertTrue(prefix.endswith("终端 "))
                     suffix = "2:  Production SSH 中文名称"
                     self.assertEqual((raw[4:4 + size] + suffix.encode("gbk")).decode("gbk"), expected[item["english"]] + suffix)
-                # These nearby values control saved preferences, not visible labels.
-                self.assertFalse({"AlwaysWarnOnClose", "Yes"} & {item["english"] for item in spec["literals"]})
+                self.assertNotIn("AlwaysWarnOnClose", {item["english"] for item in spec["literals"]})
+
+    def test_close_confirmation_yes_has_a_scoped_runtime_caption_patch(self):
+        for name in ("26.5.0.5542", "26.6.0.5560"):
+            with self.subTest(version=name):
+                _, forms, spec = load_spec(REPO, name)
+                entries = [item for item in spec["literals"] if item.get("purpose") == "session_close_confirmation_button"]
+                self.assertEqual(len(entries), 1)
+                item = entries[0]
+                self.assertEqual((item["english"], item["chinese"]), ("Yes", "是"))
+                self.assertEqual(len(item["references"]), 1)
+                self.assertEqual(bytes.fromhex(item["before_hex"]), struct.pack("<I", 3) + b"Yes\0")
+                self.assertEqual([p for p in spec["literals"] if p["english"] == "Yes"], entries)
+                form = next(f for f in forms["forms"] if f["name"] == "TFORMTERMCONFIRMCLOSE")
+                captions = {p["component"].rsplit(".", 1)[-1]: p["target"] for p in form["patches"] if p["property"] == "Caption"}
+                self.assertEqual(captions["sBitBtn1"], "是")
+                self.assertEqual(captions["sSpeedButton2"], "否")
+                # The click handler uses OK as its alternate-mode marker.
+                self.assertFalse({"AlwaysWarnOnClose", "OK"} & {p["english"] for p in spec["literals"]})
 
     def test_protected_functional_properties(self):
         value = {"component": "Form.Component", "property": "OnClick", "type": 7, "value": "Handler"}
