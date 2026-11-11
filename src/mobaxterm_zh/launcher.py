@@ -4,6 +4,8 @@ import json
 import os
 import subprocess
 
+from .release import LAUNCHER_NAME
+
 
 def build_launcher(repo, output, executable_name=None):
     repo, output = Path(repo).resolve(), Path(output).resolve()
@@ -22,7 +24,7 @@ def build_launcher(repo, output, executable_name=None):
     if compiler is None:
         raise RuntimeError("The .NET Framework C# compiler was not found")
     output.mkdir(parents=True, exist_ok=True)
-    destination = output / "MobaXterm.exe"
+    destination = output / LAUNCHER_NAME
     if destination.exists():
         raise FileExistsError("Choose a new output directory; the existing launcher is preserved")
     source = (repo / "launcher" / "MenuLauncher.cs").read_text(encoding="utf-8")

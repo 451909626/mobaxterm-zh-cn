@@ -11,6 +11,7 @@ import unittest
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 from mobaxterm_zh.launcher import build_launcher
+from mobaxterm_zh.release import LAUNCHER_NAME
 
 
 @unittest.skipUnless(os.name == "nt", "Windows launcher integration")
@@ -45,7 +46,7 @@ class LauncherSelectionTests(unittest.TestCase):
     def setUp(self):
         self.directory = self.root / self._testMethodName
         self.directory.mkdir()
-        self.program = self.directory / "MobaXterm.exe"
+        self.program = self.directory / LAUNCHER_NAME
         shutil.copyfile(self.launcher, self.program)
 
     def supply(self, version):
@@ -93,7 +94,7 @@ class LauncherSelectionTests(unittest.TestCase):
 
     def test_launcher_cannot_select_itself(self):
         self.supply("26.5.0.5542")
-        self.assertFalse(self.inspect("--exe", "MobaXterm.exe")["ok"])
+        self.assertFalse(self.inspect("--exe", self.program.name)["ok"])
 
 
 if __name__ == "__main__":

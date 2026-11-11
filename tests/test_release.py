@@ -13,7 +13,7 @@ from types import SimpleNamespace
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 from mobaxterm_zh.desktop import UserError, apply_package, inspect_package, release_info
-from mobaxterm_zh.release import (PORTABLE_NOTICES, asset_name, portable_asset_name, audit_archive,
+from mobaxterm_zh.release import (LAUNCHER_NAME, PORTABLE_NOTICES, asset_name, portable_asset_name, audit_archive,
                                  audit_portable_archive, parse_tag, upstream_for_tag)
 from mobaxterm_zh.download import download_upstream
 
@@ -53,7 +53,7 @@ class ReleaseArchiveTests(unittest.TestCase):
     def test_portable_archive_requires_reviewed_bytes_and_excludes_user_files(self):
         main = "MobaXterm_Personal_26.6.exe"
         core = {main: b"synthetic-localized", "CygUtils.plugin": b"original32",
-                "CygUtils64.plugin": b"original64", "MobaXterm.exe": b"our-launcher"}
+                "CygUtils64.plugin": b"original64", LAUNCHER_NAME: b"our-launcher"}
         sha = lambda b: hashlib.sha256(b).hexdigest()
         spec = {"upstream_main_name": main, "localized_exe_sha256": sha(core[main]),
                 "files": {n: sha(core[n]) for n in ("CygUtils.plugin", "CygUtils64.plugin")}}
@@ -66,15 +66,15 @@ class ReleaseArchiveTests(unittest.TestCase):
                     for name in PORTABLE_NOTICES:
                         z.writestr(name, "notice".encode("utf-8"))
             write(core)
-            self.assertEqual(audit_portable_archive(archive, spec, sha(core["MobaXterm.exe"]))["files"], 8)
-            for extra in ("MobaXterm.ini", "session.mxtsessions", "debug.log", "folder/extra.txt"):
+            self.assertEqual(audit_portable_archive(archive, spec, sha(core[LAUNCHER_NAME]))["files"], 8)
+            for extra in ("MobaXterm.ini", "session.mxtsessions", "debug.log", "folder/extra.txt", "MobaXterm.exe"):
                 write({**core, extra: b"private"})
                 with self.assertRaises(ValueError):
-                    audit_portable_archive(archive, spec, sha(core["MobaXterm.exe"]))
+                    audit_portable_archive(archive, spec, sha(core[LAUNCHER_NAME]))
             for name in core:
                 write({**core, name: b"changed"})
                 with self.assertRaisesRegex(ValueError, "SHA-256 mismatch"):
-                    audit_portable_archive(archive, spec, sha(core["MobaXterm.exe"]))
+                    audit_portable_archive(archive, spec, sha(core[LAUNCHER_NAME]))
 
     def test_cached_download_is_verified_and_never_overwritten(self):
         original = b"synthetic-official-archive"
@@ -103,7 +103,7 @@ class DesktopPackageTests(unittest.TestCase):
         folder.mkdir(parents=True)
         (self.payload / "launcher").mkdir()
         self.launcher = b"synthetic-launcher"
-        (self.payload / "launcher" / "MobaXterm.exe").write_bytes(self.launcher)
+        (self.payload / "launcher" / LAUNCHER_NAME).write_bytes(self.launcher)
         info = {"tool_version": "2.6.0", "upstream_version": "26.6.0.5560", "main_file": "MobaXterm_Personal_26.6_zh.exe",
                 "launcher_sha256": hashlib.sha256(self.launcher).hexdigest()}
         (self.payload / "release.json").write_text(json.dumps(info), encoding="utf-8")
@@ -117,7 +117,7 @@ class DesktopPackageTests(unittest.TestCase):
         self.output = self.root / "new-output"
 
     def test_modified_embedded_launcher_is_rejected(self):
-        (self.payload / "launcher" / "MobaXterm.exe").write_bytes(b"changed")
+        (self.payload / "launcher" / LAUNCHER_NAME).write_bytes(b"changed")
         with self.assertRaises(UserError):
             release_info(self.payload)
 

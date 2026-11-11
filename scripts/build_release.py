@@ -16,7 +16,7 @@ REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 from mobaxterm_zh.launcher import build_launcher
 from mobaxterm_zh.patcher import load_spec
-from mobaxterm_zh.release import (TOOL_VERSION, PORTABLE_NOTICES, asset_name, portable_asset_name,
+from mobaxterm_zh.release import (TOOL_VERSION, LAUNCHER_NAME, PORTABLE_NOTICES, asset_name, portable_asset_name,
                                  audit_archive, audit_portable_archive, official_version, upstream_for_tag)
 from mobaxterm_zh.download import download_upstream
 from mobaxterm_zh.upstream import select_upstream
@@ -99,7 +99,7 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
                         "1. 从官网下载对应版本的 Home 便携版 ZIP，保留原包，无需解压。\n"
                         "2. 双击本发布包中的“MobaXterm汉化工具.exe”。\n"
                         "3. 选择官方 ZIP，指定一个新的输出文件夹，点击“开始汉化”。\n"
-                        "4. 完成后打开输出目录，双击“MobaXterm.exe”。以后均从此入口使用。\n\n"
+                        f"4. 完成后打开输出目录，双击“{LAUNCHER_NAME}”。以后均从此入口使用。\n\n"
                         "工具只生成独立副本；官方原包与已有配置保留原样。输出采用新配置，旧会话需单独迁移。\n"
                         "本发布包包含自编工具与翻译数据，不包含 MobaXterm 本体、CygUtils 插件或完整汉化成品。\n"
                         "MobaXterm 官方下载：https://mobaxterm.mobatek.net/download-home-edition.html\n"
@@ -121,7 +121,7 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
         notices = {
             "汉化说明.txt": ("MobaXterm " + short + " 非官方简体中文便携版\n\n"
                           "汉化修订：" + version["localization_release"] + "；工具构建：" + tool_version + "。\n"
-                          "解压到独立目录后双击“MobaXterm.exe”。无需运行汉化工具或安装 Python。\n"
+                          f"解压到独立目录后双击“{LAUNCHER_NAME}”。无需运行汉化工具或安装 Python。\n"
                           "前三个程序文件沿用官方便携包的名称和根目录结构；主程序已汉化，两个 CygUtils 组件保留原版。\n"
                           "终端右键菜单中文由附带启动器提供；直接打开主 EXE 不会自动启用该菜单功能。\n"
                           "此包不携带用户配置、会话、凭据或日志。首次运行会在本目录创建配置，旧会话需自行迁移。\n"
@@ -139,7 +139,7 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
         }
         portable_archive = output / (portable_asset_name(upstream_version) + ".zip")
         with zipfile.ZipFile(portable_archive, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as z:
-            for filename in (version["upstream_main_name"], "CygUtils.plugin", "CygUtils64.plugin", "MobaXterm.exe"):
+            for filename in (version["upstream_main_name"], "CygUtils.plugin", "CygUtils64.plugin", LAUNCHER_NAME):
                 z.write(portable / filename, filename)
             for filename in sorted(PORTABLE_NOTICES):
                 z.writestr(filename, notices[filename].encode("utf-8-sig"))
@@ -151,7 +151,7 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
                  "对应官方 Home 便携版 **" + upstream_version + "**。发行版本跟随官方版本。\n\n"
                  "汉化修订 **" + version["localization_release"] + "**，工具构建 **" + tool_version + "**。补齐关闭运行中会话确认框的正文、“终端”前缀及运行时确认按钮，保留会话名称。\n\n"
                  "| 附件 | 用途 |\n|---|---|\n"
-                 "| `" + portable_archive.name + "` | 已汉化便携包，解压后双击 `MobaXterm.exe` |\n"
+                 "| `" + portable_archive.name + "` | 已汉化便携包，解压后双击 `" + LAUNCHER_NAME + "` |\n"
                  "| `" + archive.name + "` | 预编译图形化工具，可自行选择官方原包生成汉化副本 |\n"
                  "| `SHA256SUMS.txt` | 两个 ZIP 的 SHA-256 |\n\n"
                  "便携包保留官方三个文件的名称和根目录结构，附带中文启动器与说明。两个 CygUtils 组件未修改，不携带用户配置、会话或日志。\n\n"

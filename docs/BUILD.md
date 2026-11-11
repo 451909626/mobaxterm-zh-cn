@@ -10,18 +10,18 @@
 python scripts/build_launcher.py --output dist/menu-launcher
 ```
 
-将生成的 `MobaXterm.exe` 放到目标程序旁边，再从启动器进入。默认自动查找同目录中产品信息为 MobaXterm、版本为 26.5 或更新的 EXE；不按具体版本文件名猜测。它只处理选定文件所属的 MobaXterm 主窗口及其 CMoTTY 子窗口。关闭匹配的软件后，启动器自行退出。
+将生成的 `MobaXterm_zh-CN.exe` 放到目标程序旁边，再从启动器进入。默认自动查找同目录中产品信息为 MobaXterm、版本为 26.5 或更新的 EXE；不按具体版本文件名猜测。它只处理选定文件所属的 MobaXterm 主窗口及其 CMoTTY 子窗口。关闭匹配的软件后，启动器自行退出。
 
 同目录有多个合格 EXE 时停止并提示选择，可以启动时指定：
 
 ```powershell
-.\MobaXterm.exe --exe MobaXterm_Personal_26.5.exe
+.\MobaXterm_zh-CN.exe --exe MobaXterm_Personal_26.5.exe
 ```
 
 也可在构建时用 `--target-exe MobaXterm_Personal_26.5.exe` 固定目标文件名。两种方式都校验产品信息与最低版本。仅检查启动器将选择哪个文件而不启动软件：
 
 ```powershell
-.\MobaXterm.exe --inspect selection.json
+.\MobaXterm_zh-CN.exe --inspect selection.json
 ```
 
 构建时会导出已编译程序的菜单目录，与 `translations/terminal-menu.json` 比较。输出中的 `.generated` 保存生成源码与检查数据，供本地复核；不纳入 Git。
@@ -54,7 +54,7 @@ python scripts/build_local_ui.py --source-zip "D:\Downloads\MobaXterm_Portable_v
 
 26.6 使用相同命令并更换原包和空输出路径，无需选择版本参数。也可用 `--source-dir` 指定已经解压、包含三个官方文件的目录。目录中只能有一个 MobaXterm EXE。原始输入只读，输出目录非空时会停止，不会覆盖现有程序或配置。未知新版、低于 26.5 的版本或摘要不符的输入在生成输出前被拒绝；不提供跳过校验的强制选项。
 
-输出主程序名对应输入版本，从同目录的 `MobaXterm.exe` 运行。主程序结果必须与该版本清单一致：
+输出主程序名对应输入版本，从同目录的 `MobaXterm_zh-CN.exe` 运行。主程序结果必须与该版本清单一致：
 
 | 输出主程序 | SHA-256 |
 |---|---|

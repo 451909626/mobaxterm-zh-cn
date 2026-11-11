@@ -11,6 +11,7 @@ REPO = Path(__file__).resolve().parents[1]
 if not getattr(sys, "frozen", False):
     sys.path.insert(0, str(REPO / "src"))
 from mobaxterm_zh.desktop import apply_package, inspect_package, release_info
+from mobaxterm_zh.release import LAUNCHER_NAME
 
 
 def main():
@@ -42,7 +43,7 @@ def main():
             root.destroy()
             with tempfile.TemporaryDirectory(prefix="moba-zh-selftest-") as temporary:
                 catalog = Path(temporary) / "catalog.json"
-                subprocess.run([str(payload / "launcher" / "MobaXterm.exe"), "--catalog", str(catalog)],
+                subprocess.run([str(payload / "launcher" / LAUNCHER_NAME), "--catalog", str(catalog)],
                                check=True, timeout=15)
                 actual = json.loads(catalog.read_text(encoding="utf-8-sig"))
                 expected = json.loads((payload / "translations" / "terminal-menu.json").read_text(encoding="utf-8"))

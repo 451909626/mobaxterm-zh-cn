@@ -13,8 +13,8 @@ using System.Reflection;
 [assembly: AssemblyTitle("MobaXterm")]
 [assembly: AssemblyProduct("MobaXterm Chinese Launcher")]
 [assembly: AssemblyDescription("Local terminal-menu label localization; preserves menu command IDs and state")]
-[assembly: AssemblyVersion("2.6.3.0")]
-[assembly: AssemblyFileVersion("2.6.3.0")]
+[assembly: AssemblyVersion("2.6.4.0")]
+[assembly: AssemblyFileVersion("2.6.4.0")]
 
 internal static class MenuLauncher {
     const string MainFile = "";
@@ -120,7 +120,7 @@ internal static class MenuLauncher {
 
     static Version ValidateTarget(string path) {
         if(String.Equals(Path.GetFullPath(path),Path.GetFullPath(Assembly.GetExecutingAssembly().Location),StringComparison.OrdinalIgnoreCase))
-            throw new InvalidOperationException("不能将 MobaXterm.exe 启动入口自身选作主程序。");
+            throw new InvalidOperationException("不能将当前中文启动入口自身选作主程序。");
         if(!File.Exists(path))throw new FileNotFoundException("请将启动器与 MobaXterm 程序放在同一目录。");
         var info=FileVersionInfo.GetVersionInfo(path);
         if(!String.Equals(info.ProductName,"MobaXterm",StringComparison.OrdinalIgnoreCase))

@@ -13,7 +13,7 @@
 以 v26.6 为例：
 
 1. 下载 **`MobaXterm_Portable_v26.6_zh-CN.zip`**。
-2. 解压到独立目录，双击 **`MobaXterm.exe`**。
+2. 解压到独立目录，双击 **`MobaXterm_zh-CN.exe`**。
 3. 以后均从这个入口运行，以同时启用界面中文与终端右键菜单中文。
 
 便携包沿用官方三个文件的名称及根目录结构，另附启动器和说明：
@@ -22,7 +22,7 @@
 MobaXterm_Personal_26.6.exe
 CygUtils.plugin
 CygUtils64.plugin
-MobaXterm.exe
+MobaXterm_zh-CN.exe
 汉化说明.txt
 汉化工具-MIT-LICENSE.txt
 上游许可说明.txt
@@ -38,7 +38,7 @@ MobaXterm.exe
 1. 下载同一 Release 的 **`MobaXterm_Chinese_Tool_v26.6_win-x64.zip`**，解压后双击 **`MobaXterm汉化工具.exe`**。
 2. 从 [MobaXterm 官网](https://mobaxterm.mobatek.net/download-home-edition.html)取得对应版本的 **Home 便携版 ZIP**，无需解压。
 3. 在工具中选择原包，指定新的输出文件夹，点击 **“开始汉化”**。
-4. 完成后打开输出目录，双击 **`MobaXterm.exe`**。
+4. 完成后打开输出目录，双击 **`MobaXterm_zh-CN.exe`**。
 
 工具核对版本和原包摘要，不改写原始 ZIP，不覆盖已有目录。输出采用新配置，旧会话需另行迁移。
 
@@ -73,7 +73,7 @@ MobaXterm.exe
 
 ![终端菜单检查图](docs/images/terminal-menu.png)
 
-日常使用 **`MobaXterm.exe`**。直接打开主 EXE 可以显示界面中文，但不会自动启用独立启动器提供的终端菜单中文。已有配置的副本迁移见[构建与迁移说明](docs/BUILD.md)。
+日常使用 **`MobaXterm_zh-CN.exe`**，文件名中的 `zh-CN` 表示简体中文入口。直接打开主 EXE 可以显示界面中文，但不会自动启用独立启动器提供的终端菜单中文。已有配置的副本迁移见[构建与迁移说明](docs/BUILD.md)。
 
 ## 开发与发布
 

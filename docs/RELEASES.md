@@ -12,7 +12,7 @@
 | `MobaXterm_Portable_v26.6_zh-CN.zip` | 按官方便携包根目录结构整理的汉化客户端、启动器和说明 |
 | `SHA256SUMS.txt` | 两个 ZIP 的摘要 |
 
-便携 ZIP 根目录保留 `MobaXterm_Personal_26.6.exe`、`CygUtils.plugin`、`CygUtils64.plugin`，另附 `MobaXterm.exe` 和四份说明/许可文本。主程序必须匹配已复核的汉化摘要，两个插件必须匹配对应官方原文件，启动器必须与工具内置版本一致。
+便携 ZIP 根目录保留 `MobaXterm_Personal_26.6.exe`、`CygUtils.plugin`、`CygUtils64.plugin`，另附 `MobaXterm_zh-CN.exe` 和四份说明/许可文本。入口采用英文语言后缀 `zh-CN`，图形化工具生成的目录使用相同名称。主程序必须匹配已复核的汉化摘要，两个插件必须匹配对应官方原文件，启动器必须与工具内置版本一致。
 
 便携包不包含 INI、会话、凭据、日志、调试产物或原版备份；配置由首次运行创建。工具 ZIP 中不包含 MobaXterm 本体。二进制附件不提交到 Git。
 

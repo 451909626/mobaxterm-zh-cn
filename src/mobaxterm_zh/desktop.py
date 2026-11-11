@@ -7,6 +7,7 @@ import tempfile
 
 from .patcher import build_local_ui, load_spec
 from .upstream import inspect_upstream
+from .release import LAUNCHER_NAME
 
 
 class UserError(ValueError):
@@ -17,7 +18,7 @@ def release_info(payload):
     payload = Path(payload)
     info = json.loads((payload / "release.json").read_text(encoding="utf-8"))
     version, _, _ = load_spec(payload, info["upstream_version"])
-    launcher = payload / "launcher" / "MobaXterm.exe"
+    launcher = payload / "launcher" / LAUNCHER_NAME
     if hashlib.sha256(launcher.read_bytes()).hexdigest() != info["launcher_sha256"]:
         raise UserError("汉化工具文件不完整，请重新下载并解压对应版本的发布包。")
     if version["main_output_name"] != info["main_file"]:
@@ -61,13 +62,13 @@ def apply_package(payload, source_zip, output, progress=None):
         progress("正在生成中文界面……")
         report = build_local_ui(payload, stage, source_zip=source_zip)
         progress("正在安装菜单启动器并核对结果……")
-        launcher = (payload / "launcher" / "MobaXterm.exe").read_bytes()
-        (stage / "MobaXterm.exe").write_bytes(launcher)
+        launcher = (payload / "launcher" / LAUNCHER_NAME).read_bytes()
+        (stage / LAUNCHER_NAME).write_bytes(launcher)
         report.update(tool_version=info["tool_version"], launcher_sha256=info["launcher_sha256"],
                       input_preserved=True, output_profile="fresh", distribution="Local user build only")
         (stage / "build-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         (stage / "使用说明.txt").write_text(
-            "请双击“MobaXterm.exe”使用，主界面与终端右键菜单将显示中文。\n"
+            f"请双击“{LAUNCHER_NAME}”使用，主界面与终端右键菜单将显示中文。\n"
             "此目录根据您提供的官方 " + info["upstream_version"] + " 便携包在本机生成，原包保留原样。\n"
             "两个 CygUtils 组件为对应版本的官方原文件。配置为新配置，旧会话需单独迁移。\n",
             encoding="utf-8")
@@ -75,5 +76,5 @@ def apply_package(payload, source_zip, output, progress=None):
                 or output.exists()):
             raise UserError("输出位置发生变化，已停止操作；请重新选择新的文件夹名称。")
         stage.rename(output)
-    progress("汉化完成。请从新目录中的“MobaXterm.exe”进入。")
+    progress(f"汉化完成。请从新目录中的“{LAUNCHER_NAME}”进入。")
     return report
