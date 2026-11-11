@@ -13,8 +13,8 @@ using System.Reflection;
 [assembly: AssemblyTitle("MobaXterm")]
 [assembly: AssemblyProduct("MobaXterm Chinese Launcher")]
 [assembly: AssemblyDescription("Local terminal-menu label localization; preserves menu command IDs and state")]
-[assembly: AssemblyVersion("2.6.4.0")]
-[assembly: AssemblyFileVersion("2.6.4.0")]
+[assembly: AssemblyVersion("2.6.7.0")]
+[assembly: AssemblyFileVersion("2.6.7.0")]
 
 internal static class MenuLauncher {
     const string MainFile = "";
@@ -216,7 +216,7 @@ internal static class MenuLauncher {
     static void WriteAudit() {
         if(String.IsNullOrEmpty(AuditPath))return;
         try {
-            var state=new { release="R2.7",date=DateTime.Now.ToString("o"),target=Target,
+            var state=new { release="R2.10",date=DateTime.Now.ToString("o"),target=Target,
                 main_windows=MainWindows.Count,terminal_windows=Terminals.Count,
                 catalog_labels=Labels.Count,labels_changed=Changed,errors=Errors,
                 popup_events=Popups,last_popup=LastPopup,

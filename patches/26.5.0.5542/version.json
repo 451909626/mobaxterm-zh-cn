@@ -1,7 +1,11 @@
 {
   "schema": 1,
   "upstream_version": "26.5.0.5542",
-  "localization_release": "R2.7",
+  "localization_release": "R2.8",
+  "release_changes": [
+    "恢复工具栏布局使用的原始英文标识，修复自定义工具栏的匹配问题。",
+    "本修订的主工具栏标题保留英文，设置页和按钮提示继续汉化；26.5 的本修订界面复测尚未完成。"
+  ],
   "official_download_page": "https://mobaxterm.mobatek.net/download-home-edition.html",
   "official_archive_url": "https://download.mobatek.net/2652026082870834/MobaXterm_Portable_v26.5.zip",
   "upstream_license_url": "https://mobaxterm.mobatek.net/license.html",
@@ -11,15 +15,15 @@
     "CygUtils.plugin": "94216d3d9265296feeb5c0009af5aaff2fd2fdb8693076f291b552b91bdaad82",
     "CygUtils64.plugin": "df8c12a3aa748fa4e8a24278fd0a98deede836bb9d34b6ac21f2a1877943fbb2"
   },
-  "localized_exe_sha256": "7a45e33e995ebc46a11288a178e2f42d8c5c42b8c6094a35a65326244c951bda",
-  "resource_display_locations": 1608,
+  "localized_exe_sha256": "9b3d091f224192017cec242bca6a8eff4d7ce3a214877a60cf407ff6e907d0ac",
+  "resource_display_locations": 1594,
   "literal_display_locations": 21,
   "terminal_menu_labels": 36,
-  "total_display_locations": 1665,
+  "total_display_locations": 1651,
   "main_output_name": "MobaXterm_Personal_26.5.exe",
   "upstream_main_name": "MobaXterm_Personal_26.5.exe",
   "visual_validation": {
-    "status": "passed",
+    "status": "pending",
     "report": "docs/VALIDATION.md"
   }
 }

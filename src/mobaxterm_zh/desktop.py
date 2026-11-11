@@ -7,7 +7,7 @@ import tempfile
 
 from .patcher import build_local_ui, load_spec
 from .upstream import inspect_upstream
-from .release import LAUNCHER_NAME
+from .release import LAUNCHER_NAME, toolbar_notice
 
 
 class UserError(ValueError):
@@ -69,6 +69,7 @@ def apply_package(payload, source_zip, output, progress=None):
         (stage / "build-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         (stage / "使用说明.txt").write_text(
             f"请双击“{LAUNCHER_NAME}”使用，主界面与终端右键菜单将显示中文。\n"
+            + toolbar_notice(report) + "\n"
             "此目录根据您提供的官方 " + info["upstream_version"] + " 便携包在本机生成，原包保留原样。\n"
             "两个 CygUtils 组件为对应版本的官方原文件。配置为新配置，旧会话需单独迁移。\n",
             encoding="utf-8")

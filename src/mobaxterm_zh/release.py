@@ -4,9 +4,18 @@ import hashlib
 import re
 import zipfile
 
-TOOL_VERSION = "2.6.4"
+TOOL_VERSION = "2.6.7"
 LAUNCHER_NAME = "MobaXterm_zh-CN.exe"
 TAG = re.compile(r"v(\d+\.\d+)\Z")
+
+
+def toolbar_notice(version):
+    if version.get("toolbar_caption_labels", 0):
+        text = "常用工具栏按钮支持中文标题、自定义和保存。"
+        if version.get("settings_combo_controls", 0):
+            text += "设置页下拉选项已补译，默认主页、新标签页和 X11 缩放仍保存原始配置值。"
+        return text
+    return "主工具栏标题保留英文，以兼容自定义布局；设置页及按钮提示继续汉化。"
 
 
 def parse_tag(value):

@@ -218,6 +218,42 @@
         5893972
       ],
       "purpose": "session_close_confirmation_button"
+    },
+    {
+      "offset": 5886212,
+      "english": "You must restart MobaXterm in order to apply the modifications.\rDo you want to do it now?",
+      "chinese": "需要重启 MobaXterm 才能应用更改。\r是否立即重启？",
+      "before_hex": "596f75206d7573742072657374617274204d6f6261587465726d20696e206f7264657220746f206170706c7920746865206d6f64696669636174696f6e732e0d446f20796f752077616e7420746f20646f206974206e6f773f00",
+      "after_hex": "d0e8d2aad6d8c6f4204d6f6261587465726d20b2c5c4dcd3a6d3c3b8fcb8c4a1a30dcac7b7f1c1a2bcb4d6d8c6f4a3bf000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5883350
+      ],
+      "purpose": "settings_saved_notice",
+      "storage": "pansichar"
+    },
+    {
+      "offset": 5886548,
+      "english": "Your new terminal settings will be applied to every new terminal you start.",
+      "chinese": "新的终端设置将在此后新建的每个终端中生效。",
+      "before_hex": "596f7572206e6577207465726d696e616c2073657474696e67732077696c6c206265206170706c69656420746f206576657279206e6577207465726d696e616c20796f752073746172742e00",
+      "after_hex": "d0c2b5c4d6d5b6cbc9e8d6c3bdabd4dab4cbbaf3d0c2bda8b5c4c3bfb8f6d6d5b6cbd6d0c9fad0a7a1a300000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5883873
+      ],
+      "purpose": "settings_saved_notice",
+      "storage": "pansichar"
+    },
+    {
+      "offset": 5886624,
+      "english": "In order to apply your new X11 settings, you have to restart the X11 server.\rDo you want to do it now?",
+      "chinese": "需要重启 X11 服务器才能应用新的 X11 设置。\r是否立即重启？",
+      "before_hex": "496e206f7264657220746f206170706c7920796f7572206e6577205831312073657474696e67732c20796f75206861766520746f20726573746172742074686520583131207365727665722e0d446f20796f752077616e7420746f20646f206974206e6f773f00",
+      "after_hex": "d0e8d2aad6d8c6f42058313120b7fecef1c6f7b2c5c4dcd3a6d3c3d0c2b5c42058313120c9e8d6c3a1a30dcac7b7f1c1a2bcb4d6d8c6f4a3bf00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5883920
+      ],
+      "purpose": "settings_saved_notice",
+      "storage": "pansichar"
     }
   ]
 }

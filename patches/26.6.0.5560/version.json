@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "upstream_version": "26.6.0.5560",
-  "localization_release": "R2.7",
+  "localization_release": "R2.10",
   "official_download_page": "https://mobaxterm.mobatek.net/download-home-edition.html",
   "official_archive_url": "https://download.mobatek.net/2662026100713843/MobaXterm_Portable_v26.6.zip",
   "upstream_license_url": "https://mobaxterm.mobatek.net/license.html",
@@ -11,15 +11,27 @@
     "CygUtils.plugin": "65c17f095ecbbab4c8015e24aa02bc7de1c098704aec3d8b4b7ec81b28a56602",
     "CygUtils64.plugin": "4750dc32ba3372fa7f4b8ca38583f98d9d0477d9b0686966fee40aa181bff915"
   },
-  "localized_exe_sha256": "095f779b9a14bb8733479568d245b484da26f3123940a1f79f7e9ffb6807307e",
-  "resource_display_locations": 1613,
-  "literal_display_locations": 21,
+  "localized_exe_sha256": "c0a6f4a47c2c7e0991bdfd0b156478f8984db57b37f0a9d1b006cf9225d0ad0b",
+  "resource_display_locations": 1709,
+  "literal_display_locations": 24,
   "terminal_menu_labels": 36,
-  "total_display_locations": 1670,
+  "total_display_locations": 1783,
   "main_output_name": "MobaXterm_Personal_26.6.exe",
   "upstream_main_name": "MobaXterm_Personal_26.6.exe",
   "visual_validation": {
     "status": "passed",
-    "report": "docs/VALIDATION.md"
-  }
+    "report": "docs/VALIDATION.md",
+    "scope": "User verified Chinese toolbar, customization/save, icon/caption styles, settings dropdown labels and editing/save. Three settings-saved notices are statically verified; no separate user visual acceptance is claimed.",
+    "settings_saved_notices": "static_verified; separate user visual check not recorded"
+  },
+  "toolbar_caption_labels": 14,
+  "settings_combo_controls": 25,
+  "settings_combo_item_labels": 85,
+  "release_changes": [
+    "修复自定义工具栏后只剩游戏按钮的问题；顶部按钮保持中文，支持增减、排序、保存及图标/文字模式切换。",
+    "补译设置页 25 个下拉控件的 85 条选项及对应默认显示文字。",
+    "默认主页、新标签页和 X11 缩放在界面显示中文，保存时继续使用原始配置值，兼容现有配置。键盘布局代码、引擎版本、Shell/皮肤名称及用户自定义名称保留原文。",
+    "补译终端设置后续生效、重启 MobaXterm、重启 X11 服务器三条保存提示。"
+  ],
+  "release_validation_note": "35 项自动检查通过；工具栏中文、自定义保存、图标/文字切换及下拉选项显示和修改保存经用户复测。三条保存提示已核对文字、容量、换行与唯一调用引用，未另行记录其弹窗的用户视觉验收。"
 }

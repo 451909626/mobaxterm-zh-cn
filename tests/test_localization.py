@@ -15,7 +15,7 @@ from mobaxterm_zh.profiles import migrate
 
 class ManifestTests(unittest.TestCase):
     def test_reviewed_scope_and_fixed_size_literals(self):
-        for version, count in [("26.5.0.5542", 1608), ("26.6.0.5560", 1613)]:
+        for version, count in [("26.5.0.5542", 1594), ("26.6.0.5560", 1709)]:
             with self.subTest(version=version):
                 self.check_manifest(version, count)
 
@@ -26,19 +26,41 @@ class ManifestTests(unittest.TestCase):
         changes = [item for form in forms["forms"] for item in form["patches"]]
         self.assertEqual(sum(isinstance(item["target"], str) for item in changes), count)
         self.assertEqual(sum(type(item["target"]) is int for item in changes), 1)
-        self.assertEqual(len(literals["literals"]), 21)
+        self.assertEqual(len(literals["literals"]), 24 if name == "26.6.0.5560" else 21)
         self.assertEqual(version["literal_display_locations"], len(literals["literals"]))
-        self.assertEqual(version["total_display_locations"], count + len(literals["literals"]) + 36)
+        self.assertEqual(version["total_display_locations"], count + len(literals["literals"]) + 36
+                         + version.get("toolbar_caption_labels", 0))
         spans = []
         for item in literals["literals"]:
             before, after = bytes.fromhex(item["before_hex"]), bytes.fromhex(item["after_hex"])
             self.assertEqual(len(before), len(after))
-            size = struct.unpack_from("<I", after, 0)[0]
-            self.assertEqual(after[4:4 + size].decode("gbk"), item["chinese"])
-            self.assertFalse(any(after[4 + size:]))
+            if item.get("storage") == "pansichar":
+                self.assertEqual(before, item["english"].encode("ascii") + b"\0")
+                size = after.index(0)
+                self.assertEqual(after[:size].decode("gbk"), item["chinese"])
+                self.assertFalse(any(after[size:]))
+            else:
+                size = struct.unpack_from("<I", after, 0)[0]
+                self.assertEqual(after[4:4 + size].decode("gbk"), item["chinese"])
+                self.assertFalse(any(after[4 + size:]))
             start = item["offset"]
             self.assertTrue(all(start >= b or a >= start + len(before) for a, b in spans))
             spans.append((start, start + len(before)))
+
+    def test_settings_saved_notices_keep_message_boundaries_and_line_breaks(self):
+        _, _, spec = load_spec(REPO, "26.6.0.5560")
+        notices = [x for x in spec["literals"] if x.get("purpose") == "settings_saved_notice"]
+        self.assertEqual(len(notices), 3)
+        self.assertIn("Your new terminal settings will be applied to every new terminal you start.",
+                      {x["english"] for x in notices})
+        for item in notices:
+            self.assertEqual(item["storage"], "pansichar")
+            self.assertEqual(len(item["references"]), 1)
+            self.assertEqual(item["english"].count("\r"), item["chinese"].count("\r"))
+            self.assertLess(len(item["chinese"].encode("gbk")), len(bytes.fromhex(item["before_hex"])))
+            self.assertTrue(bytes.fromhex(item["after_hex"]).endswith(b"\0"))
+        _, _, previous = load_spec(REPO, "26.5.0.5542")
+        self.assertFalse([x for x in previous["literals"] if x.get("purpose") == "settings_saved_notice"])
 
     def test_close_confirmation_keeps_line_breaks_and_dynamic_session_suffix(self):
         body = "One or more sessions are currently running.\rDo you want to close the following tab(s) anyway?\r\rTerminal "
@@ -87,6 +109,26 @@ class ManifestTests(unittest.TestCase):
         self.assertFalse(permitted("TFORMXTERM", value, "命令"))
         value.update(component="FormColorsSelector.Group.Col1", property="Hint", value="1")
         self.assertFalse(permitted("TFORMCOLORSSELECTOR", value, "一"))
+
+    def test_toolbar_layout_identifiers_are_protected_for_real_components(self):
+        buttons = {
+            "BtnNewSession": "Session", "BtnServices": "Servers",
+            "BtnMenuComdes": "Tools", "BtnGames": "Games",
+            "BtnBookmarks": "Sessions", "ToolButton2": "View",
+            "BtnSplitMode": "Split", "BtnMultiExec": "MultiExec",
+            "BtnTunneling": "Tunneling", "BtnMobapt": "Packages",
+            "BtnColor": "Settings", "BtnHelp": "Help",
+            "sBitBtn7": "X server", "BtnClose": "Exit",
+        }
+        for name, key in buttons.items():
+            with self.subTest(button=name):
+                value = {"component": "FormXterm.sPanel4." + name,
+                         "property": "HelpKeyword", "type": 6, "value": key}
+                self.assertFalse(permitted("TFORMXTERM", value, "中文"))
+        for name in ("26.5.0.5542", "26.6.0.5560"):
+            _, forms, _ = load_spec(REPO, name)
+            self.assertFalse([patch for form in forms["forms"] for patch in form["patches"]
+                              if patch["property"] == "HelpKeyword"])
 
     def test_bad_source_is_rejected_before_loading(self):
         directory = REPO / ".local" / "tests"

@@ -45,9 +45,6 @@ DISPLAY_LISTS = {
     ("TFORMMASTERPASSWORD", "FormMasterPassword.sRadioGroup1", "Items.Strings[]"),
     ("TFORMSYNTAX", "FormSyntax.sTabControl1", "Tabs.Strings[]"),
 }
-TOOLBAR = {"BtnNewSession", "BtnServices", "BtnMenuComdes", "BtnGames", "BtnBookmarks",
-           "ToolButton2", "BtnSplitMode", "BtnMultiExec", "BtnTunneling", "BtnMobapt",
-           "BtnColor", "BtnHelp", "sBitBtn7", "BtnClose"}
 LIST_HEIGHT = ("TFORMADVANCEDTERMSETTINGS", "FormAdvancedTermSettings.sGroupBox2.ChkListFeatures", "Height")
 COMMAND_HINTS = {"ctris", "TCPCapture --showdata yes", "MobaTaskList", "dwm", "fvwm", "twm",
                  "MobaHwInfo", "MobaSwInfo", "cmd.exe", "powershell.exe", "vim", "ascii",
@@ -67,11 +64,15 @@ def permitted(form, value, target):
     if (form == "TFORMCOLORSSELECTOR" and prop == "Hint"
             and re.fullmatch(r"Col\d+", component.rsplit(".", 1)[-1])):
         return False
+    if form == "TFORMPARAMS" and prop in ("Text", "Items.Strings[]"):
+        from .settings import permitted as permitted_setting
+        return permitted_setting(form, value, target)
     if prop == "Text":
         return (form, component) in PROMPT_FIELDS
     if prop == "HelpKeyword":
-        return (form == "TFORMXTERM" and component.startswith("FormXterm.sPanel4.")
-                and component.rsplit(".", 1)[-1] in TOOLBAR)
+        # Toolbar customization persists and resolves these values as keys.
+        # They are also used to restore captions, but are not display-only.
+        return False
     return (prop in {"Caption", "Hint", "TextHint", "Title"} or prop.endswith(".Caption")
             or prop.endswith(".Hint") or (form, component, prop) in DISPLAY_LISTS)
 
@@ -124,7 +125,11 @@ def patch_literals(data, pe, spec):
         section = pe.get_section_by_offset(start)
         if section.Name.rstrip(b"\0") != b"CODE":
             raise ValueError("Runtime text is outside the reviewed section")
-        pointer = struct.pack("<I", pe.OPTIONAL_HEADER.ImageBase + pe.get_rva_from_offset(start + 4))
+        storage = item.get("storage", "ansistring")
+        if storage not in ("ansistring", "pansichar"):
+            raise ValueError("Unknown runtime label storage")
+        pointer_offset = 0 if storage == "pansichar" else 4
+        pointer = struct.pack("<I", pe.OPTIONAL_HEADER.ImageBase + pe.get_rva_from_offset(start + pointer_offset))
         actual = [match.start() for match in re.finditer(re.escape(pointer), data)]
         if actual != item["references"]:
             raise ValueError("Runtime label references changed")
@@ -191,6 +196,38 @@ def build_local_ui(repo, output, source_zip=None, source_dir=None):
         candidate.write_bytes(data)
         update_resources(candidate, patches)
         data = bytearray(candidate.read_bytes())
+    toolbar_report = None
+    if version.get("toolbar_caption_labels", 0):
+        if version["upstream_version"] != "26.6.0.5560":
+            raise ValueError("No reviewed toolbar display adapter for this version")
+        from .toolbar import patch as patch_toolbar
+        data, toolbar_report = patch_toolbar(bytes(data))
+        data = bytearray(data)
+        if toolbar_report["translated_labels"] != version["toolbar_caption_labels"]:
+            raise ValueError("Toolbar label count differs from the reviewed version")
+        # The existing-code allowance is limited to the three guarded calls.
+        expected_code = bytearray(expected_code)
+        hook_pe = pefile.PE(data=bytes(data))
+        call_rvas = [toolbar_report["call_rva"], *toolbar_report["layout_getter_calls"]]
+        for rva in call_rvas:
+            old_offset = p0.get_offset_from_rva(rva)
+            new_offset = hook_pe.get_offset_from_rva(rva)
+            expected_code[old_offset:old_offset + 5] = data[new_offset:new_offset + 5]
+    settings_report = None
+    if version.get("settings_combo_controls", 0):
+        if version["upstream_version"] != "26.6.0.5560":
+            raise ValueError("No reviewed settings value adapter for this version")
+        from .settings import COMBO_LABELS, patch as patch_settings
+        if len(COMBO_LABELS) != version["settings_combo_controls"]:
+            raise ValueError("Settings control count differs from the reviewed version")
+        data, settings_report = patch_settings(bytes(data))
+        data = bytearray(data)
+        expected_code = bytearray(expected_code)
+        hook_pe = pefile.PE(data=bytes(data))
+        for rva in settings_report["call_rvas"]:
+            old_offset = p0.get_offset_from_rva(rva)
+            new_offset = hook_pe.get_offset_from_rva(rva)
+            expected_code[old_offset:old_offset + 5] = data[new_offset:new_offset + 5]
     p1 = pefile.PE(data=bytes(data))
     struct.pack_into("<I", data, p1.OPTIONAL_HEADER.get_field_absolute_offset("CheckSum"), p1.generate_checksum())
     p1 = pefile.PE(data=bytes(data))
@@ -200,6 +237,12 @@ def build_local_ui(repo, output, source_zip=None, source_dir=None):
     changed = {(10, name, lang) for name, lang, _ in patches}
     if before.keys() != after.keys() or {k for k in before if before[k] != after[k]} != changed:
         raise ValueError("Unexpected resource change")
+    added_sections = ([b".zhui"] if toolbar_report else []) + ([b".zhset"] if settings_report else [])
+    if len(p1.sections) != len(p0.sections) + len(added_sections):
+        raise ValueError("Unexpected number of PE sections")
+    for section, name in zip(p1.sections[len(p0.sections):], added_sections):
+        if section.Name.rstrip(b"\0") != name or section.Characteristics != 0x60000020:
+            raise ValueError("Unexpected display adapter section or permissions")
     for old, new in zip(p0.sections, p1.sections):
         if old.Name != new.Name or old.VirtualAddress != new.VirtualAddress:
             raise ValueError("Unexpected section layout")
@@ -218,4 +261,8 @@ def build_local_ui(repo, output, source_zip=None, source_dir=None):
     return {"release": version["localization_release"], "upstream_version": version["upstream_version"],
             "source_sha256": digest(original), "localized_exe_sha256": digest(data),
             "resource_forms": len(patches), "resource_strings": version["resource_display_locations"],
-            "runtime_literals": len(literals["literals"]), "main_file": destination.name}
+            "runtime_literals": len(literals["literals"]), "main_file": destination.name,
+            "toolbar_caption_labels": version.get("toolbar_caption_labels", 0),
+            "toolbar_display_adapter": toolbar_report,
+            "settings_combo_controls": version.get("settings_combo_controls", 0),
+            "settings_value_adapter": settings_report}

@@ -9285,7 +9285,7 @@
       "name": "TFORMXTERM",
       "language": 0,
       "source_sha256": "940b1d338b87ce03f8a4d6cffedb363bb628bc24e11f14d52b9d7031e517ed99",
-      "target_sha256": "1728a4ff6e4fc54e7fee4a94cea7f8bec6c9dfd848a6cd7f5a77fb80cd21b51d",
+      "target_sha256": "ac68cf6b7af5e97d6a3d23ffa5478b033fd48ac8a33b62c33d96427bb52c3c01",
       "patches": [
         {
           "index": 73,
@@ -9712,14 +9712,6 @@
           "target": "新建远程会话"
         },
         {
-          "index": 1709,
-          "component": "FormXterm.sPanel4.BtnNewSession",
-          "property": "HelpKeyword",
-          "source_type": 6,
-          "source_value_sha256": "33e2fb9199d2a41464f72bb9727f939df338d6cf84f707cbe955b555b0a8abd1",
-          "target": "新建会话"
-        },
-        {
           "index": 1710,
           "component": "FormXterm.sPanel4.BtnNewSession",
           "property": "Caption",
@@ -9734,14 +9726,6 @@
           "source_type": 6,
           "source_value_sha256": "b0297bc8e2b083b53637727f644db957adf8c7d0da45770aa2931776a400cf24",
           "target": "查看 MobaXterm 帮助"
-        },
-        {
-          "index": 1724,
-          "component": "FormXterm.sPanel4.BtnHelp",
-          "property": "HelpKeyword",
-          "source_type": 6,
-          "source_value_sha256": "d6f502f396dcfcf58dc9375a7e9d11f6fbc4602447d6cbacafb51767fb0977fb",
-          "target": "帮助"
         },
         {
           "index": 1725,
@@ -9760,14 +9744,6 @@
           "target": "修改 MobaXterm 配置"
         },
         {
-          "index": 1739,
-          "component": "FormXterm.sPanel4.BtnColor",
-          "property": "HelpKeyword",
-          "source_type": 6,
-          "source_value_sha256": "db024b82c3be56d154df50c637b63ea6707c93521a2fa7d12218b824f5c5ca37",
-          "target": "设置"
-        },
-        {
           "index": 1740,
           "component": "FormXterm.sPanel4.BtnColor",
           "property": "Caption",
@@ -9782,14 +9758,6 @@
           "source_type": 6,
           "source_value_sha256": "6871e460f9697149a7940a133cd5c965834265f15b5bb8d2cdc0cfdff4aaa3b1",
           "target": "工具栏、菜单和按钮选项"
-        },
-        {
-          "index": 1756,
-          "component": "FormXterm.sPanel4.ToolButton2",
-          "property": "HelpKeyword",
-          "source_type": 6,
-          "source_value_sha256": "b2eea9fd6a45858507131836fd210aeb20022c27c303269bc65a12724bf11a42",
-          "target": "查看"
         },
         {
           "index": 1759,
@@ -9808,14 +9776,6 @@
           "target": "同时向所有终端发送命令"
         },
         {
-          "index": 1775,
-          "component": "FormXterm.sPanel4.BtnMultiExec",
-          "property": "HelpKeyword",
-          "source_type": 6,
-          "source_value_sha256": "ea652043188541ba81807b0fbace1c2fe634d362a3d3139826721e47f113cb86",
-          "target": "多端执行"
-        },
-        {
           "index": 1776,
           "component": "FormXterm.sPanel4.BtnMultiExec",
           "property": "Caption",
@@ -9830,14 +9790,6 @@
           "source_type": 6,
           "source_value_sha256": "a5afeb404f596148daaff74f5392d07d053912074cfa47e489479194953a65a2",
           "target": "终端分屏选项"
-        },
-        {
-          "index": 1792,
-          "component": "FormXterm.sPanel4.BtnSplitMode",
-          "property": "HelpKeyword",
-          "source_type": 6,
-          "source_value_sha256": "d0b81d231800afd90376244e107949d20a2d34d07b4138a7cc4faf74c41fef30",
-          "target": "分屏"
         },
         {
           "index": 1795,
@@ -9856,14 +9808,6 @@
           "target": "启动 MobaXterm 内置工具"
         },
         {
-          "index": 1811,
-          "component": "FormXterm.sPanel4.BtnMenuComdes",
-          "property": "HelpKeyword",
-          "source_type": 6,
-          "source_value_sha256": "6f7518bd1429661260747cb185ba77c9a3ab9be46bb56de64e84546e5cf3bbf6",
-          "target": "工具"
-        },
-        {
           "index": 1814,
           "component": "FormXterm.sPanel4.BtnMenuComdes",
           "property": "Caption",
@@ -9878,14 +9822,6 @@
           "source_type": 6,
           "source_value_sha256": "e279ddea1279dbde5b6c1ced8fe0ceb8fb7ae55da9a415482e1c891d2aff4de8",
           "target": "打开已保存的会话"
-        },
-        {
-          "index": 1830,
-          "component": "FormXterm.sPanel4.BtnBookmarks",
-          "property": "HelpKeyword",
-          "source_type": 6,
-          "source_value_sha256": "73dcee3018c1283097dd12c39fe2632e72116b05bc30ed30cecb3d24965e2d17",
-          "target": "会话"
         },
         {
           "index": 1833,
@@ -9934,14 +9870,6 @@
           "source_type": 6,
           "source_value_sha256": "90ae011090a3b9745e1beb1e6b6bf358b1b333fd2b47ee4ac8867ed655376f86",
           "target": "启动终端游戏"
-        },
-        {
-          "index": 1884,
-          "component": "FormXterm.sPanel4.BtnGames",
-          "property": "HelpKeyword",
-          "source_type": 6,
-          "source_value_sha256": "6278edf06700fae7e4b67cf9bc52c601201a6d560ef2103947510f12a2304d73",
-          "target": "游戏"
         },
         {
           "index": 1887,
@@ -10024,14 +9952,6 @@
           "target": "启动 MobaSSHTunnel 图形化端口转发工具"
         },
         {
-          "index": 1969,
-          "component": "FormXterm.sPanel4.BtnTunneling",
-          "property": "HelpKeyword",
-          "source_type": 6,
-          "source_value_sha256": "4e2bd8c4629be9d1f8997b2709ef3e3326f1206398a82a6f84b193afe53bd6ac",
-          "target": "隧道"
-        },
-        {
           "index": 1970,
           "component": "FormXterm.sPanel4.BtnTunneling",
           "property": "Caption",
@@ -10046,14 +9966,6 @@
           "source_type": 6,
           "source_value_sha256": "48e406660943ac9318335431f3defd8208ef3853b1b535b458d4f9efdb89d1ca",
           "target": "网络服务"
-        },
-        {
-          "index": 1984,
-          "component": "FormXterm.sPanel4.BtnServices",
-          "property": "HelpKeyword",
-          "source_type": 6,
-          "source_value_sha256": "5b66ec0972fd9289c6fc0e80501ea9b35f20dd82cf1f6cd67f612d97d971ed14",
-          "target": "服务"
         },
         {
           "index": 1985,
@@ -10280,14 +10192,6 @@
           "target": "MobApt 软件包管理器（实验功能）"
         },
         {
-          "index": 2272,
-          "component": "FormXterm.sPanel4.BtnMobapt",
-          "property": "HelpKeyword",
-          "source_type": 6,
-          "source_value_sha256": "8e6139b13fa686b846f5757414ac43f8c50d6e0d71e9d817d33d58e1f3d0a9f5",
-          "target": "软件包"
-        },
-        {
           "index": 2273,
           "component": "FormXterm.sPanel4.BtnMobapt",
           "property": "Caption",
@@ -10320,14 +10224,6 @@
           "target": "X 服务器已停止"
         },
         {
-          "index": 2304,
-          "component": "FormXterm.sPanel4.sBitBtn7",
-          "property": "HelpKeyword",
-          "source_type": 6,
-          "source_value_sha256": "526be88f97b5ed3886c800ab63f8835a8c1852ffae6e0765ba183a6c47901bba",
-          "target": "X服务器"
-        },
-        {
           "index": 2305,
           "component": "FormXterm.sPanel4.sBitBtn7",
           "property": "Caption",
@@ -10342,14 +10238,6 @@
           "source_type": 6,
           "source_value_sha256": "7d30aaf33033b2833fcde8e094dfd848894bf9f0e494d51b7943d5ca456f5e1f",
           "target": "退出 MobaXterm"
-        },
-        {
-          "index": 2319,
-          "component": "FormXterm.sPanel4.BtnClose",
-          "property": "HelpKeyword",
-          "source_type": 6,
-          "source_value_sha256": "e4b8840215da9bafcfc421acbe2e769930c786625c3a25d281084a5cb43d5d94",
-          "target": "退出"
         },
         {
           "index": 2320,

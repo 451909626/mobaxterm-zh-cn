@@ -17,7 +17,7 @@ sys.path.insert(0, str(REPO / "src"))
 from mobaxterm_zh.launcher import build_launcher
 from mobaxterm_zh.patcher import load_spec
 from mobaxterm_zh.release import (TOOL_VERSION, LAUNCHER_NAME, PORTABLE_NOTICES, asset_name, portable_asset_name,
-                                 audit_archive, audit_portable_archive, official_version, upstream_for_tag)
+                                 audit_archive, audit_portable_archive, official_version, upstream_for_tag, toolbar_notice)
 from mobaxterm_zh.download import download_upstream
 from mobaxterm_zh.upstream import select_upstream
 
@@ -100,6 +100,7 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
                         "2. 双击本发布包中的“MobaXterm汉化工具.exe”。\n"
                         "3. 选择官方 ZIP，指定一个新的输出文件夹，点击“开始汉化”。\n"
                         f"4. 完成后打开输出目录，双击“{LAUNCHER_NAME}”。以后均从此入口使用。\n\n"
+                        + toolbar_notice(version) + "\n"
                         "工具只生成独立副本；官方原包与已有配置保留原样。输出采用新配置，旧会话需单独迁移。\n"
                         "本发布包包含自编工具与翻译数据，不包含 MobaXterm 本体、CygUtils 插件或完整汉化成品。\n"
                         "MobaXterm 官方下载：https://mobaxterm.mobatek.net/download-home-edition.html\n"
@@ -124,6 +125,7 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
                           f"解压到独立目录后双击“{LAUNCHER_NAME}”。无需运行汉化工具或安装 Python。\n"
                           "前三个程序文件沿用官方便携包的名称和根目录结构；主程序已汉化，两个 CygUtils 组件保留原版。\n"
                           "终端右键菜单中文由附带启动器提供；直接打开主 EXE 不会自动启用该菜单功能。\n"
+                          + toolbar_notice(version) + "\n"
                           "此包不携带用户配置、会话、凭据或日志。首次运行会在本目录创建配置，旧会话需自行迁移。\n"
                           "本包是修改后的非官方副本，原厂数字签名已失效并移除，不代表 Mobatek 官方发行。\n"
                           "MobaXterm 本体及组件适用各自上游许可，MIT 仅覆盖自编工具与有权授权的贡献。\n"),
@@ -147,9 +149,14 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
         sums = audit["sha256"] + "  " + archive.name + "\n" + portable_audit["sha256"] + "  " + portable_archive.name + "\n"
         (output / "SHA256SUMS.txt").write_text(sums, encoding="ascii")
         pending = "\n" + short + " 已通过构建及静态校验，完整实屏回归仍待补做。\n" if version.get("visual_validation", {}).get("status") != "passed" else ""
+        changes = version.get("release_changes", ["补齐关闭运行中会话确认框的正文、“终端”前缀及运行时确认按钮，保留会话名称。"])
+        change_notes = "\n".join("- " + item for item in changes) + "\n\n"
+        validation = version.get("release_validation_note", "")
+        validation_notes = "验证：" + validation + "\n\n" if validation else ""
         notes = ("# MobaXterm " + short + " 简体中文汉化\n\n"
                  "对应官方 Home 便携版 **" + upstream_version + "**。发行版本跟随官方版本。\n\n"
-                 "汉化修订 **" + version["localization_release"] + "**，工具构建 **" + tool_version + "**。补齐关闭运行中会话确认框的正文、“终端”前缀及运行时确认按钮，保留会话名称。\n\n"
+                 "汉化修订 **" + version["localization_release"] + "**，工具构建 **" + tool_version + "**。\n\n"
+                 + change_notes + validation_notes +
                  "| 附件 | 用途 |\n|---|---|\n"
                  "| `" + portable_archive.name + "` | 已汉化便携包，解压后双击 `" + LAUNCHER_NAME + "` |\n"
                  "| `" + archive.name + "` | 预编译图形化工具，可自行选择官方原包生成汉化副本 |\n"
