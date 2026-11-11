@@ -4,7 +4,7 @@ import hashlib
 import re
 import zipfile
 
-TOOL_VERSION = "2.6.1"
+TOOL_VERSION = "2.6.2"
 TAG = re.compile(r"v(\d+\.\d+)\Z")
 
 

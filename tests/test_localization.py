@@ -26,7 +26,9 @@ class ManifestTests(unittest.TestCase):
         changes = [item for form in forms["forms"] for item in form["patches"]]
         self.assertEqual(sum(isinstance(item["target"], str) for item in changes), count)
         self.assertEqual(sum(type(item["target"]) is int for item in changes), 1)
-        self.assertEqual(len(literals["literals"]), 18)
+        self.assertEqual(len(literals["literals"]), 20)
+        self.assertEqual(version["literal_display_locations"], len(literals["literals"]))
+        self.assertEqual(version["total_display_locations"], count + len(literals["literals"]) + 36)
         spans = []
         for item in literals["literals"]:
             before, after = bytes.fromhex(item["before_hex"]), bytes.fromhex(item["after_hex"])
@@ -37,6 +39,26 @@ class ManifestTests(unittest.TestCase):
             start = item["offset"]
             self.assertTrue(all(start >= b or a >= start + len(before) for a, b in spans))
             spans.append((start, start + len(before)))
+
+    def test_close_confirmation_keeps_line_breaks_and_dynamic_session_suffix(self):
+        body = "One or more sessions are currently running.\rDo you want to close the following tab(s) anyway?\r\rTerminal "
+        expected = {"Terminal ": "终端 ", body: "仍有会话正在运行。\r仍要关闭以下标签页吗？\r\r终端 "}
+        for name in ("26.5.0.5542", "26.6.0.5560"):
+            with self.subTest(version=name):
+                _, _, spec = load_spec(REPO, name)
+                entries = [item for item in spec["literals"] if item.get("purpose") == "session_close_confirmation"]
+                self.assertEqual(len(entries), 2)
+                self.assertEqual({item["english"]: item["chinese"] for item in entries}, expected)
+                for item in entries:
+                    raw = bytes.fromhex(item["after_hex"])
+                    size = struct.unpack_from("<I", raw)[0]
+                    prefix = raw[4:4 + size].decode("gbk")
+                    self.assertEqual(prefix.count("\r"), item["english"].count("\r"))
+                    self.assertTrue(prefix.endswith("终端 "))
+                    suffix = "2:  Production SSH 中文名称"
+                    self.assertEqual((raw[4:4 + size] + suffix.encode("gbk")).decode("gbk"), expected[item["english"]] + suffix)
+                # These nearby values control saved preferences, not visible labels.
+                self.assertFalse({"AlwaysWarnOnClose", "Yes"} & {item["english"] for item in spec["literals"]})
 
     def test_protected_functional_properties(self):
         value = {"component": "Form.Component", "property": "OnClick", "type": 7, "value": "Handler"}

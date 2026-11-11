@@ -66,7 +66,8 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
         launcher = build_launcher(REPO, work / "compiled-launcher", version["main_output_name"])
         (payload / "launcher").mkdir()
         shutil.copyfile(launcher, payload / "launcher" / launcher.name)
-        info = {"schema": 1, "tool_version": tool_version, "upstream_version": upstream_version, "official_version": short,
+        info = {"schema": 1, "tool_version": tool_version, "localization_release": version["localization_release"],
+                "upstream_version": upstream_version, "official_version": short,
                 "main_file": version["main_output_name"], "launcher_sha256": hashlib.sha256(launcher.read_bytes()).hexdigest(),
                 "contains_upstream_binaries": False}
         (payload / "release.json").write_text(json.dumps(info, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -119,6 +120,7 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
             raise ValueError("Frozen tool reconstruction failed")
         notices = {
             "汉化说明.txt": ("MobaXterm " + short + " 非官方简体中文便携版\n\n"
+                          "汉化修订：" + version["localization_release"] + "；工具构建：" + tool_version + "。\n"
                           "解压到独立目录后双击“MobaXterm.exe”。无需运行汉化工具或安装 Python。\n"
                           "前三个程序文件沿用官方便携包的名称和根目录结构；主程序已汉化，两个 CygUtils 组件保留原版。\n"
                           "终端右键菜单中文由附带启动器提供；直接打开主 EXE 不会自动启用该菜单功能。\n"
@@ -147,6 +149,7 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
         pending = "\n" + short + " 已通过构建及静态校验，完整实屏回归仍待补做。\n" if version.get("visual_validation", {}).get("status") != "passed" else ""
         notes = ("# MobaXterm " + short + " 简体中文汉化\n\n"
                  "对应官方 Home 便携版 **" + upstream_version + "**。发行版本跟随官方版本。\n\n"
+                 "汉化修订 **" + version["localization_release"] + "**，工具构建 **" + tool_version + "**。补齐关闭运行中会话确认框的正文及“终端”前缀，保留会话名称。\n\n"
                  "| 附件 | 用途 |\n|---|---|\n"
                  "| `" + portable_archive.name + "` | 已汉化便携包，解压后双击 `MobaXterm.exe` |\n"
                  "| `" + archive.name + "` | 预编译图形化工具，可自行选择官方原包生成汉化副本 |\n"

@@ -185,6 +185,28 @@
       ],
       "before_hex": "0400000048656c7000",
       "after_hex": "04000000b0efd6fa00"
+    },
+    {
+      "offset": 5898664,
+      "english": "Terminal ",
+      "chinese": "终端 ",
+      "before_hex": "090000005465726d696e616c2000",
+      "after_hex": "05000000d6d5b6cb200000000000",
+      "references": [
+        5894077
+      ],
+      "purpose": "session_close_confirmation"
+    },
+    {
+      "offset": 5898696,
+      "english": "One or more sessions are currently running.\rDo you want to close the following tab(s) anyway?\r\rTerminal ",
+      "chinese": "仍有会话正在运行。\r仍要关闭以下标签页吗？\r\r终端 ",
+      "before_hex": "680000004f6e65206f72206d6f72652073657373696f6e73206172652063757272656e746c792072756e6e696e672e0d446f20796f752077616e7420746f20636c6f73652074686520666f6c6c6f77696e672074616228732920616e797761793f0d0d5465726d696e616c2000",
+      "after_hex": "30000000c8d4d3d0bbe1bbb0d5fdd4dad4cbd0d0a1a30dc8d4d2aab9d8b1d5d2d4cfc2b1eac7a9d2b3c2f0a3bf0d0dd6d5b6cb20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5894349
+      ],
+      "purpose": "session_close_confirmation"
     }
   ]
 }

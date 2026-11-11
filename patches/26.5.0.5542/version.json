@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "upstream_version": "26.5.0.5542",
-  "localization_release": "R2.5",
+  "localization_release": "R2.6",
   "official_download_page": "https://mobaxterm.mobatek.net/download-home-edition.html",
   "official_archive_url": "https://download.mobatek.net/2652026082870834/MobaXterm_Portable_v26.5.zip",
   "upstream_license_url": "https://mobaxterm.mobatek.net/license.html",
@@ -11,12 +11,15 @@
     "CygUtils.plugin": "94216d3d9265296feeb5c0009af5aaff2fd2fdb8693076f291b552b91bdaad82",
     "CygUtils64.plugin": "df8c12a3aa748fa4e8a24278fd0a98deede836bb9d34b6ac21f2a1877943fbb2"
   },
-  "localized_exe_sha256": "2efdc21f410c26bccd7456a3b954f1012726fae962743ecd7df1cf66c719924b",
+  "localized_exe_sha256": "9538335054e8cfaca4eeeb0a762c9ed7b88115afd898b96b0b5969bb2e4146b7",
   "resource_display_locations": 1608,
-  "literal_display_locations": 18,
+  "literal_display_locations": 20,
   "terminal_menu_labels": 36,
-  "total_display_locations": 1662,
+  "total_display_locations": 1664,
   "main_output_name": "MobaXterm_Personal_26.5.exe",
   "upstream_main_name": "MobaXterm_Personal_26.5.exe",
-  "visual_validation": {"status": "pending", "report": "docs/VALIDATION.md"}
+  "visual_validation": {
+    "status": "pending",
+    "report": "docs/VALIDATION.md"
+  }
 }
