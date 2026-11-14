@@ -15,21 +15,22 @@ from mobaxterm_zh.profiles import migrate
 
 class ManifestTests(unittest.TestCase):
     def test_reviewed_scope_and_fixed_size_literals(self):
-        for version, count in [("26.5.0.5542", 1594), ("26.6.0.5560", 1709)]:
+        for version, count in [("26.5.0.5542", 1594), ("26.6.0.5560", 2023)]:
             with self.subTest(version=version):
                 self.check_manifest(version, count)
 
     def check_manifest(self, name, count):
         version, forms, literals = load_spec(REPO, name)
         self.assertEqual(version["upstream_version"], name)
-        self.assertEqual(len(forms["forms"]), 45)
+        self.assertEqual(len(forms["forms"]), 56 if name == "26.6.0.5560" else 45)
         changes = [item for form in forms["forms"] for item in form["patches"]]
         self.assertEqual(sum(isinstance(item["target"], str) for item in changes), count)
         self.assertEqual(sum(type(item["target"]) is int for item in changes), 1)
-        self.assertEqual(len(literals["literals"]), 24 if name == "26.6.0.5560" else 21)
+        self.assertEqual(len(literals["literals"]), 54 if name == "26.6.0.5560" else 21)
         self.assertEqual(version["literal_display_locations"], len(literals["literals"]))
         self.assertEqual(version["total_display_locations"], count + len(literals["literals"]) + 36
-                         + version.get("toolbar_caption_labels", 0))
+                         + version.get("toolbar_caption_labels", 0) + version.get("runtime_button_labels", 0)
+                         + version.get("runtime_option_labels", 0) + version.get("connection_prompt_rules", 0))
         spans = []
         for item in literals["literals"]:
             before, after = bytes.fromhex(item["before_hex"]), bytes.fromhex(item["after_hex"])
@@ -46,6 +47,33 @@ class ManifestTests(unittest.TestCase):
             start = item["offset"]
             self.assertTrue(all(start >= b or a >= start + len(before) for a, b in spans))
             spans.append((start, start + len(before)))
+
+    def test_sidebar_context_menu_keeps_selection_counts_and_source_session_names(self):
+        version, _, spec = load_spec(REPO, "26.6.0.5560")
+        entries = [item for item in spec["literals"] if item.get("purpose") == "sidebar_session_context_menu"]
+        self.assertEqual(len(entries), version["sidebar_menu_literals"])
+        self.assertEqual(len(entries), 22)
+        self.assertEqual(sum(len(item["references"]) for item in entries), 30)
+        self.assertEqual({item["consumer_method"] for item in entries}, {"TreeSessionsContextPopup"})
+        by_source = {item["english"]: item for item in entries}
+        self.assertTrue({"Edit session", "Delete folder", "Clear saved sessions", "Delete sessions",
+                         "Duplicate these shared sessions", 'Copy to "User sessions" tree'} <= by_source.keys())
+        self.assertNotIn("User sessions\\", by_source)
+        self.assertNotIn("Bookmarks", by_source)
+
+        def translated(source):
+            raw = bytes.fromhex(by_source[source]["after_hex"])
+            length = struct.unpack_from("<I", raw)[0]
+            return raw[4:4 + length]
+
+        for count in (2, 18, 9999):
+            label = translated("Execute these ") + str(count).encode("ascii") + translated(" sessions")
+            self.assertEqual(label.decode("gbk"), "执行所选 " + str(count) + " 个会话")
+        for name in ("Production & Dev", "中文会话", '含"引号"的会话', "User sessions\\原名"):
+            raw_name = name.encode("gbk")
+            label = translated('Paste settings from "') + raw_name + translated('" session')
+            self.assertEqual(label.decode("gbk"), "粘贴来自“" + name + "”的设置")
+            self.assertIn(raw_name, label)
 
     def test_settings_saved_notices_keep_message_boundaries_and_line_breaks(self):
         _, _, spec = load_spec(REPO, "26.6.0.5560")

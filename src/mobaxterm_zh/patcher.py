@@ -64,6 +64,10 @@ def permitted(form, value, target):
     if (form == "TFORMCOLORSSELECTOR" and prop == "Hint"
             and re.fullmatch(r"Col\d+", component.rsplit(".", 1)[-1])):
         return False
+    if prop in ("Text", "Items.Strings[]"):
+        from .session_options import LABELS, permitted as permitted_session_option
+        if (form, component) in LABELS:
+            return permitted_session_option(form, value, target)
     if form == "TFORMPARAMS" and prop in ("Text", "Items.Strings[]"):
         from .settings import permitted as permitted_setting
         return permitted_setting(form, value, target)
@@ -228,6 +232,46 @@ def build_local_ui(repo, output, source_zip=None, source_dir=None):
             old_offset = p0.get_offset_from_rva(rva)
             new_offset = hook_pe.get_offset_from_rva(rva)
             expected_code[old_offset:old_offset + 5] = data[new_offset:new_offset + 5]
+    session_report = None
+    if version.get("session_combo_controls", 0):
+        if version["upstream_version"] != "26.6.0.5560":
+            raise ValueError("No reviewed session option adapter for this version")
+        from .session_options import LABELS, patch as patch_session_options
+        if len(LABELS) != version["session_combo_controls"] + version.get("secondary_combo_controls", 0):
+            raise ValueError("Session option control count differs from the reviewed version")
+        session_spec = json.loads((Path(repo) / "patches" / version["upstream_version"] / "session-values.json").read_text(encoding="utf-8"))
+        if session_spec["source_sha256"] != version["files"][version["upstream_main_name"]]:
+            raise ValueError("Session value recipe belongs to a different source executable")
+        if len(session_spec["sites"]) != version["session_value_sites"]:
+            raise ValueError("Session value call count differs from the reviewed version")
+        data, session_report = patch_session_options(bytes(data), session_spec)
+        data = bytearray(data)
+        expected_code = bytearray(expected_code)
+        hook_pe = pefile.PE(data=bytes(data))
+        for rva in session_report["call_rvas"]:
+            old_offset = p0.get_offset_from_rva(rva)
+            new_offset = hook_pe.get_offset_from_rva(rva)
+            expected_code[old_offset:old_offset + 5] = data[new_offset:new_offset + 5]
+    prompt_report = None
+    if version.get("connection_prompt_rules", 0):
+        if version["upstream_version"] != "26.6.0.5560":
+            raise ValueError("No reviewed connection prompt adapter for this version")
+        from .prompts import patch as patch_prompts
+        folder = Path(repo) / "patches" / version["upstream_version"]
+        catalog = json.loads((folder / "connection-prompts.json").read_text(encoding="utf-8"))
+        prompt_spec = json.loads((folder / "prompt-sites.json").read_text(encoding="utf-8"))
+        source_hash = version["files"][version["upstream_main_name"]]
+        if catalog["source_sha256"] != source_hash or prompt_spec["source_sha256"] != source_hash:
+            raise ValueError("Connection prompt recipe belongs to a different source executable")
+        if len(catalog["rules"]) != version["connection_prompt_rules"] or len(prompt_spec["sites"]) != version["connection_prompt_sites"]:
+            raise ValueError("Connection prompt scope differs from the reviewed version")
+        data, prompt_report = patch_prompts(bytes(data), catalog, prompt_spec)
+        data = bytearray(data)
+        hook_pe = pefile.PE(data=bytes(data))
+        for call, size in prompt_report["call_spans"].items():
+            rva = int(call)
+            old_offset, new_offset = p0.get_offset_from_rva(rva), hook_pe.get_offset_from_rva(rva)
+            expected_code[old_offset:old_offset + size] = data[new_offset:new_offset + size]
     p1 = pefile.PE(data=bytes(data))
     struct.pack_into("<I", data, p1.OPTIONAL_HEADER.get_field_absolute_offset("CheckSum"), p1.generate_checksum())
     p1 = pefile.PE(data=bytes(data))
@@ -237,7 +281,8 @@ def build_local_ui(repo, output, source_zip=None, source_dir=None):
     changed = {(10, name, lang) for name, lang, _ in patches}
     if before.keys() != after.keys() or {k for k in before if before[k] != after[k]} != changed:
         raise ValueError("Unexpected resource change")
-    added_sections = ([b".zhui"] if toolbar_report else []) + ([b".zhset"] if settings_report else [])
+    added_sections = (([b".zhui"] if toolbar_report else []) + ([b".zhset"] if settings_report else [])
+                      + ([b".zhss"] if session_report else []) + ([b".zhpr"] if prompt_report else []))
     if len(p1.sections) != len(p0.sections) + len(added_sections):
         raise ValueError("Unexpected number of PE sections")
     for section, name in zip(p1.sections[len(p0.sections):], added_sections):
@@ -265,4 +310,8 @@ def build_local_ui(repo, output, source_zip=None, source_dir=None):
             "toolbar_caption_labels": version.get("toolbar_caption_labels", 0),
             "toolbar_display_adapter": toolbar_report,
             "settings_combo_controls": version.get("settings_combo_controls", 0),
-            "settings_value_adapter": settings_report}
+            "settings_value_adapter": settings_report,
+            "session_combo_controls": version.get("session_combo_controls", 0),
+            "secondary_combo_controls": version.get("secondary_combo_controls", 0),
+            "session_value_adapter": session_report,
+            "connection_prompt_adapter": prompt_report}

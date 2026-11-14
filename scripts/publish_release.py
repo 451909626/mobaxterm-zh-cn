@@ -43,11 +43,12 @@ def release_command(tag, repository, assets):
         info = json.loads(z.read(next(n for n in z.namelist() if n.endswith("/release-manifest.json"))))
         if info["upstream_version"] != upstream or info["launcher_sha256"] != report["launcher_sha256"]:
             raise ValueError("Tool and portable launcher do not match")
-    latest = upstream == manifests(REPO)[-1]["upstream_version"]
+    validated = version.get("visual_validation", {}).get("status") == "passed"
+    latest = validated and upstream == manifests(REPO)[-1]["upstream_version"]
     command = ["gh", "release", "create", tag, str(archive), str(portable), str(checksum), "--repo", repository,
                "--verify-tag", "--title", short,
                "--notes-file", str(assets / "release-notes.md"), "--latest=" + str(latest).lower()]
-    if version.get("visual_validation", {}).get("status") != "passed":
+    if not validated:
         command.append("--prerelease")
     return command
 

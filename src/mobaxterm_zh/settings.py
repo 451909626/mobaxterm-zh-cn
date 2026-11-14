@@ -26,7 +26,7 @@ MISC = "FormParams.PC36.sTabSheet2."
 CUSTOM = "FormParams.PC36.OngletCustom."
 
 COMBO_LABELS = {
-    # Professional customizer directory templates are literal path tokens.
+    # Directory templates use the separately guarded R2.11 option adapters.
     # They are not part of the Home Edition's available settings surface.
     GENERAL + "ComboDefaultUserProfile": _pairs(
         ["<Automatic>", "<Application Data>", "<My Documents>", "<Local Application Data>"],

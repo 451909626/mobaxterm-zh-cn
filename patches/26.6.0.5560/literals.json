@@ -3,6 +3,28 @@
   "encoding": "GBK / CP936",
   "literals": [
     {
+      "offset": 5221252,
+      "english": "shared folder",
+      "chinese": "共享文件夹",
+      "before_hex": "0d00000073686172656420666f6c64657200",
+      "after_hex": "0a000000b9b2cfedcec4bcfebcd000000000",
+      "references": [
+        5221158
+      ],
+      "purpose": "shared_session_runtime_option"
+    },
+    {
+      "offset": 5765444,
+      "english": "User sessions",
+      "chinese": "用户会话",
+      "references": [
+        5759664,
+        5759910
+      ],
+      "before_hex": "0d000000557365722073657373696f6e7300",
+      "after_hex": "08000000d3c3bba7bbe1bbb0000000000000"
+    },
+    {
       "offset": 5858708,
       "english": "  UNREGISTERED VERSION",
       "chinese": "  未注册版本",
@@ -23,88 +45,6 @@
       ]
     },
     {
-      "offset": 6231112,
-      "english": " days",
-      "chinese": " 天",
-      "before_hex": "05000000206461797300",
-      "after_hex": "0300000020ccec000000",
-      "references": [
-        6227201
-      ]
-    },
-    {
-      "offset": 6231128,
-      "english": " hours",
-      "chinese": " 小时",
-      "before_hex": "0600000020686f75727300",
-      "after_hex": "0500000020d0a1cab10000",
-      "references": [
-        6227304
-      ]
-    },
-    {
-      "offset": 6231144,
-      "english": " min",
-      "chinese": " 分",
-      "before_hex": "04000000206d696e00",
-      "after_hex": "0300000020b7d60000",
-      "references": [
-        6227404
-      ]
-    },
-    {
-      "offset": 6231160,
-      "english": " sec",
-      "chinese": " 秒",
-      "before_hex": "040000002073656300",
-      "after_hex": "0300000020c3eb0000",
-      "references": [
-        6227465
-      ]
-    },
-    {
-      "offset": 6368160,
-      "english": "Start local terminal",
-      "chinese": "启动本地终端",
-      "references": [
-        6366343
-      ],
-      "before_hex": "140000005374617274206c6f63616c207465726d696e616c00",
-      "after_hex": "0c000000c6f4b6afb1beb5d8d6d5b6cb000000000000000000"
-    },
-    {
-      "offset": 6368308,
-      "english": "Recover previous sessions",
-      "chinese": "恢复上次会话",
-      "references": [
-        6366835
-      ],
-      "before_hex": "190000005265636f7665722070726576696f75732073657373696f6e7300",
-      "after_hex": "0c000000bbd6b8b4c9cfb4cebbe1bbb00000000000000000000000000000"
-    },
-    {
-      "offset": 6368192,
-      "english": "New session",
-      "chinese": "新建会话",
-      "references": [
-        6366380,
-        6366904
-      ],
-      "before_hex": "0b0000004e65772073657373696f6e00",
-      "after_hex": "08000000d0c2bda8bbe1bbb000000000"
-    },
-    {
-      "offset": 5765444,
-      "english": "User sessions",
-      "chinese": "用户会话",
-      "references": [
-        5759664,
-        5759910
-      ],
-      "before_hex": "0d000000557365722073657373696f6e7300",
-      "after_hex": "08000000d3c3bba7bbe1bbb0000000000000"
-    },
-    {
       "offset": 5859188,
       "english": "User sessions",
       "chinese": "用户会话",
@@ -113,6 +53,75 @@
       ],
       "before_hex": "0d000000557365722073657373696f6e7300",
       "after_hex": "08000000d3c3bba7bbe1bbb0000000000000"
+    },
+    {
+      "offset": 5886212,
+      "english": "You must restart MobaXterm in order to apply the modifications.\rDo you want to do it now?",
+      "chinese": "需要重启 MobaXterm 才能应用更改。\r是否立即重启？",
+      "before_hex": "596f75206d7573742072657374617274204d6f6261587465726d20696e206f7264657220746f206170706c7920746865206d6f64696669636174696f6e732e0d446f20796f752077616e7420746f20646f206974206e6f773f00",
+      "after_hex": "d0e8d2aad6d8c6f4204d6f6261587465726d20b2c5c4dcd3a6d3c3b8fcb8c4a1a30dcac7b7f1c1a2bcb4d6d8c6f4a3bf000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5883350
+      ],
+      "purpose": "settings_saved_notice",
+      "storage": "pansichar"
+    },
+    {
+      "offset": 5886548,
+      "english": "Your new terminal settings will be applied to every new terminal you start.",
+      "chinese": "新的终端设置将在此后新建的每个终端中生效。",
+      "before_hex": "596f7572206e6577207465726d696e616c2073657474696e67732077696c6c206265206170706c69656420746f206576657279206e6577207465726d696e616c20796f752073746172742e00",
+      "after_hex": "d0c2b5c4d6d5b6cbc9e8d6c3bdabd4dab4cbbaf3d0c2bda8b5c4c3bfb8f6d6d5b6cbd6d0c9fad0a7a1a300000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5883873
+      ],
+      "purpose": "settings_saved_notice",
+      "storage": "pansichar"
+    },
+    {
+      "offset": 5886624,
+      "english": "In order to apply your new X11 settings, you have to restart the X11 server.\rDo you want to do it now?",
+      "chinese": "需要重启 X11 服务器才能应用新的 X11 设置。\r是否立即重启？",
+      "before_hex": "496e206f7264657220746f206170706c7920796f7572206e6577205831312073657474696e67732c20796f75206861766520746f20726573746172742074686520583131207365727665722e0d446f20796f752077616e7420746f20646f206974206e6f773f00",
+      "after_hex": "d0e8d2aad6d8c6f42058313120b7fecef1c6f7b2c5c4dcd3a6d3c3d0c2b5c42058313120c9e8d6c3a1a30dcac7b7f1c1a2bcb4d6d8c6f4a3bf00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5883920
+      ],
+      "purpose": "settings_saved_notice",
+      "storage": "pansichar"
+    },
+    {
+      "offset": 5898652,
+      "english": "Yes",
+      "chinese": "是",
+      "before_hex": "0300000059657300",
+      "after_hex": "02000000cac70000",
+      "references": [
+        5893972
+      ],
+      "purpose": "session_close_confirmation_button"
+    },
+    {
+      "offset": 5898664,
+      "english": "Terminal ",
+      "chinese": "终端 ",
+      "before_hex": "090000005465726d696e616c2000",
+      "after_hex": "05000000d6d5b6cb200000000000",
+      "references": [
+        5894077
+      ],
+      "purpose": "session_close_confirmation"
+    },
+    {
+      "offset": 5898696,
+      "english": "One or more sessions are currently running.\rDo you want to close the following tab(s) anyway?\r\rTerminal ",
+      "chinese": "仍有会话正在运行。\r仍要关闭以下标签页吗？\r\r终端 ",
+      "before_hex": "680000004f6e65206f72206d6f72652073657373696f6e73206172652063757272656e746c792072756e6e696e672e0d446f20796f752077616e7420746f20636c6f73652074686520666f6c6c6f77696e672074616228732920616e797761793f0d0d5465726d696e616c2000",
+      "after_hex": "30000000c8d4d3d0bbe1bbb0d5fdd4dad4cbd0d0a1a30dc8d4d2aab9d8b1d5d2d4cfc2b1eac7a9d2b3c2f0a3bf0d0dd6d5b6cb20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5894349
+      ],
+      "purpose": "session_close_confirmation"
     },
     {
       "offset": 5939604,
@@ -157,16 +166,6 @@
       "after_hex": "0b000000d0c2bda8bbe1bbb02e2e2e00000000"
     },
     {
-      "offset": 6363356,
-      "english": "New session...",
-      "chinese": "新建会话...",
-      "references": [
-        6362837
-      ],
-      "before_hex": "0e0000004e65772073657373696f6e2e2e2e00",
-      "after_hex": "0b000000d0c2bda8bbe1bbb02e2e2e00000000"
-    },
-    {
       "offset": 6089936,
       "english": "Help",
       "chinese": "帮助",
@@ -175,6 +174,56 @@
       ],
       "before_hex": "0400000048656c7000",
       "after_hex": "04000000b0efd6fa00"
+    },
+    {
+      "offset": 6231112,
+      "english": " days",
+      "chinese": " 天",
+      "before_hex": "05000000206461797300",
+      "after_hex": "0300000020ccec000000",
+      "references": [
+        6227201
+      ]
+    },
+    {
+      "offset": 6231128,
+      "english": " hours",
+      "chinese": " 小时",
+      "before_hex": "0600000020686f75727300",
+      "after_hex": "0500000020d0a1cab10000",
+      "references": [
+        6227304
+      ]
+    },
+    {
+      "offset": 6231144,
+      "english": " min",
+      "chinese": " 分",
+      "before_hex": "04000000206d696e00",
+      "after_hex": "0300000020b7d60000",
+      "references": [
+        6227404
+      ]
+    },
+    {
+      "offset": 6231160,
+      "english": " sec",
+      "chinese": " 秒",
+      "before_hex": "040000002073656300",
+      "after_hex": "0300000020c3eb0000",
+      "references": [
+        6227465
+      ]
+    },
+    {
+      "offset": 6363356,
+      "english": "New session...",
+      "chinese": "新建会话...",
+      "references": [
+        6362837
+      ],
+      "before_hex": "0e0000004e65772073657373696f6e2e2e2e00",
+      "after_hex": "0b000000d0c2bda8bbe1bbb02e2e2e00000000"
     },
     {
       "offset": 6363380,
@@ -187,73 +236,391 @@
       "after_hex": "04000000b0efd6fa00"
     },
     {
-      "offset": 5898664,
-      "english": "Terminal ",
-      "chinese": "终端 ",
-      "before_hex": "090000005465726d696e616c2000",
-      "after_hex": "05000000d6d5b6cb200000000000",
+      "offset": 6368160,
+      "english": "Start local terminal",
+      "chinese": "启动本地终端",
       "references": [
-        5894077
+        6366343
       ],
-      "purpose": "session_close_confirmation"
+      "before_hex": "140000005374617274206c6f63616c207465726d696e616c00",
+      "after_hex": "0c000000c6f4b6afb1beb5d8d6d5b6cb000000000000000000"
     },
     {
-      "offset": 5898696,
-      "english": "One or more sessions are currently running.\rDo you want to close the following tab(s) anyway?\r\rTerminal ",
-      "chinese": "仍有会话正在运行。\r仍要关闭以下标签页吗？\r\r终端 ",
-      "before_hex": "680000004f6e65206f72206d6f72652073657373696f6e73206172652063757272656e746c792072756e6e696e672e0d446f20796f752077616e7420746f20636c6f73652074686520666f6c6c6f77696e672074616228732920616e797761793f0d0d5465726d696e616c2000",
-      "after_hex": "30000000c8d4d3d0bbe1bbb0d5fdd4dad4cbd0d0a1a30dc8d4d2aab9d8b1d5d2d4cfc2b1eac7a9d2b3c2f0a3bf0d0dd6d5b6cb20000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "offset": 6368192,
+      "english": "New session",
+      "chinese": "新建会话",
       "references": [
-        5894349
+        6366380,
+        6366904
       ],
-      "purpose": "session_close_confirmation"
+      "before_hex": "0b0000004e65772073657373696f6e00",
+      "after_hex": "08000000d0c2bda8bbe1bbb000000000"
     },
     {
-      "offset": 5898652,
-      "english": "Yes",
-      "chinese": "是",
-      "before_hex": "0300000059657300",
-      "after_hex": "02000000cac70000",
+      "offset": 6368308,
+      "english": "Recover previous sessions",
+      "chinese": "恢复上次会话",
       "references": [
-        5893972
+        6366835
       ],
-      "purpose": "session_close_confirmation_button"
+      "before_hex": "190000005265636f7665722070726576696f75732073657373696f6e7300",
+      "after_hex": "0c000000bbd6b8b4c9cfb4cebbe1bbb00000000000000000000000000000"
     },
     {
-      "offset": 5886212,
-      "english": "You must restart MobaXterm in order to apply the modifications.\rDo you want to do it now?",
-      "chinese": "需要重启 MobaXterm 才能应用更改。\r是否立即重启？",
-      "before_hex": "596f75206d7573742072657374617274204d6f6261587465726d20696e206f7264657220746f206170706c7920746865206d6f64696669636174696f6e732e0d446f20796f752077616e7420746f20646f206974206e6f773f00",
-      "after_hex": "d0e8d2aad6d8c6f4204d6f6261587465726d20b2c5c4dcd3a6d3c3b8fcb8c4a1a30dcac7b7f1c1a2bcb4d6d8c6f4a3bf000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "offset": 6057924,
+      "english": "Delete sessions",
+      "chinese": "删除所选会话",
+      "before_hex": "0f00000044656c6574652073657373696f6e7300",
+      "after_hex": "0c000000c9beb3fdcbf9d1a1bbe1bbb000000000",
       "references": [
-        5883350
+        6055525
       ],
-      "purpose": "settings_saved_notice",
-      "storage": "pansichar"
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
     },
     {
-      "offset": 5886548,
-      "english": "Your new terminal settings will be applied to every new terminal you start.",
-      "chinese": "新的终端设置将在此后新建的每个终端中生效。",
-      "before_hex": "596f7572206e6577207465726d696e616c2073657474696e67732077696c6c206265206170706c69656420746f206576657279206e6577207465726d696e616c20796f752073746172742e00",
-      "after_hex": "d0c2b5c4d6d5b6cbc9e8d6c3bdabd4dab4cbbaf3d0c2bda8b5c4c3bfb8f6d6d5b6cbd6d0c9fad0a7a1a300000000000000000000000000000000000000000000000000000000000000000000",
+      "offset": 6057948,
+      "english": "Execute these ",
+      "chinese": "执行所选 ",
+      "before_hex": "0e000000457865637574652074686573652000",
+      "after_hex": "09000000d6b4d0d0cbf9d1a120000000000000",
       "references": [
-        5883873
+        6055535
       ],
-      "purpose": "settings_saved_notice",
-      "storage": "pansichar"
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
     },
     {
-      "offset": 5886624,
-      "english": "In order to apply your new X11 settings, you have to restart the X11 server.\rDo you want to do it now?",
-      "chinese": "需要重启 X11 服务器才能应用新的 X11 设置。\r是否立即重启？",
-      "before_hex": "496e206f7264657220746f206170706c7920796f7572206e6577205831312073657474696e67732c20796f75206861766520746f20726573746172742074686520583131207365727665722e0d446f20796f752077616e7420746f20646f206974206e6f773f00",
-      "after_hex": "d0e8d2aad6d8c6f42058313120b7fecef1c6f7b2c5c4dcd3a6d3c3d0c2b5c42058313120c9e8d6c3a1a30dcac7b7f1c1a2bcb4d6d8c6f4a3bf00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "offset": 6057972,
+      "english": " sessions",
+      "chinese": " 个会话",
+      "before_hex": "090000002073657373696f6e7300",
+      "after_hex": "0700000020b8f6bbe1bbb0000000",
       "references": [
-        5883920
+        6055566
       ],
-      "purpose": "settings_saved_notice",
-      "storage": "pansichar"
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6057992,
+      "english": "Paste settings from \"",
+      "chinese": "粘贴来自“",
+      "before_hex": "1500000050617374652073657474696e67732066726f6d202200",
+      "after_hex": "0a000000d5b3ccf9c0b4d7d4a1b0000000000000000000000000",
+      "references": [
+        6055637,
+        6056642,
+        6056839,
+        6057355,
+        6057673
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058024,
+      "english": "\" session",
+      "chinese": "”的设置",
+      "before_hex": "09000000222073657373696f6e00",
+      "after_hex": "08000000a1b1b5c4c9e8d6c30000",
+      "references": [
+        6055648,
+        6056653,
+        6056850,
+        6057366,
+        6057684
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058044,
+      "english": "Import sessions from file",
+      "chinese": "从文件导入会话",
+      "before_hex": "19000000496d706f72742073657373696f6e732066726f6d2066696c6500",
+      "after_hex": "0e000000b4d3cec4bcfeb5bcc8ebbbe1bbb0000000000000000000000000",
+      "references": [
+        6055778
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058080,
+      "english": "Export all sessions to file",
+      "chinese": "将所有会话导出到文件",
+      "before_hex": "1b0000004578706f727420616c6c2073657373696f6e7320746f2066696c6500",
+      "after_hex": "14000000bdabcbf9d3d0bbe1bbb0b5bcb3f6b5bdcec4bcfe0000000000000000",
+      "references": [
+        6055794
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058116,
+      "english": "Edit",
+      "chinese": "编辑",
+      "before_hex": "040000004564697400",
+      "after_hex": "04000000b1e0bcad00",
+      "references": [
+        6055810
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058132,
+      "english": "Delete",
+      "chinese": "删除",
+      "before_hex": "0600000044656c65746500",
+      "after_hex": "04000000c9beb3fd000000",
+      "references": [
+        6055826
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058148,
+      "english": "Execute",
+      "chinese": "执行",
+      "before_hex": "070000004578656375746500",
+      "after_hex": "04000000d6b4d0d000000000",
+      "references": [
+        6055842
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058164,
+      "english": "Share these sessions with my team",
+      "chinese": "与团队共享这些会话",
+      "before_hex": "2100000053686172652074686573652073657373696f6e732077697468206d79207465616d00",
+      "after_hex": "12000000d3ebcdc5b6d3b9b2cfedd5e2d0a9bbe1bbb000000000000000000000000000000000",
+      "references": [
+        6055858
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058208,
+      "english": "Copy to \"User sessions\" tree",
+      "chinese": "复制到“用户会话”",
+      "before_hex": "1c000000436f707920746f2022557365722073657373696f6e7322207472656500",
+      "after_hex": "12000000b8b4d6c6b5bda1b0d3c3bba7bbe1bbb0a1b10000000000000000000000",
+      "references": [
+        6055918
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058332,
+      "english": "Duplicate these shared sessions",
+      "chinese": "复制这些共享会话",
+      "before_hex": "1f0000004475706c6963617465207468657365207368617265642073657373696f6e7300",
+      "after_hex": "10000000b8b4d6c6d5e2d0a9b9b2cfedbbe1bbb000000000000000000000000000000000",
+      "references": [
+        6056319
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058372,
+      "english": "Clear saved sessions",
+      "chinese": "清空已保存的会话",
+      "before_hex": "14000000436c6561722073617665642073657373696f6e7300",
+      "after_hex": "10000000c7e5bfd5d2d1b1a3b4e6b5c4bbe1bbb00000000000",
+      "references": [
+        6056463
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058404,
+      "english": "Edit session",
+      "chinese": "编辑会话",
+      "before_hex": "0c000000456469742073657373696f6e00",
+      "after_hex": "08000000b1e0bcadbbe1bbb00000000000",
+      "references": [
+        6056916
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058428,
+      "english": "Delete session",
+      "chinese": "删除会话",
+      "before_hex": "0e00000044656c6574652073657373696f6e00",
+      "after_hex": "08000000c9beb3fdbbe1bbb000000000000000",
+      "references": [
+        6056932
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058452,
+      "english": "Duplicate session",
+      "chinese": "复制会话",
+      "before_hex": "110000004475706c69636174652073657373696f6e00",
+      "after_hex": "08000000b8b4d6c6bbe1bbb000000000000000000000",
+      "references": [
+        6056948
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058480,
+      "english": "Rename session",
+      "chinese": "重命名会话",
+      "before_hex": "0e00000052656e616d652073657373696f6e00",
+      "after_hex": "0a000000d6d8c3fcc3fbbbe1bbb00000000000",
+      "references": [
+        6056964
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058504,
+      "english": "Edit folder",
+      "chinese": "编辑文件夹",
+      "before_hex": "0b0000004564697420666f6c64657200",
+      "after_hex": "0a000000b1e0bcadcec4bcfebcd00000",
+      "references": [
+        6057422
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058524,
+      "english": "Delete folder",
+      "chinese": "删除文件夹",
+      "before_hex": "0d00000044656c65746520666f6c64657200",
+      "after_hex": "0a000000c9beb3fdcec4bcfebcd000000000",
+      "references": [
+        6057438
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058548,
+      "english": "Import sessions into this folder",
+      "chinese": "导入会话到此文件夹",
+      "before_hex": "20000000496d706f72742073657373696f6e7320696e746f207468697320666f6c64657200",
+      "after_hex": "12000000b5bcc8ebbbe1bbb0b5bdb4cbcec4bcfebcd0000000000000000000000000000000",
+      "references": [
+        6057454
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 6058592,
+      "english": "Export sessions from this folder",
+      "chinese": "导出此文件夹的会话",
+      "before_hex": "200000004578706f72742073657373696f6e732066726f6d207468697320666f6c64657200",
+      "after_hex": "12000000b5bcb3f6b4cbcec4bcfebcd0b5c4bbe1bbb0000000000000000000000000000000",
+      "references": [
+        6057470
+      ],
+      "purpose": "sidebar_session_context_menu",
+      "consumer_method": "TreeSessionsContextPopup"
+    },
+    {
+      "offset": 4410548,
+      "storage": "pansichar",
+      "english": "Sorry, the new master password fields do not match.",
+      "chinese": "两次输入的新主密码不一致。",
+      "before_hex": "536f7272792c20746865206e6577206d61737465722070617373776f7264206669656c647320646f206e6f74206d617463682e00",
+      "after_hex": "c1bdb4cecae4c8ebb5c4d0c2d6f7c3dcc2ebb2bbd2bbd6c2a1a30000000000000000000000000000000000000000000000000000",
+      "references": [
+        4405380
+      ],
+      "purpose": "native_master_password_error"
+    },
+    {
+      "offset": 4410600,
+      "storage": "pansichar",
+      "english": "Sorry, the master password is too weak.\rYour master password must have at least 12 characters and use at least 3 of the 4 available character types: lowercase letters, uppercase letters, numbers, and symbols.",
+      "chinese": "主密码强度不足。\r主密码至少需要 12 个字符，并包含小写字母、大写字母、数字和符号这四类字符中的至少三类。",
+      "before_hex": "536f7272792c20746865206d61737465722070617373776f726420697320746f6f207765616b2e0d596f7572206d61737465722070617373776f7264206d7573742068617665206174206c65617374203132206368617261637465727320616e6420757365206174206c656173742033206f6620746865203420617661696c61626c65206368617261637465722074797065733a206c6f77657263617365206c6574746572732c20757070657263617365206c6574746572732c206e756d626572732c20616e642073796d626f6c732e00",
+      "after_hex": "d6f7c3dcc2ebc7bfb6c8b2bbd7e3a1a30dd6f7c3dcc2ebd6c1c9d9d0e8d2aa20313220b8f6d7d6b7fba3acb2a2b0fcbaacd0a1d0b4d7d6c4b8a1a2b4f3d0b4d7d6c4b8a1a2cafdd7d6bacdb7fbbac5d5e2cbc4c0e0d7d6b7fbd6d0b5c4d6c1c9d9c8fdc0e0a1a300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        4405471
+      ],
+      "purpose": "native_master_password_error"
+    },
+    {
+      "offset": 4410812,
+      "storage": "pansichar",
+      "english": "Sorry, the master password is too weak.\rYour master password must have at least 8 characters and use at least 3 of the 4 available character types: lowercase letters, uppercase letters, numbers, and symbols.",
+      "chinese": "主密码强度不足。\r主密码至少需要 8 个字符，并包含小写字母、大写字母、数字和符号这四类字符中的至少三类。",
+      "before_hex": "536f7272792c20746865206d61737465722070617373776f726420697320746f6f207765616b2e0d596f7572206d61737465722070617373776f7264206d7573742068617665206174206c656173742038206368617261637465727320616e6420757365206174206c656173742033206f6620746865203420617661696c61626c65206368617261637465722074797065733a206c6f77657263617365206c6574746572732c20757070657263617365206c6574746572732c206e756d626572732c20616e642073796d626f6c732e00",
+      "after_hex": "d6f7c3dcc2ebc7bfb6c8b2bbd7e3a1a30dd6f7c3dcc2ebd6c1c9d9d0e8d2aa203820b8f6d7d6b7fba3acb2a2b0fcbaacd0a1d0b4d7d6c4b8a1a2b4f3d0b4d7d6c4b8a1a2cafdd7d6bacdb7fbbac5d5e2cbc4c0e0d7d6b7fbd6d0b5c4d6c1c9d9c8fdc0e0a1a300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        4405562
+      ],
+      "purpose": "native_master_password_error"
+    },
+    {
+      "offset": 4411020,
+      "storage": "pansichar",
+      "english": "Sorry, the master password is too weak.\rYour master password must have at least 7 characters.",
+      "chinese": "主密码强度不足。\r主密码至少需要 7 个字符。",
+      "before_hex": "536f7272792c20746865206d61737465722070617373776f726420697320746f6f207765616b2e0d596f7572206d61737465722070617373776f7264206d7573742068617665206174206c65617374203720636861726163746572732e00",
+      "after_hex": "d6f7c3dcc2ebc7bfb6c8b2bbd7e3a1a30dd6f7c3dcc2ebd6c1c9d9d0e8d2aa203720b8f6d7d6b7fba1a300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        4405624
+      ],
+      "purpose": "native_master_password_error"
+    },
+    {
+      "offset": 4411116,
+      "storage": "pansichar",
+      "english": "LAST WARNING:\r\rIF YOU FORGET YOUR MASTER PASSWORD, YOU WILL LOSE ALL YOUR STORED PASSWORDS!\r\rAre you really sure you want to continue and encrypt all your MobaXterm stored passwords database?",
+      "chinese": "最后警告：\r\r如果忘记主密码，您将丢失所有已保存的密码！\r\r是否确实要继续，并加密 MobaXterm 的整个已保存密码数据库？",
+      "before_hex": "4c415354205741524e494e473a0d0d494620594f5520464f5247455420594f5552204d41535445522050415353574f52442c20594f552057494c4c204c4f534520414c4c20594f55522053544f5245442050415353574f524453210d0d41726520796f75207265616c6c79207375726520796f752077616e7420746f20636f6e74696e756520616e6420656e637279707420616c6c20796f7572204d6f6261587465726d2073746f7265642070617373776f7264732064617461626173653f00",
+      "after_hex": "d7eebaf3beafb8e6a3ba0d0dc8e7b9fbcdfcbcc7d6f7c3dcc2eba3acc4fabdabb6aacaa7cbf9d3d0d2d1b1a3b4e6b5c4c3dcc2eba3a10d0dcac7b7f1c8b7cab5d2aabcccd0f8a3acb2a2bcd3c3dc204d6f6261587465726d20b5c4d5fbb8f6d2d1b1a3b4e6c3dcc2ebcafdbeddbfe2a3bf00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        4405688
+      ],
+      "purpose": "native_master_password_error"
+    },
+    {
+      "offset": 5992052,
+      "storage": "pansichar",
+      "english": "Sorry, the master password you entered is incorrect.\rMobaXterm will now be closed.\r\rIf you forgot your master password and want to use MobaXterm again, you can download our \"Reset Master Password\" tool from our website: https://mobaxterm.mobatek.net/resetmasterpassword.html.\rThis tool will disable your master password, but you will lose all your previously saved passwords.",
+      "chinese": "您输入的主密码不正确。\rMobaXterm 即将关闭。\r\r如果忘记主密码并希望重新使用 MobaXterm，可从官网下载“Reset Master Password”工具：https://mobaxterm.mobatek.net/resetmasterpassword.html。\r该工具会禁用主密码，但您将丢失此前保存的所有密码。",
+      "before_hex": "536f7272792c20746865206d61737465722070617373776f726420796f7520656e746572656420697320696e636f72726563742e0d4d6f6261587465726d2077696c6c206e6f7720626520636c6f7365642e0d0d496620796f7520666f72676f7420796f7572206d61737465722070617373776f726420616e642077616e7420746f20757365204d6f6261587465726d20616761696e2c20796f752063616e20646f776e6c6f6164206f757220225265736574204d61737465722050617373776f72642220746f6f6c2066726f6d206f757220776562736974653a2068747470733a2f2f6d6f6261787465726d2e6d6f626174656b2e6e65742f72657365746d617374657270617373776f72642e68746d6c2e0d5468697320746f6f6c2077696c6c2064697361626c6520796f7572206d61737465722070617373776f72642c2062757420796f752077696c6c206c6f736520616c6c20796f75722070726576696f75736c792073617665642070617373776f7264732e00",
+      "after_hex": "c4facae4c8ebb5c4d6f7c3dcc2ebb2bbd5fdc8b7a1a30d4d6f6261587465726d20bcb4bdabb9d8b1d5a1a30d0dc8e7b9fbcdfcbcc7d6f7c3dcc2ebb2a2cfa3cdfbd6d8d0c2cab9d3c3204d6f6261587465726da3acbfc9b4d3b9d9cdf8cfc2d4d8a1b05265736574204d61737465722050617373776f7264a1b1b9a4bedfa3ba68747470733a2f2f6d6f6261787465726d2e6d6f626174656b2e6e65742f72657365746d617374657270617373776f72642e68746d6ca1a30db8c3b9a4bedfbbe1bdfbd3c3d6f7c3dcc2eba3acb5abc4fabdabb6aacaa7b4cbc7b0b1a3b4e6b5c4cbf9d3d0c3dcc2eba1a3000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5972701
+      ],
+      "purpose": "native_master_password_error"
+    },
+    {
+      "offset": 6860140,
+      "storage": "pansichar",
+      "english": "Sorry, the master password you entered is incorrect.\rMobaXterm will now be closed.\r\rIf you forgot your master password and want to use MobaXterm again, you can download our \"Reset Master Password\" tool from our website: https://mobaxterm.mobatek.net/resetmasterpassword.html.\rThis tool will disable your master password, but you will lose all your previously saved passwords.",
+      "chinese": "您输入的主密码不正确。\rMobaXterm 即将关闭。\r\r如果忘记主密码并希望重新使用 MobaXterm，可从官网下载“Reset Master Password”工具：https://mobaxterm.mobatek.net/resetmasterpassword.html。\r该工具会禁用主密码，但您将丢失此前保存的所有密码。",
+      "before_hex": "536f7272792c20746865206d61737465722070617373776f726420796f7520656e746572656420697320696e636f72726563742e0d4d6f6261587465726d2077696c6c206e6f7720626520636c6f7365642e0d0d496620796f7520666f72676f7420796f7572206d61737465722070617373776f726420616e642077616e7420746f20757365204d6f6261587465726d20616761696e2c20796f752063616e20646f776e6c6f6164206f757220225265736574204d61737465722050617373776f72642220746f6f6c2066726f6d206f757220776562736974653a2068747470733a2f2f6d6f6261787465726d2e6d6f626174656b2e6e65742f72657365746d617374657270617373776f72642e68746d6c2e0d5468697320746f6f6c2077696c6c2064697361626c6520796f7572206d61737465722070617373776f72642c2062757420796f752077696c6c206c6f736520616c6c20796f75722070726576696f75736c792073617665642070617373776f7264732e00",
+      "after_hex": "c4facae4c8ebb5c4d6f7c3dcc2ebb2bbd5fdc8b7a1a30d4d6f6261587465726d20bcb4bdabb9d8b1d5a1a30d0dc8e7b9fbcdfcbcc7d6f7c3dcc2ebb2a2cfa3cdfbd6d8d0c2cab9d3c3204d6f6261587465726da3acbfc9b4d3b9d9cdf8cfc2d4d8a1b05265736574204d61737465722050617373776f7264a1b1b9a4bedfa3ba68747470733a2f2f6d6f6261787465726d2e6d6f626174656b2e6e65742f72657365746d617374657270617373776f72642e68746d6ca1a30db8c3b9a4bedfbbe1bdfbd3c3d6f7c3dcc2eba3acb5abc4fabdabb6aacaa7b4cbc7b0b1a3b4e6b5c4cbf9d3d0c3dcc2eba1a3000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        6856585
+      ],
+      "purpose": "native_master_password_error"
     }
   ]
 }

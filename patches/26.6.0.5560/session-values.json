@@ -1,0 +1,557 @@
+{
+  "schema": 1,
+  "upstream_version": "26.6.0.5560",
+  "source_sha256": "e9a66144b3a1c4d32f8062b1eb34e26e9ed5298106abf1982b4654ab107f13a5",
+  "sites": [
+    {
+      "control": "FormSessionEdit.PC1.TabTerminal.sComboBox4",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5018971,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "0300008bc38b10ff92cc0000008bd08d4dd48b833c020000",
+      "source_consumer": "CreerTermPuTTYConf"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabTerminal.sComboBox4",
+      "kind": "item",
+      "vmt_register": "edi",
+      "rva": 5032938,
+      "before_hex": "8b38ff570c",
+      "context_before_hex": "10ff92cc0000008bd08d4d888b86400300008b803c020000",
+      "source_consumer": "LaunchSession"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabTerminal.sComboBox4",
+      "kind": "indexof",
+      "vmt_register": "",
+      "rva": 5036371,
+      "before_hex": "8b08ff5154",
+      "context_before_hex": "00008b038b906c0600008b068bb8400300008b873c020000",
+      "source_consumer": "LoadDefaultTermSettings"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabTerminal.sComboBox4",
+      "kind": "indexof",
+      "vmt_register": "",
+      "rva": 5036427,
+      "before_hex": "8b08ff5154",
+      "context_before_hex": "0085c07d358b068bb8400300008b873c020000ba94dc8c00",
+      "source_consumer": "LoadDefaultTermSettings"
+    },
+    {
+      "control": "FormSessionEdit.sBitBtn7",
+      "kind": "caption",
+      "vmt_register": "",
+      "rva": 5037809,
+      "before_hex": "e836b5bbff",
+      "context_before_hex": "00817df898feffff75288b45fc8b80fc020000badc908d00",
+      "source_consumer": "ChargerLaSession button mode",
+      "source_label": "Save"
+    },
+    {
+      "control": "FormSessionEdit.sBitBtn8",
+      "kind": "caption",
+      "vmt_register": "",
+      "rva": 5037828,
+      "before_hex": "e823b5bbff",
+      "context_before_hex": "badc908d00e836b5bbff8b45fc8b8000030000baec908d00",
+      "source_consumer": "ChargerLaSession button mode",
+      "source_label": "Close"
+    },
+    {
+      "control": "FormSessionEdit.sBitBtn7",
+      "kind": "caption",
+      "vmt_register": "",
+      "rva": 5037849,
+      "before_hex": "e80eb5bbff",
+      "context_before_hex": "908d00e823b5bbffeb268b45fc8b80fc020000bafc908d00",
+      "source_consumer": "ChargerLaSession button mode",
+      "source_label": "OK"
+    },
+    {
+      "control": "FormSessionEdit.sBitBtn8",
+      "kind": "caption",
+      "vmt_register": "",
+      "rva": 5037868,
+      "before_hex": "e8fbb4bbff",
+      "context_before_hex": "bafc908d00e80eb5bbff8b45fc8b8000030000ba08918d00",
+      "source_consumer": "ChargerLaSession button mode",
+      "source_label": "Cancel"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+      "kind": "indexof",
+      "vmt_register": "",
+      "rva": 5052112,
+      "before_hex": "8b08ff5154",
+      "context_before_hex": "a4b3ff8b95e8f9ffff8b45fc8b988c0400008b833c020000",
+      "source_consumer": "ChargerLaSession"
+    },
+    {
+      "control": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+      "kind": "indexof",
+      "vmt_register": "",
+      "rva": 5078953,
+      "before_hex": "8b08ff5154",
+      "context_before_hex": "3bb3ff8b9534ecffff8b45fc8b98380700008b833c020000",
+      "source_consumer": "ChargerLaSession"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+      "kind": "text",
+      "vmt_register": "",
+      "rva": 5087378,
+      "before_hex": "e865f3baff",
+      "context_before_hex": "00508d851cffffff508d9514ffffff8b45fc8b808c040000",
+      "source_consumer": "GetSessionCommandLine"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabXDMCP.sComboBox9",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5092629,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8bc38b10ff92cc0000008bd08d8d08fdffff8b833c020000",
+      "source_consumer": "GetSessionCommandLine"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5092715,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8bc38b10ff92cc0000008bd08d8d04fdffff8b833c020000",
+      "source_consumer": "GetSessionCommandLine"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5092863,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8bc38b10ff92cc0000008bd08d8d00fdffff8b833c020000",
+      "source_consumer": "GetSessionCommandLine"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5092951,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8bc38b10ff92cc0000008bd08d8dfcfcffff8b833c020000",
+      "source_consumer": "GetSessionCommandLine"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabRDP.sComboBox7",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5094488,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8bc38b10ff92cc0000008bd08d8d64fcffff8b833c020000",
+      "source_consumer": "GetSessionCommandLine"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabRDP.CmbZoom",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5094558,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8bc38b10ff92cc0000008bd08d8d60fcffff8b833c020000",
+      "source_consumer": "GetSessionCommandLine"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5103061,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8bc38b10ff92cc0000008bd08d8d88f9ffff8b833c020000",
+      "source_consumer": "GetSessionCommandLine"
+    },
+    {
+      "control": "FormSessionEdit.PC1.sTabSheet1.sComboBox21",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5105191,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8bc38b10ff92cc0000008bd08d8dc0f8ffff8b833c020000",
+      "source_consumer": "GetSessionCommandLine"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabSerial.sComboBox15",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5107886,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8bc38b10ff92cc0000008bd08d8ddcf7ffff8b833c020000",
+      "source_consumer": "GetSessionCommandLine"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabMosh.sComboBox24",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5112418,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "008bd08d8dccf6ffff8b45fc8b80280600008b803c020000",
+      "source_consumer": "GetSessionCommandLine"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabMosh.sComboBox25",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5112495,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "008bd08d8dc8f6ffff8b45fc8b802c0600008b803c020000",
+      "source_consumer": "GetSessionCommandLine"
+    },
+    {
+      "control": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5113749,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "008bd08d8d58f6ffff8b45fc8b80380700008b803c020000",
+      "source_consumer": "GetSessionCommandLine"
+    },
+    {
+      "control": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5128224,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "cc0000008bd08d8d64ffffff8b83380700008b803c020000",
+      "source_consumer": "CreerUnNomDeSession"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+      "kind": "text",
+      "vmt_register": "",
+      "rva": 5149235,
+      "before_hex": "e8c401baff",
+      "context_before_hex": "683e938e0064ff306489208d45fc508d55f88b833c040000",
+      "source_consumer": "sSpinEdit8Change"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+      "kind": "text",
+      "vmt_register": "",
+      "rva": 5149432,
+      "before_hex": "e8ff00baff",
+      "context_before_hex": "8b8350040000e8456df4ff8d45f4508d55f08b833c040000",
+      "source_consumer": "sSpinEdit8Change"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabTerminal.sComboBox4",
+      "kind": "settext",
+      "vmt_register": "",
+      "rva": 5166672,
+      "before_hex": "e8d7bdb9ff",
+      "context_before_hex": "0000e8b56fbbffe8b440fdff8b80400300008b931c790000",
+      "source_consumer": "sBitBtn12Click"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabTerminal.sComboBox4",
+      "kind": "text",
+      "vmt_register": "",
+      "rva": 5167169,
+      "before_hex": "e8b6bbb9ff",
+      "context_before_hex": "8318790000e8f978b1ffe8c03efdff8b80400300008d55e4",
+      "source_consumer": "sBitBtn12Click"
+    },
+    {
+      "control": "FormColorsSelector.sComboBox8",
+      "kind": "item",
+      "vmt_register": "esi",
+      "rva": 5213769,
+      "before_hex": "8b30ff560c",
+      "context_before_hex": "0300008bc68b10ff92cc0000008bd08d4df88b863c020000",
+      "source_consumer": "UpdateThemeButtons"
+    },
+    {
+      "control": "FormColorsSelector.sComboBox8",
+      "kind": "indexof",
+      "vmt_register": "",
+      "rva": 5213889,
+      "before_hex": "8b08ff5154",
+      "context_before_hex": "8b08ff5164eb608b83640300008b803c020000ba3c8f8f00",
+      "source_consumer": "UpdateThemeButtons"
+    },
+    {
+      "control": "FormColorsSelector.sComboBox8",
+      "kind": "findtext",
+      "vmt_register": "",
+      "rva": 5214113,
+      "before_hex": "e8b68f1b00",
+      "context_before_hex": "c38bc053565755518814248bd8ba1c908f008b8364030000",
+      "source_consumer": "Built-in theme / persistent directory lookup"
+    },
+    {
+      "control": "FormColorsSelector.sComboBox8",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5214317,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "0300008bc38b10ff92cc0000008bd08d4df88b833c020000",
+      "source_consumer": "sComboBox8Change"
+    },
+    {
+      "control": "FormColorsSelector.sComboBox8",
+      "kind": "findtext",
+      "vmt_register": "",
+      "rva": 5215231,
+      "before_hex": "e8588b1b00",
+      "context_before_hex": "8f008b45f48b08ff514c8b45fc8b8064030000ba58958f00",
+      "source_consumer": "Built-in theme / persistent directory lookup"
+    },
+    {
+      "control": "FormColorsSelector.sComboBox8",
+      "kind": "findtext",
+      "vmt_register": "",
+      "rva": 5215663,
+      "before_hex": "e8a8891b00",
+      "context_before_hex": "0300008b10ff92cc0000008bf0ba68978f008b8364030000",
+      "source_consumer": "Built-in theme / persistent directory lookup"
+    },
+    {
+      "control": "FormColorsSelector.sComboBox8",
+      "kind": "findtext",
+      "vmt_register": "",
+      "rva": 5215851,
+      "before_hex": "e8ec881b00",
+      "context_before_hex": "29a0b1ff8b55f48d45fce80ebbb0ff8b55fc8b8364030000",
+      "source_consumer": "Built-in theme / persistent directory lookup"
+    },
+    {
+      "control": "FormColorsSelector.sComboBox8",
+      "kind": "findtext",
+      "vmt_register": "",
+      "rva": 5215920,
+      "before_hex": "e8a7881b00",
+      "context_before_hex": "0300008b10ff92cc0000008bf0ba68978f008b8364030000",
+      "source_consumer": "Built-in theme / persistent directory lookup"
+    },
+    {
+      "control": "FormColorsSelector.sComboBox8",
+      "kind": "findtext",
+      "vmt_register": "",
+      "rva": 5216396,
+      "before_hex": "e8cb861b00",
+      "context_before_hex": "0300008b10ff92cc0000008bd88b8664030000ba38998f00",
+      "source_consumer": "Built-in theme / persistent directory lookup"
+    },
+    {
+      "control": "FormParams.PC36.OngletProGeneral.ComboPersistentRoot",
+      "kind": "findtext",
+      "vmt_register": "",
+      "rva": 5247732,
+      "before_hex": "e8630c1b00",
+      "context_before_hex": "7df800750e33d28bc38b08ff91d0000000eb688b55f88bc3",
+      "source_consumer": "Built-in theme / persistent directory lookup"
+    },
+    {
+      "control": "FormParams.PC36.OngletProGeneral.ComboPersistentRoot",
+      "kind": "findtext",
+      "vmt_register": "",
+      "rva": 5247746,
+      "before_hex": "e8550c1b00",
+      "context_before_hex": "000000eb688b55f88bc3e8630c1b0085c07c188b55f88bc3",
+      "source_consumer": "Built-in theme / persistent directory lookup"
+    },
+    {
+      "control": "FormParams.PC36.OngletProGeneral.ComboPersistentHome",
+      "kind": "item",
+      "vmt_register": "esi",
+      "rva": 5271694,
+      "before_hex": "8b30ff560c",
+      "context_before_hex": "8bc68b10ff92cc0000008bd08d8d34ffffff8b863c020000",
+      "source_consumer": "SaveParamsToIni"
+    },
+    {
+      "control": "FormParams.PC36.OngletProGeneral.ComboPersistentRoot",
+      "kind": "item",
+      "vmt_register": "esi",
+      "rva": 5271802,
+      "before_hex": "8b30ff560c",
+      "context_before_hex": "8bc68b10ff92cc0000008bd08d8d28ffffff8b863c020000",
+      "source_consumer": "SaveParamsToIni"
+    },
+    {
+      "control": "FormParams.PC36.OngletProGeneral.ComboPersistentIni",
+      "kind": "item",
+      "vmt_register": "esi",
+      "rva": 5271910,
+      "before_hex": "8b30ff560c",
+      "context_before_hex": "8bc68b10ff92cc0000008bd08d8d1cffffff8b863c020000",
+      "source_consumer": "SaveParamsToIni"
+    },
+    {
+      "control": "FormParams.PC36.OngletProGeneral.ComboPersistentRoot",
+      "kind": "item",
+      "vmt_register": "edi",
+      "rva": 5306723,
+      "before_hex": "8b38ff570c",
+      "context_before_hex": "0500008bc68b10ff92cc0000008bd08d4dfc8b863c020000",
+      "source_consumer": "sSpeedButton17Click"
+    },
+    {
+      "control": "FormPortForwarding.PanPrincipal.sScrollBox1.sPanel2.sComboBox1",
+      "kind": "indexof",
+      "vmt_register": "",
+      "rva": 5400403,
+      "before_hex": "8b08ff5154",
+      "context_before_hex": "00e89f5c12008b55f48b45fc8b98800300008b833c020000",
+      "source_consumer": "BtnProxyClick"
+    },
+    {
+      "control": "FormPortForwarding.PanPrincipal.sScrollBox1.sPanel2.sComboBox1",
+      "kind": "text",
+      "vmt_register": "",
+      "rva": 5401296,
+      "before_hex": "e82729b6ff",
+      "context_before_hex": "048b84c3e8030000b201e81d26b2ff8d55ec8b8380030000",
+      "source_consumer": "sBitBtn5Click"
+    },
+    {
+      "control": "FormImportExport.PC1.GB2.sComboBox1",
+      "kind": "item",
+      "vmt_register": "esi",
+      "rva": 5435892,
+      "before_hex": "8b30ff560c",
+      "context_before_hex": "0048755e8d4dfc8b83100300008b803c020000ba01000000",
+      "source_consumer": "sComboBox1Change"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5671790,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8b10ff92cc0000008bd08d4de0a1e861be008b833c020000",
+      "source_consumer": "cross_form"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabTerminal.sComboBox4",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5700368,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8d50feffffa1e861be008b008b80400300008b803c020000",
+      "source_consumer": "cross_form"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabTerminal.sComboBox4",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5700659,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8d38feffffa1e861be008b008b80400300008b803c020000",
+      "source_consumer": "cross_form"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabTerminal.sComboBox4",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5709672,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8d68fcffffa1e861be008b008b80400300008b803c020000",
+      "source_consumer": "cross_form"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabTerminal.sComboBox4",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5711034,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8df4fbffffa1e861be008b008b80400300008b803c020000",
+      "source_consumer": "cross_form"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabTerminal.sComboBox4",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5711536,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8dccfbffffa1e861be008b008b80400300008b803c020000",
+      "source_consumer": "cross_form"
+    },
+    {
+      "control": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 5719569,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "8d7cf9ffffa1e861be008b008b80380700008b803c020000",
+      "source_consumer": "cross_form"
+    },
+    {
+      "control": "FormSessionEdit.PC1.TabBrowser.ComboWhichBrowser",
+      "kind": "item",
+      "vmt_register": "ebx",
+      "rva": 6056015,
+      "before_hex": "8b18ff530c",
+      "context_before_hex": "feffffa1e861be008b008b80500700008b803c0200008bd3",
+      "source_consumer": "cross_form"
+    },
+    {
+      "control": "PathDialogForm.sBitBtn1",
+      "kind": "caption",
+      "vmt_register": "",
+      "rva": 6513775,
+      "before_hex": "e8b82fa5ff",
+      "context_before_hex": "8310030000e8cb2fa5ff8b15a879be008b128b83fc020000",
+      "source_consumer": "AlphaSkins dialog language refresh",
+      "source_label": "OK",
+      "language_global": 12482984,
+      "source_resource_id": 58992
+    },
+    {
+      "control": "PathDialogForm.sBitBtn2",
+      "kind": "caption",
+      "vmt_register": "",
+      "rva": 6513794,
+      "before_hex": "e8a52fa5ff",
+      "context_before_hex": "83fc020000e8b82fa5ff8b151875be008b128b8300030000",
+      "source_consumer": "AlphaSkins dialog language refresh",
+      "source_label": "Cancel",
+      "language_global": 12481816,
+      "source_resource_id": 58991
+    },
+    {
+      "control": "PathDialogForm.sBitBtn3",
+      "kind": "caption",
+      "vmt_register": "",
+      "rva": 6513813,
+      "before_hex": "e8922fa5ff",
+      "context_before_hex": "8300030000e8a52fa5ff8b15206dbe008b128b8308030000",
+      "source_consumer": "AlphaSkins dialog language refresh",
+      "source_label": "Create",
+      "language_global": 12479776,
+      "source_resource_id": 58910
+    },
+    {
+      "control": "sColorDialogForm.sBitBtn1",
+      "kind": "caption",
+      "vmt_register": "",
+      "rva": 7653933,
+      "before_hex": "e8fac993ff",
+      "context_before_hex": "ff5b5dc2080090538bd88b15a879be008b128b83fc020000",
+      "source_consumer": "AlphaSkins dialog language refresh",
+      "source_label": "OK",
+      "language_global": 12482984,
+      "source_resource_id": 58992
+    },
+    {
+      "control": "sColorDialogForm.sBitBtn2",
+      "kind": "caption",
+      "vmt_register": "",
+      "rva": 7653952,
+      "before_hex": "e8e7c993ff",
+      "context_before_hex": "83fc020000e8fac993ff8b151875be008b128b8300030000",
+      "source_consumer": "AlphaSkins dialog language refresh",
+      "source_label": "Cancel",
+      "language_global": 12481816,
+      "source_resource_id": 58991
+    }
+  ]
+}

@@ -1,0 +1,923 @@
+{
+  "schema": 1,
+  "upstream_version": "26.6.0.5560",
+  "source_sha256": "e9a66144b3a1c4d32f8062b1eb34e26e9ed5298106abf1982b4654ab107f13a5",
+  "rules": [
+    {
+      "id": "body_9dbc28",
+      "group": "body",
+      "source_parts": [
+        "It seems to be the first time you connect to this server:\rThe remote server identity is not yet known by MobaXterm.\r\rPress \"Accept\" if you trust this identity and want to carry on connecting.\rPress \"Cancel\" if you want to abandon this connection."
+      ],
+      "target_parts": [
+        "这似乎是您首次连接到此服务器：\rMobaXterm 尚未识别此远程服务器的身份。\r\r如果您信任此身份并希望继续连接，请点击“接受”。\r若要放弃此次连接，请点击“取消”。"
+      ],
+      "source_vas": [
+        10337320
+      ]
+    },
+    {
+      "id": "body_9dbd34",
+      "group": "body",
+      "source_parts": [
+        "Warning: remote server identity has changed!\r\rThe SFTP server identity has changed since last connection.\rThis means that either the server host key has changed (after a new server installation or upgrade), \ror you have actually connected to another computer pretending to be the server.\r\rDo you want to accept this new identity and carry on connecting?"
+      ],
+      "target_parts": [
+        "警告：远程服务器身份已变更！\r\rSFTP 服务器的身份与上次连接时不同。\r这可能是服务器重新安装或升级后主机密钥发生了变更，\r也可能是您实际连接到了冒充该服务器的另一台计算机。\r\r是否接受此新身份并继续连接？"
+      ],
+      "source_vas": [
+        10337588
+      ]
+    },
+    {
+      "id": "body_9a9670",
+      "group": "body",
+      "source_parts": [
+        "Do you want to save this passphrase?"
+      ],
+      "target_parts": [
+        "是否保存此私钥口令？"
+      ],
+      "source_vas": [
+        10131056
+      ]
+    },
+    {
+      "id": "body_92e0f8",
+      "group": "body",
+      "source_parts": [
+        "Sorry, the current Windows password or master password is incorrect.\rPlease type your current Windows account password or your MobaXterm Master Password in this field."
+      ],
+      "target_parts": [
+        "当前 Windows 密码或主密码不正确。\r请在此处输入当前 Windows 账户密码或 MobaXterm 主密码。"
+      ],
+      "source_vas": [
+        9625848
+      ]
+    },
+    {
+      "id": "body_92e2c4",
+      "group": "body",
+      "source_parts": [
+        "Sorry, the Master Password you typed is incorrect."
+      ],
+      "target_parts": [
+        "您输入的主密码不正确。"
+      ],
+      "source_vas": [
+        9626308
+      ]
+    },
+    {
+      "id": "body_92f164",
+      "group": "body",
+      "source_parts": [
+        "Current Windows password or master password:"
+      ],
+      "target_parts": [
+        "当前 Windows 密码或主密码："
+      ],
+      "source_vas": [
+        9630052
+      ]
+    },
+    {
+      "id": "body_92f19c",
+      "group": "body",
+      "source_parts": [
+        "Enter your Master Password:"
+      ],
+      "target_parts": [
+        "请输入主密码："
+      ],
+      "source_vas": [
+        9630108
+      ]
+    },
+    {
+      "id": "body_9b78f4",
+      "group": "body",
+      "source_parts": [
+        "Please enter your master password to unlock MobaXterm"
+      ],
+      "target_parts": [
+        "请输入主密码以解锁 MobaXterm"
+      ],
+      "source_vas": [
+        10189044
+      ]
+    },
+    {
+      "id": "body_9b7934",
+      "group": "body",
+      "source_parts": [
+        "Wrong password. Please enter your correct master password"
+      ],
+      "target_parts": [
+        "密码错误，请输入正确的主密码"
+      ],
+      "source_vas": [
+        10189108
+      ]
+    },
+    {
+      "id": "body_a8b8b0",
+      "group": "body",
+      "source_parts": [
+        "Please enter your master password"
+      ],
+      "target_parts": [
+        "请输入主密码"
+      ],
+      "source_vas": [
+        11057328
+      ]
+    },
+    {
+      "id": "body_9e56f4",
+      "group": "body",
+      "source_parts": [
+        "Enter the master password of the file"
+      ],
+      "target_parts": [
+        "请输入此文件的主密码"
+      ],
+      "source_vas": [
+        10376948
+      ]
+    },
+    {
+      "id": "body_8bfd2c",
+      "group": "body",
+      "source_parts": [
+        "No smart card certificate found.\r\r\rClick on the right green button to create a new smart card certificate.\r\rImportant: you must have a smart card that is compatible with the PIV\r(Personal Identity Verification) interface, and have write access to it.\r\rFor Yubikey smart cards, you must have the Yubikey minidriver installed."
+      ],
+      "target_parts": [
+        "未找到智能卡证书。\r\r\r请点击右侧绿色按钮，创建新的智能卡证书。\r\r重要提示：智能卡须兼容 PIV\r（个人身份验证）接口，并允许写入。\r\r使用 Yubikey 智能卡时，须安装 Yubikey 小型驱动程序。"
+      ],
+      "source_vas": [
+        9174316
+      ]
+    },
+    {
+      "id": "body_8c00fc",
+      "group": "body",
+      "source_parts": [
+        "The OpenSSH public key has been copied!\r\rIf you want to connect to a remote server with this certificate,\ryou can paste this public key inside the \"~/.ssh/authorized_keys\"\rfile on your remote server."
+      ],
+      "target_parts": [
+        "OpenSSH 公钥已复制！\r\r如果希望使用此证书连接远程服务器，\r可将公钥粘贴到远程服务器的“~/.ssh/authorized_keys”\r文件中。"
+      ],
+      "source_vas": [
+        9175292
+      ]
+    },
+    {
+      "id": "body_8c01ec",
+      "group": "body",
+      "source_parts": [
+        "The certificate fingerprint has been copied!"
+      ],
+      "target_parts": [
+        "证书指纹已复制！"
+      ],
+      "source_vas": [
+        9175532
+      ]
+    },
+    {
+      "id": "body_8c0984",
+      "group": "body",
+      "source_parts": [
+        "The new certificate has been created successfully"
+      ],
+      "target_parts": [
+        "新证书已成功创建"
+      ],
+      "source_vas": [
+        9177476
+      ]
+    },
+    {
+      "id": "body_8c09c0",
+      "group": "body",
+      "source_parts": [
+        "FAILED to create the smartcard key or certificate"
+      ],
+      "target_parts": [
+        "创建智能卡密钥或证书失败"
+      ],
+      "source_vas": [
+        9177536
+      ]
+    },
+    {
+      "id": "body_8c0dc0",
+      "group": "body",
+      "source_parts": [
+        "Warning: do you really want to delete this certificate\rand the corresponding key from your smart card?"
+      ],
+      "target_parts": [
+        "警告：是否确实要从智能卡中删除此证书\r及其对应的密钥？"
+      ],
+      "source_vas": [
+        9178560
+      ]
+    },
+    {
+      "id": "body_8c0ed0",
+      "group": "body",
+      "source_parts": [
+        "Smartcard key and certificate deleted successfully"
+      ],
+      "target_parts": [
+        "智能卡密钥和证书已成功删除"
+      ],
+      "source_vas": [
+        9178832
+      ]
+    },
+    {
+      "id": "body_8c0f0c",
+      "group": "body",
+      "source_parts": [
+        "The certificate has been deleted successfully"
+      ],
+      "target_parts": [
+        "证书已成功删除"
+      ],
+      "source_vas": [
+        9178892
+      ]
+    },
+    {
+      "id": "body_8c0f44",
+      "group": "body",
+      "source_parts": [
+        "FAILED to delete the smartcard key or certificate"
+      ],
+      "target_parts": [
+        "删除智能卡密钥或证书失败"
+      ],
+      "source_vas": [
+        9178948
+      ]
+    },
+    {
+      "id": "body_8c0f9c",
+      "group": "body",
+      "source_parts": [
+        "Failed to delete the certificate"
+      ],
+      "target_parts": [
+        "删除证书失败"
+      ],
+      "source_vas": [
+        9179036
+      ]
+    },
+    {
+      "id": "body_a263e4",
+      "group": "body",
+      "source_parts": [
+        "Do you wish to trust this certificate and continue?"
+      ],
+      "target_parts": [
+        "是否信任此证书并继续？"
+      ],
+      "source_vas": [
+        10642404
+      ]
+    },
+    {
+      "id": "body_a64e90",
+      "group": "body",
+      "source_parts": [
+        "Important: The key seems to be an OpenSSH key signed by a certificate."
+      ],
+      "target_parts": [
+        "重要提示：此密钥似乎是由证书签名的 OpenSSH 密钥。"
+      ],
+      "source_vas": [
+        10899088
+      ]
+    },
+    {
+      "id": "body_98d87c",
+      "group": "body",
+      "source_parts": [
+        "You seem to have some custom macros embedded into your sessions.\rThese macros are encrypted with your master password, so they will\rnot work properly if you share your sessions with someone else.\r\rDo you want to export them unencrypted?"
+      ],
+      "target_parts": [
+        "您的会话似乎内嵌了自定义宏。\r这些宏使用主密码加密，因此将会话共享给他人后，\r这些宏将无法正常使用。\r\r是否将它们以未加密形式导出？"
+      ],
+      "source_vas": [
+        10016892
+      ]
+    },
+    {
+      "id": "body_save_credential",
+      "group": "body",
+      "source_parts": [
+        "Do you want to save password for credential ",
+        "?"
+      ],
+      "target_parts": [
+        "是否保存凭据 ",
+        " 的密码？"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "body_save_password",
+      "group": "body",
+      "source_parts": [
+        "Do you want to save password for ",
+        "?"
+      ],
+      "target_parts": [
+        "是否保存 ",
+        " 的密码？"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "body_update_credential",
+      "group": "body",
+      "source_parts": [
+        "Do you want to update password for credential ",
+        "?"
+      ],
+      "target_parts": [
+        "是否更新凭据 ",
+        " 的密码？"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "body_update_password",
+      "group": "body",
+      "source_parts": [
+        "Do you want to update password for ",
+        "?"
+      ],
+      "target_parts": [
+        "是否更新 ",
+        " 的密码？"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "proxy_body",
+      "group": "body",
+      "source_parts": [
+        "Do you want to save the proxy password for ",
+        "?"
+      ],
+      "target_parts": [
+        "是否保存 ",
+        " 的代理密码？"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "proxy_prefix_body",
+      "group": "body",
+      "source_parts": [
+        "Do you want to save the proxy password for ",
+        ""
+      ],
+      "target_parts": [
+        "是否保存以下代理密码：",
+        ""
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "passphrase_store",
+      "group": "store",
+      "source_parts": [
+        "Do you want to save this passphrase?"
+      ],
+      "target_parts": [
+        "是否保存此私钥口令？"
+      ],
+      "source_vas": [
+        10131056
+      ]
+    },
+    {
+      "id": "store_save_credential",
+      "group": "store",
+      "source_parts": [
+        "Do you want to save password for credential ",
+        "?"
+      ],
+      "target_parts": [
+        "是否保存凭据 ",
+        " 的密码？"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "store_save_password",
+      "group": "store",
+      "source_parts": [
+        "Do you want to save password for ",
+        "?"
+      ],
+      "target_parts": [
+        "是否保存 ",
+        " 的密码？"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "store_update_credential",
+      "group": "store",
+      "source_parts": [
+        "Do you want to update password for credential ",
+        "?"
+      ],
+      "target_parts": [
+        "是否更新凭据 ",
+        " 的密码？"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "store_update_password",
+      "group": "store",
+      "source_parts": [
+        "Do you want to update password for ",
+        "?"
+      ],
+      "target_parts": [
+        "是否更新 ",
+        " 的密码？"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "proxy_store",
+      "group": "store",
+      "source_parts": [
+        "Do you want to save the proxy password for ",
+        "?"
+      ],
+      "target_parts": [
+        "是否保存 ",
+        " 的代理密码？"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "proxy_prefix_store",
+      "group": "store",
+      "source_parts": [
+        "Do you want to save the proxy password for ",
+        ""
+      ],
+      "target_parts": [
+        "是否保存以下代理密码：",
+        ""
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "ssh_identity_changed",
+      "group": "body",
+      "source_parts": [
+        "<b>Remote host identification has changed!</b>\r\rThis could either mean that someone tries to impersonate\ryour server \"",
+        "\" (man-in-the-middle attack)",
+        "or that your SSH server key has just been changed",
+        "(e.g. if you re-installed or upgraded the server \"",
+        "Do you want to reset this alarm and continue connecting?"
+      ],
+      "target_parts": [
+        "<b>远程主机身份已变更！</b>\r\r有人可能正在冒充您的服务器 \"",
+        "\"（中间人攻击）",
+        "也可能是您的 SSH 服务器密钥刚刚发生了变更",
+        "(例如，您重新安装或升级了服务器 \"",
+        "是否清除此警报并继续连接？"
+      ],
+      "source_vas": [
+        10131388,
+        10131516,
+        10131568,
+        10131628,
+        10131700
+      ]
+    },
+    {
+      "id": "ftps_certificate",
+      "group": "body",
+      "source_parts": [
+        "The FTPS server certificate is unknown.\r\r<u>Certificate details</u>\r<b>Delivered to</b>:  ",
+        "<b>Delivered by</b>:  ",
+        "<b>Valid from</b>  ",
+        "  <b>to</b>  ",
+        "<b>Hash (MD5)</b>:  ",
+        "Do you wish to trust this certificate and continue?"
+      ],
+      "target_parts": [
+        "尚未识别此 FTPS 服务器的证书。\r\r<u>证书详情</u>\r<b>颁发给</b>：  ",
+        "<b>颁发者</b>：  ",
+        "<b>有效期从</b>  ",
+        "  <b>至</b>  ",
+        "<b>哈希（MD5）</b>：  ",
+        "是否信任此证书并继续？"
+      ],
+      "source_vas": [
+        10642164,
+        10642276,
+        10642320,
+        10642348,
+        10642372,
+        10642404
+      ]
+    },
+    {
+      "id": "ftps_certificate_details",
+      "group": "body",
+      "source_parts": [
+        "The FTPS server certificate is unknown.\r\r<u>Certificate details</u>\r<b>Delivered to</b>:  ",
+        "<b>Delivered by</b>:  ",
+        "<b>Valid from</b>  ",
+        "  <b>to</b>  ",
+        "<b>Hash (MD5)</b>:  ",
+        ""
+      ],
+      "target_parts": [
+        "尚未识别此 FTPS 服务器的证书。\r\r<u>证书详情</u>\r<b>颁发给</b>：  ",
+        "<b>颁发者</b>：  ",
+        "<b>有效期从</b>  ",
+        "  <b>至</b>  ",
+        "<b>哈希（MD5）</b>：  ",
+        ""
+      ],
+      "source_vas": [
+        10642164,
+        10642276,
+        10642320,
+        10642348,
+        10642372
+      ]
+    },
+    {
+      "id": "vnc_certificate",
+      "group": "body",
+      "source_parts": [
+        "The VNC server certificate is unknown.\r\r<u>Certificate details</u>\r<b>Delivered to</b>:  ",
+        "<b>Delivered by</b>:  ",
+        "<b>Valid from</b>  ",
+        "  <b>to</b>  ",
+        "<b>Hash (MD5)</b>:  ",
+        "Do you wish to trust this certificate and continue?"
+      ],
+      "target_parts": [
+        "尚未识别此 VNC 服务器的证书。\r\r<u>证书详情</u>\r<b>颁发给</b>：  ",
+        "<b>颁发者</b>：  ",
+        "<b>有效期从</b>  ",
+        "  <b>至</b>  ",
+        "<b>哈希（MD5）</b>：  ",
+        "是否信任此证书并继续？"
+      ],
+      "source_vas": [
+        10703356,
+        10703468,
+        10703512,
+        10703540,
+        10703564,
+        10703596
+      ]
+    },
+    {
+      "id": "vnc_certificate_details",
+      "group": "body",
+      "source_parts": [
+        "The VNC server certificate is unknown.\r\r<u>Certificate details</u>\r<b>Delivered to</b>:  ",
+        "<b>Delivered by</b>:  ",
+        "<b>Valid from</b>  ",
+        "  <b>to</b>  ",
+        "<b>Hash (MD5)</b>:  ",
+        ""
+      ],
+      "target_parts": [
+        "尚未识别此 VNC 服务器的证书。\r\r<u>证书详情</u>\r<b>颁发给</b>：  ",
+        "<b>颁发者</b>：  ",
+        "<b>有效期从</b>  ",
+        "  <b>至</b>  ",
+        "<b>哈希（MD5）</b>：  ",
+        ""
+      ],
+      "source_vas": [
+        10703356,
+        10703468,
+        10703512,
+        10703540,
+        10703564
+      ]
+    },
+    {
+      "id": "smartcard_error",
+      "group": "body",
+      "source_parts": [
+        "Sorry, the smart card refused to create the certificate with the following error message:\r",
+        ""
+      ],
+      "target_parts": [
+        "智能卡拒绝创建证书，错误信息如下：\r",
+        ""
+      ],
+      "source_vas": [
+        9177624
+      ]
+    },
+    {
+      "id": "master_info_same_account",
+      "group": "body",
+      "source_parts": [
+        "The master password is your personal password which is used to encrypt your MobaXterm stored passwords database.\r",
+        "This master password has been set on ",
+        " on this computer with this Windows account.",
+        "Go to MobaXterm global settings --> \"MobaXterm passwords management\" --> \"Master password settings\".",
+        "You will be prompted for your Windows password and then, you will be able to set another master password.",
+        "If your master password is definitely lost, you can download the \"Reset Master Password\" tool from our website: https://mobaxterm.mobatek.net/resetmasterpassword.html.",
+        "It will delete the master password and all the stored passwords as well, and allow you to start MobaXterm again."
+      ],
+      "target_parts": [
+        "主密码是您的个人密码，用于加密 MobaXterm 已保存的密码数据库。\r",
+        "此主密码设置于 ",
+        "，由此计算机上的当前 Windows 账户设置。",
+        "请进入 MobaXterm 全局设置 →“MobaXterm 密码管理”→“主密码设置”。",
+        "系统会要求输入 Windows 密码，之后便可设置新的主密码。",
+        "如果主密码已彻底遗失，可从官网下载“Reset Master Password”工具：https://mobaxterm.mobatek.net/resetmasterpassword.html。",
+        "该工具会删除主密码及所有已保存的密码，随后便可重新启动 MobaXterm。"
+      ],
+      "source_vas": [
+        10956912,
+        10957120,
+        10957168,
+        10957496,
+        10957608,
+        10957724,
+        10957900
+      ]
+    },
+    {
+      "id": "master_info_other_account",
+      "group": "body",
+      "source_parts": [
+        "The master password is your personal password which is used to encrypt your MobaXterm stored passwords database.\r",
+        "This master password has been set on ",
+        " with the account \"",
+        "\" on computer \"",
+        "If you forgot it, you may be able to change it by logging on to \"",
+        "\" computer with \"",
+        "\" account.",
+        "Go to MobaXterm global settings --> \"MobaXterm passwords management\" --> \"Master password settings\".",
+        "You will be prompted for your Windows password and then, you will be able to set another master password.",
+        "If your master password is definitely lost, you can download the \"Reset Master Password\" tool from our website: https://mobaxterm.mobatek.net/resetmasterpassword.html.",
+        "It will delete the master password and all the stored passwords as well, and allow you to start MobaXterm again."
+      ],
+      "target_parts": [
+        "主密码是您的个人密码，用于加密 MobaXterm 已保存的密码数据库。\r",
+        "此主密码设置于 ",
+        "，所用账户为 \"",
+        "\"，计算机为 \"",
+        "若已忘记主密码，可尝试登录到 \"",
+        "\" 计算机并使用 \"",
+        "\" 账户来更改。",
+        "请进入 MobaXterm 全局设置 →“MobaXterm 密码管理”→“主密码设置”。",
+        "系统会要求输入 Windows 密码，之后便可设置新的主密码。",
+        "如果主密码已彻底遗失，可从官网下载“Reset Master Password”工具：https://mobaxterm.mobatek.net/resetmasterpassword.html。",
+        "该工具会删除主密码及所有已保存的密码，随后便可重新启动 MobaXterm。"
+      ],
+      "source_vas": [
+        10956912,
+        10957120,
+        10957236,
+        10957264,
+        10957372,
+        10957448,
+        10957476,
+        10957496,
+        10957608,
+        10957724,
+        10957900
+      ]
+    },
+    {
+      "id": "title_51",
+      "group": "title",
+      "source_parts": [
+        "Smart card fingerprint"
+      ],
+      "target_parts": [
+        "智能卡指纹"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "title_53",
+      "group": "title",
+      "source_parts": [
+        "Stored passwords and credentials"
+      ],
+      "target_parts": [
+        "已保存的密码和登录凭据"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "connection_title",
+      "group": "title",
+      "source_parts": [
+        "Connection to ",
+        ""
+      ],
+      "target_parts": [
+        "连接到 ",
+        ""
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_55",
+      "group": "button",
+      "source_parts": [
+        "OK"
+      ],
+      "target_parts": [
+        "确定"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_56",
+      "group": "button",
+      "source_parts": [
+        "Yes"
+      ],
+      "target_parts": [
+        "是"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_57",
+      "group": "button",
+      "source_parts": [
+        "No"
+      ],
+      "target_parts": [
+        "否"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_58",
+      "group": "button",
+      "source_parts": [
+        "Cancel"
+      ],
+      "target_parts": [
+        "取消"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_59",
+      "group": "button",
+      "source_parts": [
+        "Accept"
+      ],
+      "target_parts": [
+        "接受"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_60",
+      "group": "button",
+      "source_parts": [
+        "Reject"
+      ],
+      "target_parts": [
+        "拒绝"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_61",
+      "group": "button",
+      "source_parts": [
+        "Retry"
+      ],
+      "target_parts": [
+        "重试"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_62",
+      "group": "button",
+      "source_parts": [
+        "Abort"
+      ],
+      "target_parts": [
+        "中止"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_63",
+      "group": "button",
+      "source_parts": [
+        "Ignore"
+      ],
+      "target_parts": [
+        "忽略"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_64",
+      "group": "button",
+      "source_parts": [
+        "Continue"
+      ],
+      "target_parts": [
+        "继续"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_65",
+      "group": "button",
+      "source_parts": [
+        "More info..."
+      ],
+      "target_parts": [
+        "更多信息..."
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_66",
+      "group": "button",
+      "source_parts": [
+        "Save"
+      ],
+      "target_parts": [
+        "保存"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_67",
+      "group": "button",
+      "source_parts": [
+        "Do not save"
+      ],
+      "target_parts": [
+        "不保存"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_68",
+      "group": "button",
+      "source_parts": [
+        "Yes to all"
+      ],
+      "target_parts": [
+        "全部选是"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_69",
+      "group": "button",
+      "source_parts": [
+        "No to all"
+      ],
+      "target_parts": [
+        "全部选否"
+      ],
+      "source_vas": []
+    },
+    {
+      "id": "button_70",
+      "group": "button",
+      "source_parts": [
+        "Connect once"
+      ],
+      "target_parts": [
+        "仅连接一次"
+      ],
+      "source_vas": []
+    }
+  ]
+}

@@ -59,7 +59,12 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
         (payload / "patches" / upstream_version).mkdir(parents=True)
         index = {"schema": 1, "minimum_version": "26.5", "versions": [upstream_version]}
         (payload / "patches" / "index.json").write_text(json.dumps(index), encoding="utf-8")
-        for filename in ("version.json", "forms.json", "literals.json"):
+        patch_files = ["version.json", "forms.json", "literals.json"]
+        if version.get("session_combo_controls", 0):
+            patch_files.append("session-values.json")
+        if version.get("connection_prompt_rules", 0):
+            patch_files.extend(("connection-prompts.json", "prompt-sites.json"))
+        for filename in patch_files:
             shutil.copyfile(REPO / "patches" / upstream_version / filename, payload / "patches" / upstream_version / filename)
         (payload / "translations").mkdir()
         shutil.copyfile(REPO / "translations" / "terminal-menu.json", payload / "translations" / "terminal-menu.json")

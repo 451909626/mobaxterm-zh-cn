@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "upstream_version": "26.6.0.5560",
-  "localization_release": "R2.10",
+  "localization_release": "R2.13",
   "official_download_page": "https://mobaxterm.mobatek.net/download-home-edition.html",
   "official_archive_url": "https://download.mobatek.net/2662026100713843/MobaXterm_Portable_v26.6.zip",
   "upstream_license_url": "https://mobaxterm.mobatek.net/license.html",
@@ -11,27 +11,38 @@
     "CygUtils.plugin": "65c17f095ecbbab4c8015e24aa02bc7de1c098704aec3d8b4b7ec81b28a56602",
     "CygUtils64.plugin": "4750dc32ba3372fa7f4b8ca38583f98d9d0477d9b0686966fee40aa181bff915"
   },
-  "localized_exe_sha256": "c0a6f4a47c2c7e0991bdfd0b156478f8984db57b37f0a9d1b006cf9225d0ad0b",
-  "resource_display_locations": 1709,
-  "literal_display_locations": 24,
+  "localized_exe_sha256": "670276375a2602065a941c4e1098f7d69aa19cdf82122e5b790ea6ed7d7b7553",
+  "resource_display_locations": 2023,
+  "literal_display_locations": 54,
   "terminal_menu_labels": 36,
-  "total_display_locations": 1783,
+  "total_display_locations": 2201,
   "main_output_name": "MobaXterm_Personal_26.6.exe",
   "upstream_main_name": "MobaXterm_Personal_26.6.exe",
   "visual_validation": {
-    "status": "passed",
+    "status": "pending",
     "report": "docs/VALIDATION.md",
-    "scope": "User verified Chinese toolbar, customization/save, icon/caption styles, settings dropdown labels and editing/save. Three settings-saved notices are statically verified; no separate user visual acceptance is claimed.",
-    "settings_saved_notices": "static_verified; separate user visual check not recorded"
+    "scope": "Connection prompt rendering, original modal results and native message keys checked; actual connection-popup visual acceptance pending. Earlier R2.11/R2.12 visual acceptance remains pending."
   },
   "toolbar_caption_labels": 14,
   "settings_combo_controls": 25,
   "settings_combo_item_labels": 85,
   "release_changes": [
-    "修复自定义工具栏后只剩游戏按钮的问题；顶部按钮保持中文，支持增减、排序、保存及图标/文字模式切换。",
-    "补译设置页 25 个下拉控件的 85 条选项及对应默认显示文字。",
-    "默认主页、新标签页和 X11 缩放在界面显示中文，保存时继续使用原始配置值，兼容现有配置。键盘布局代码、引擎版本、Shell/皮肤名称及用户自定义名称保留原文。",
-    "补译终端设置后续生效、重启 MobaXterm、重启 X11 服务器三条保存提示。"
+    "合并 R2.11 至 R2.13：补译 35 个会话下拉控件的 162 条选项、15 个二级窗口下拉控件的 83 条选项及遗漏按钮，连接参数和保存值继续使用原格式。",
+    "修正会话窗口、目录及颜色选择器中的运行时英文按钮，并补译左侧会话栏右键菜单的 22 处动态文字，保留会话名称、数量和操作事件。",
+    "补译首次连接、主机密钥变更、保存或更新密码、私钥口令、主密码验证、证书信任及相关提示的标题、正文和按钮。",
+    "仅在显示阶段转换通用提示，保留英文消息标识、不再显示选项、更多信息判断及原生弹窗返回结果；动态主机、账号、指纹和证书字段按原字节保留。",
+    "补译主机密钥详情窗口与主密码错误、强度及遗失警告，保留已发布的工具栏自定义保存、全局设置下拉框及保存提示修复。"
   ],
-  "release_validation_note": "35 项自动检查通过；工具栏中文、自定义保存、图标/文字切换及下拉选项显示和修改保存经用户复测。三条保存提示已核对文字、容量、换行与唯一调用引用，未另行记录其弹窗的用户视觉验收。"
+  "release_validation_note": "42 项 Windows 测试、封装工具自检与官方原包重建通过。新增会话及二级窗口适配通过 1588 组原值读取/查找和 120 组赋值检查；连接提示通过 534 组匹配、26 组生命周期及保存凭据优先匹配检查，核对原生返回值、消息标识、变量字节与关闭后的内部标题恢复。此前工具栏及全局设置操作已由用户复测；新增二级窗口、会话栏动态菜单及连接弹窗的完整实屏验收仍待完成，本修订标为预发布。",
+  "session_combo_controls": 35,
+  "session_combo_item_labels": 162,
+  "session_value_sites": 59,
+  "runtime_button_labels": 9,
+  "resource_form_count": 56,
+  "secondary_combo_controls": 15,
+  "secondary_combo_item_labels": 83,
+  "runtime_option_labels": 1,
+  "sidebar_menu_literals": 22,
+  "connection_prompt_rules": 64,
+  "connection_prompt_sites": 5
 }

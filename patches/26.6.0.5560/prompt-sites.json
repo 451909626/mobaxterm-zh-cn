@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "upstream_version": "26.6.0.5560",
+  "source_sha256": "e9a66144b3a1c4d32f8062b1eb34e26e9ed5298106abf1982b4654ab107f13a5",
+  "sites": [
+    {
+      "rva": 4488596,
+      "kind": "message",
+      "before_hex": "8b10ff92ec000000",
+      "context_before_hex": "eb148b83000300008b50488b8308030000e8260ec4ff8bc3",
+      "consumer": "TFormMessageBox.MsgBox after suppression keys and button layout"
+    },
+    {
+      "rva": 5650544,
+      "kind": "store",
+      "before_hex": "8b10ff92ec000000",
+      "context_before_hex": "be008b0033c98b15781bc100e8ff980f00a10067be008b00",
+      "consumer": "GetnSaveCredPassword: TFormStorePasswords.ShowModal"
+    },
+    {
+      "rva": 5745119,
+      "kind": "store",
+      "before_hex": "8b10ff92ec000000",
+      "context_before_hex": "be008b0033c98b15781bc100e890270e00a10067be008b00",
+      "consumer": "SavePasswordRegistry: TFormStorePasswords.ShowModal"
+    },
+    {
+      "rva": 5748043,
+      "kind": "store",
+      "before_hex": "8b10ff92ec000000",
+      "context_before_hex": "be008b0033c98b15781bc100e8241c0e00a10067be008b00",
+      "consumer": "SavePasswordIni: TFormStorePasswords.ShowModal"
+    },
+    {
+      "rva": 6761094,
+      "kind": "input_label",
+      "before_hex": "e81da7fdff",
+      "context_before_hex": "8b008b902c030000a17873be008b008b80000300008b4dfc",
+      "consumer": "MobaInputDialog: MessagePrincipal label, text argument ECX"
+    }
+  ]
+}

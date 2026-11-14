@@ -157,7 +157,7 @@
       "name": "TFORMADVANCEDRDPSETTINGS",
       "language": 0,
       "source_sha256": "1f04f395ac7242f6cb2b977ee7471adbe9a2d0099647151c9bb2fda3b3ab67fb",
-      "target_sha256": "25c5da2d219a806d281f6f6101ae2236b63d4d3c0a13035e1a0186039e42ed98",
+      "target_sha256": "4c4cf65ccad11cd1f026b41ebeeef2882165b00be43f9012cad82dd58db3bba0",
       "patches": [
         {
           "index": 3,
@@ -272,6 +272,22 @@
           "target": "色彩深度"
         },
         {
+          "index": 166,
+          "component": "FormAdvancedRdpSettings.sGroupBox1.sComboBox37",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "9fdd34866f77a3705954a4407a557880f99f194e52a766affcf3d08644e781c3",
+          "target": "自动"
+        },
+        {
+          "index": 167,
+          "component": "FormAdvancedRdpSettings.sGroupBox1.sComboBox37",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "9fdd34866f77a3705954a4407a557880f99f194e52a766affcf3d08644e781c3",
+          "target": "自动"
+        },
+        {
           "index": 178,
           "component": "FormAdvancedRdpSettings.sGroupBox1.sCheckBox55",
           "property": "Caption",
@@ -336,6 +352,30 @@
           "target": "自动重连"
         },
         {
+          "index": 263,
+          "component": "FormAdvancedRdpSettings.sGroupBox2.sComboBox1",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "77715719334c7080410ac70c5b3be24edb9a3557de31aa88f23ff88db67030ae",
+          "target": "使用 Windows 账户"
+        },
+        {
+          "index": 265,
+          "component": "FormAdvancedRdpSettings.sGroupBox2.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "77715719334c7080410ac70c5b3be24edb9a3557de31aa88f23ff88db67030ae",
+          "target": "使用 Windows 账户"
+        },
+        {
+          "index": 266,
+          "component": "FormAdvancedRdpSettings.sGroupBox2.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "f560755daeff0b1e71de9db5402f38d97f78fc20bb7716c311268d6b78676d30",
+          "target": "询问登录凭据"
+        },
+        {
           "index": 274,
           "component": "FormAdvancedRdpSettings.sGroupBox2.ChkUseRedirectionName",
           "property": "Caption",
@@ -392,6 +432,38 @@
           "target": "使用 RDP 网关："
         },
         {
+          "index": 342,
+          "component": "FormAdvancedRdpSettings.sGroupBox4.sComboBox21",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "0da22d9c802809eff37e202384419b5d39149dd65d0bd0202635a5df98403494",
+          "target": "从不"
+        },
+        {
+          "index": 344,
+          "component": "FormAdvancedRdpSettings.sGroupBox4.sComboBox21",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "0da22d9c802809eff37e202384419b5d39149dd65d0bd0202635a5df98403494",
+          "target": "从不"
+        },
+        {
+          "index": 345,
+          "component": "FormAdvancedRdpSettings.sGroupBox4.sComboBox21",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "7439d290af91a55f527170611e914f97b6e14e2bdbd0680e7ffb6e651ae85bf4",
+          "target": "自动检测"
+        },
+        {
+          "index": 346,
+          "component": "FormAdvancedRdpSettings.sGroupBox4.sComboBox21",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2c210392baaadf2aee2455b5bc172a92c288e8272ded6bac6c8179a623d7d37e",
+          "target": "始终"
+        },
+        {
           "index": 357,
           "component": "FormAdvancedRdpSettings.sGroupBox4.sEdit29",
           "property": "BoundLabel.Caption",
@@ -414,6 +486,46 @@
           "source_type": 6,
           "source_value_sha256": "9bd71195fbed403501d2e39585c15a9bf23f154fa2b6b1f20651c093126c17f5",
           "target": "身份验证："
+        },
+        {
+          "index": 382,
+          "component": "FormAdvancedRdpSettings.sGroupBox4.sComboBox2",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "cdeb24f903443203654c1877f932158c065713b60dc07d469e1e3e1d6d367033",
+          "target": "与目标服务器相同"
+        },
+        {
+          "index": 384,
+          "component": "FormAdvancedRdpSettings.sGroupBox4.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "cdeb24f903443203654c1877f932158c065713b60dc07d469e1e3e1d6d367033",
+          "target": "与目标服务器相同"
+        },
+        {
+          "index": 385,
+          "component": "FormAdvancedRdpSettings.sGroupBox4.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "6ff08d7bb05fce6d3fe422b8bf576b4d9f81c0ff5db990bd040546ddc34ebd53",
+          "target": "连接时询问"
+        },
+        {
+          "index": 386,
+          "component": "FormAdvancedRdpSettings.sGroupBox4.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "f73c8cc66bfef480a91f2533f048d5ecca50813961efabf862c828ffecf81093",
+          "target": "指定用户名和密码"
+        },
+        {
+          "index": 387,
+          "component": "FormAdvancedRdpSettings.sGroupBox4.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "14d716c3e4518babe80427b02a2327fa4d69a1b1cbf04ae7d9a1913dbb0193c1",
+          "target": "使用智能卡"
         }
       ]
     },
@@ -421,7 +533,7 @@
       "name": "TFORMADVANCEDTERMSETTINGS",
       "language": 0,
       "source_sha256": "57e7c9a14f3fe31338299fd18d34ef5d91589a601af33b95198815ec3a7dd70b",
-      "target_sha256": "4094022d17d1ef14e74e0f349202cee98f431c7fff3ef956266c981302597b72",
+      "target_sha256": "4a16b2c1d47b960bca05fc2c369f708ddb1a5313482c4ba418e90da1ebed0653",
       "patches": [
         {
           "index": 3,
@@ -736,6 +848,46 @@
           "target": "响铃类型："
         },
         {
+          "index": 186,
+          "component": "FormAdvancedTermSettings.sGroupBox2.sComboBox11",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "5915b710c4b4752616e138b4794484a016af7aa965426b3a2aa8b62aa6e44472",
+          "target": "无"
+        },
+        {
+          "index": 187,
+          "component": "FormAdvancedTermSettings.sGroupBox2.sComboBox11",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "5915b710c4b4752616e138b4794484a016af7aa965426b3a2aa8b62aa6e44472",
+          "target": "无"
+        },
+        {
+          "index": 188,
+          "component": "FormAdvancedTermSettings.sGroupBox2.sComboBox11",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "aace5112b9d61088ddfaa7b4e69d0e7dfd459474911005bf769632b0ebf3dd01",
+          "target": "默认提示音"
+        },
+        {
+          "index": 189,
+          "component": "FormAdvancedTermSettings.sGroupBox2.sComboBox11",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "02d58393fbda575ac97d5e8559bde838214502a47b9cc0bc244e6e998e7f9503",
+          "target": "视觉提示"
+        },
+        {
+          "index": 190,
+          "component": "FormAdvancedTermSettings.sGroupBox2.sComboBox11",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "a0a43ef449e0cd7559954d45368428a6fb4a15c65eceb0919eb48e2be4204743",
+          "target": "电脑扬声器"
+        },
+        {
           "index": 200,
           "component": "FormAdvancedTermSettings.sGroupBox2.sSpinEdit1",
           "property": "BoundLabel.Caption",
@@ -766,6 +918,22 @@
           "source_type": 6,
           "source_value_sha256": "acee844ec4639223a2542b4a003284d247401cb70badf66ff39aa1162586986d",
           "target": "退出："
+        },
+        {
+          "index": 232,
+          "component": "FormAdvancedTermSettings.sGroupBox4.sComboBox5",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "ab25173db0050b37a1ee8a8dfef2da50248996020ff16869cd07dc289c33a7f1",
+          "target": "其他任意键"
+        },
+        {
+          "index": 233,
+          "component": "FormAdvancedTermSettings.sGroupBox4.sComboBox5",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ab25173db0050b37a1ee8a8dfef2da50248996020ff16869cd07dc289c33a7f1",
+          "target": "其他任意键"
         },
         {
           "index": 301,
@@ -1077,7 +1245,7 @@
       "name": "TFORMCOLORSSELECTOR",
       "language": 0,
       "source_sha256": "1cdb79ffa0978216a1870ceb0df0aed4c9ec92342ca16779a24c9572499c3da2",
-      "target_sha256": "de9f5d854468fc24072dd296adb483c370b6817e6d80500abdea9e25014f46a7",
+      "target_sha256": "853347c0c6fdbba2f0a7fa753b74f9620d68ae96509ac9dfba29d6d0dafbdf34",
       "patches": [
         {
           "index": 3,
@@ -1208,6 +1376,62 @@
           "target": "光标样式："
         },
         {
+          "index": 189,
+          "component": "FormColorsSelector.sGroupBox3.ComboCursor",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "33746848dceb647ad67c056bb19ebac007eaaecb1775793cf1a3d1e06f548350",
+          "target": "块状"
+        },
+        {
+          "index": 190,
+          "component": "FormColorsSelector.sGroupBox3.ComboCursor",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "33746848dceb647ad67c056bb19ebac007eaaecb1775793cf1a3d1e06f548350",
+          "target": "块状"
+        },
+        {
+          "index": 191,
+          "component": "FormColorsSelector.sGroupBox3.ComboCursor",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "cbf04bf1f039ca4d5611b4df3c06f2bc17a58872f1b11b127750a3b8bcc0c83f",
+          "target": "下划线"
+        },
+        {
+          "index": 192,
+          "component": "FormColorsSelector.sGroupBox3.ComboCursor",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "3d8c835e94df12e640a971dee059298699456e8475adca99999f82ff00a75c32",
+          "target": "竖线"
+        },
+        {
+          "index": 193,
+          "component": "FormColorsSelector.sGroupBox3.ComboCursor",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "7bc407cbf8ed06a3e2776cf2f8d64aeec587067054fbd0d49752c6e89d559216",
+          "target": "闪烁块状"
+        },
+        {
+          "index": 194,
+          "component": "FormColorsSelector.sGroupBox3.ComboCursor",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "b7681016364f7ba4ada549130e536722027f4bf61f35fc0676698f97da9b9a71",
+          "target": "闪烁下划线"
+        },
+        {
+          "index": 195,
+          "component": "FormColorsSelector.sGroupBox3.ComboCursor",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "4af832c0442d28a08e437aa870bc1ab606eeb2c94f88fe959866ecddd01917a9",
+          "target": "闪烁竖线"
+        },
+        {
           "index": 201,
           "component": "FormColorsSelector.sGroupBox2",
           "property": "Caption",
@@ -1240,6 +1464,86 @@
           "target": "配色方案："
         },
         {
+          "index": 492,
+          "component": "FormColorsSelector.sComboBox8",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "839475b1fe9cac833a5d66ba534f63a53523b5f1660f9d37aeb26309a5144f02",
+          "target": "当前全局配色"
+        },
+        {
+          "index": 494,
+          "component": "FormColorsSelector.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "839475b1fe9cac833a5d66ba534f63a53523b5f1660f9d37aeb26309a5144f02",
+          "target": "当前全局配色"
+        },
+        {
+          "index": 495,
+          "component": "FormColorsSelector.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "a04233c4e9da8a571103c5568fa9dcc467975168b709f6f4adc6a70dce35c030",
+          "target": "深色背景／浅色文字"
+        },
+        {
+          "index": 496,
+          "component": "FormColorsSelector.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2ddcc750406149c31038291ba93996737da10e0fc7038b7be977c88fb91c9db5",
+          "target": "浅色背景／深色文字"
+        },
+        {
+          "index": 497,
+          "component": "FormColorsSelector.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2243c77219cb089ad2d961416eb7a8db12fade138e757530f30daeb791e24d2e",
+          "target": "Solarized 深色"
+        },
+        {
+          "index": 498,
+          "component": "FormColorsSelector.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "b7f77dc4c0fb24fbbf06d5e5e6fec3589e911659f154c0ec1445911804e925c1",
+          "target": "Solarized 浅色"
+        },
+        {
+          "index": 499,
+          "component": "FormColorsSelector.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "9d011c724ef0a7a83bdb12a1501bab5670f7f61c61899d20c6cfff4e60b8d56b",
+          "target": "柔和粉彩"
+        },
+        {
+          "index": 500,
+          "component": "FormColorsSelector.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "c7ef7c28c0e6bddf6b21fff9d83aedc37c5daf39fc92fde13741b22980c5b122",
+          "target": "明亮"
+        },
+        {
+          "index": 503,
+          "component": "FormColorsSelector.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "36dbf734cad3f058b68416c723a53436da337605ec7929656c84b6d7bf6cf8bf",
+          "target": "单色"
+        },
+        {
+          "index": 504,
+          "component": "FormColorsSelector.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "4c818f654aeed78ecc05496c7a7d17a4ffdcfe3fd1d7df74fee12064278f1382",
+          "target": "自定义配色"
+        },
+        {
           "index": 508,
           "component": "FormColorsSelector.sSaveDialog1",
           "property": "Title",
@@ -1254,6 +1558,126 @@
           "source_type": 6,
           "source_value_sha256": "5c9eeccdae6b41d5d07abdaf458b3bcc4c1f464683c949e44e31801a0aacb119",
           "target": "打开 MobaXterm 配色主题文件"
+        }
+      ]
+    },
+    {
+      "name": "TFORMCSVIMPORT",
+      "language": 0,
+      "source_sha256": "f8fd614c6b8468e0e9283caae59be99f82a3ffb711c2535cd31e36ff8bd44b42",
+      "target_sha256": "5ad41a982cc04a98456205770756fcf30a223fd8e99e0212e9e7d9f225492561",
+      "patches": [
+        {
+          "index": 56,
+          "component": "FormCSVImport.sBitBtn1",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "3ebfd65382779a1e1b17e90d10c2797e3cff3c22739c9d78ca9f19b1fa01d2e0",
+          "target": "确定"
+        },
+        {
+          "index": 80,
+          "component": "FormCSVImport.sComboBox1",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "7211136f462273e26c91ea0bcae382a3b6dc3a6f7772a74d34f59c52c4d0ecd0",
+          "target": "逗号 \",\""
+        },
+        {
+          "index": 82,
+          "component": "FormCSVImport.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "7211136f462273e26c91ea0bcae382a3b6dc3a6f7772a74d34f59c52c4d0ecd0",
+          "target": "逗号 \",\""
+        },
+        {
+          "index": 83,
+          "component": "FormCSVImport.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "f7d610fd1ff7168d0587f657b942602f5c180c0caae0b5b5c7d5460666685f9d",
+          "target": "分号 \";\""
+        },
+        {
+          "index": 89,
+          "component": "FormCSVImport.sBitBtn2",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "b6c90794b80b9e16b333bca3e974490e73410c565bba6a4dbb44ab8e38d792c5",
+          "target": "取消"
+        }
+      ]
+    },
+    {
+      "name": "TFORMCUSTOMIZER",
+      "language": 0,
+      "source_sha256": "3e9ea8672bacd5f6b778e2935278a69a2c02a6954146ed25c445cae432c4d1b0",
+      "target_sha256": "9fe17aaadf30fdbd43ef12737223683480420c491fdab608d7246ca401a0d440",
+      "patches": [
+        {
+          "index": 1276,
+          "component": "FormCustomizer.sBitBtn13",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "3ebfd65382779a1e1b17e90d10c2797e3cff3c22739c9d78ca9f19b1fa01d2e0",
+          "target": "确定"
+        },
+        {
+          "index": 1286,
+          "component": "FormCustomizer.sBitBtn18",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "b6c90794b80b9e16b333bca3e974490e73410c565bba6a4dbb44ab8e38d792c5",
+          "target": "取消"
+        }
+      ]
+    },
+    {
+      "name": "TFORMCUSTOMIZERDIALOG",
+      "language": 0,
+      "source_sha256": "d197e00e70e3d6e8d83b4642c84633eeb499ce4efec7f622d4e925677e0a59c0",
+      "target_sha256": "da8c3d76ab625624814dc7619db05295398458ff7904074d58456a7284e202a1",
+      "patches": [
+        {
+          "index": 23,
+          "component": "FormCustomizerDialog.BoutYes",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "db6955ce75f1282668593dbb460a90e666a824e1c9924f4c6bdd7610d0c13242",
+          "target": "是"
+        },
+        {
+          "index": 42,
+          "component": "FormCustomizerDialog.BoutNo",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "d8f09bb190744841fe11d012c8cc46a35ed62b3d1df52fd0ba6276f253667b11",
+          "target": "否"
+        },
+        {
+          "index": 61,
+          "component": "FormCustomizerDialog.BoutOK",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "3ebfd65382779a1e1b17e90d10c2797e3cff3c22739c9d78ca9f19b1fa01d2e0",
+          "target": "确定"
+        }
+      ]
+    },
+    {
+      "name": "TFORMCYGUTILSMSG",
+      "language": 0,
+      "source_sha256": "7e1e1539099fd1b02403ac55a4135cd1f0d912b9a578f1cbe9bb0d6adfc60e39",
+      "target_sha256": "28cdd5b1dd7e97d036e2450a25e5acce5961548bcb88ab0f20ac5209e60b29a2",
+      "patches": [
+        {
+          "index": 70,
+          "component": "FormCygUtilsMsg.sBitBtn1",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "3ebfd65382779a1e1b17e90d10c2797e3cff3c22739c9d78ca9f19b1fa01d2e0",
+          "target": "确定"
         }
       ]
     },
@@ -1314,10 +1738,42 @@
       ]
     },
     {
+      "name": "TFORMDETACHEDTAB",
+      "language": 0,
+      "source_sha256": "6ba7c96a084b476118c8e1b9b93d44f7aa535d0adc1b42984c0b0f7c831300b8",
+      "target_sha256": "a8fb3acbe5bef4dfb47d10c67b8a02bfa436823d009ccee1a1222ffc6d4b0129",
+      "patches": [
+        {
+          "index": 54,
+          "component": "FormDetachedTab.PanBoutons.BtnClose",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "bd2cb76655122e2838be95e36284e38c7297167a09fd090834d99005b249cb58",
+          "target": "关闭"
+        }
+      ]
+    },
+    {
+      "name": "TFORMDOWNLOADBLOQUANT",
+      "language": 0,
+      "source_sha256": "bf98c36dbac4f2b4c08598e9a9d19fdd0718ba78dba6ee3f45d5c17058266680",
+      "target_sha256": "b40be531c3c8a81a788a504348d620e0c0b989332358fbe5a43ba22323a2d785",
+      "patches": [
+        {
+          "index": 104,
+          "component": "FormDownloadBloquant.sBitBtn1",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "b6c90794b80b9e16b333bca3e974490e73410c565bba6a4dbb44ab8e38d792c5",
+          "target": "取消"
+        }
+      ]
+    },
+    {
       "name": "TFORMEDITMACROLINE",
       "language": 0,
       "source_sha256": "f54ccfea14caa934bb11f3b59b60028336cf8569df716246636e789e35669364",
-      "target_sha256": "07a38e3a36fdcfb896221cc887e4bead361c24a0ac3d409f8e7051f59ed349c6",
+      "target_sha256": "9456e431747393f0295901e14ce29617d44f9573533f4477e700aa83b7d702c3",
       "patches": [
         {
           "index": 3,
@@ -1424,6 +1880,22 @@
           "target": "按键："
         },
         {
+          "index": 220,
+          "component": "FormEditMacroLine.sPanel2.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "740a621a5e0653be5ef3c15c5f3e9daf7b706adbb1291589936b816a8f28b131",
+          "target": "按下按键"
+        },
+        {
+          "index": 221,
+          "component": "FormEditMacroLine.sPanel2.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "83ff3a3b7f80979d44a708b83bf9adf3829e8613794de9ffe10d3d3c10f5fb03",
+          "target": "松开按键"
+        },
+        {
           "index": 255,
           "component": "FormEditMacroLine.sPanel2.sRadioButton5",
           "property": "Caption",
@@ -1432,12 +1904,76 @@
           "target": "鼠标事件："
         },
         {
+          "index": 270,
+          "component": "FormEditMacroLine.sPanel2.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "55147b4630fe06ac25f012d6ce26ad76168d777e1b7d3ca1b75605be1f353542",
+          "target": "按下左键"
+        },
+        {
+          "index": 271,
+          "component": "FormEditMacroLine.sPanel2.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "f19cc77abe7e0c0fb594a0e435d7e6b71c914237288ccaa3dff6d367b17683e8",
+          "target": "松开左键"
+        },
+        {
+          "index": 272,
+          "component": "FormEditMacroLine.sPanel2.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "8ae5650cb445e068f6ccc0ee2fd527921d586bf57a1feeb5cefffa186600bc8a",
+          "target": "按下右键"
+        },
+        {
+          "index": 273,
+          "component": "FormEditMacroLine.sPanel2.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "98aa4b6acb0a93891a1790d8f19c2a809800846da2482624af481f15fa744f11",
+          "target": "松开右键"
+        },
+        {
+          "index": 274,
+          "component": "FormEditMacroLine.sPanel2.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "fb93936a8d2024ab89fe8619a291c1fc331feec76e3c5f5d5919c87fe592e4ac",
+          "target": "按下中键"
+        },
+        {
+          "index": 275,
+          "component": "FormEditMacroLine.sPanel2.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "a5cf5e20f80a2472f6a20d287939a77c2e7a4c3292fefb752135830914fc81f7",
+          "target": "松开中键"
+        },
+        {
           "index": 281,
           "component": "FormEditMacroLine.sPanel2.sRadioButton8",
           "property": "Caption",
           "source_type": 6,
           "source_value_sha256": "5ff8cda9a2d4fe9c9cd5a8ea29cc8c01b0891099a4af7bbb9fb6fb589608f950",
           "target": "等待："
+        },
+        {
+          "index": 294,
+          "component": "FormEditMacroLine.sPanel2.sComboBox3",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "806c85747f82389adfe6ade0a165bf9ea1f2876bfa1a1eb3b8ecd0f573ecc074",
+          "target": "鼠标所在窗口"
+        },
+        {
+          "index": 295,
+          "component": "FormEditMacroLine.sPanel2.sComboBox3",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "3730e91abaddefe4bb82f94397ab3ef5f4f7f08726d29c9e8ab729bc000dc604",
+          "target": "当前焦点窗口"
         },
         {
           "index": 303,
@@ -1517,7 +2053,7 @@
       "name": "TFORMFONTSELECTOR",
       "language": 0,
       "source_sha256": "8467e45ae35ebf892e9e2cd3da4dbfcceb52b5ee9b7feda41b1cd27ca7368368",
-      "target_sha256": "79532803946faeb98ab47f0d117a3070cfc1d6a40eb209667c407275533c43b2",
+      "target_sha256": "2bc97f12480cc07ece74a0b86aed7831f5e02ec15e97d7c362b94b5a98e4ce23",
       "patches": [
         {
           "index": 3,
@@ -1606,6 +2142,278 @@
           "source_type": 6,
           "source_value_sha256": "7e4383df2c0e6a22598b83b25f1f9af50b80feef541eb1e92722acb78a92bf8b",
           "target": "终端字符编码："
+        },
+        {
+          "index": 121,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "03fb933483c472520ba12515916fda6c383f898d41207a6aa9ec510ca1ae53cd",
+          "target": "ISO-8859-1 (西欧)"
+        },
+        {
+          "index": 122,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "72c72ffaa2b1c2174b8255c253cc2b66fdfe9664bcd285e8ecd851637b4dfa0b",
+          "target": "ISO-8859-2 (东欧)"
+        },
+        {
+          "index": 123,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "f36f120ff8d05d8afbe20b9e5b9cf49897d044dc4917bc4de0ca65051143e5ab",
+          "target": "ISO-8859-3 (南欧)"
+        },
+        {
+          "index": 124,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "d8895dd04a573ec1e95b0ac92108554335381ff5696a7e47ef358066a5bd9fbb",
+          "target": "ISO-8859-4 (北欧)"
+        },
+        {
+          "index": 125,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "10f45df57b5e500c112eebf90ac7184b534d741e7dc99510dd6f26ef2ede85af",
+          "target": "ISO-8859-5 (西里尔文)"
+        },
+        {
+          "index": 126,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "0a9e9fb8fb57ec51584d346e5e005f3430fed2e4766911028e5adb2d65e56404",
+          "target": "ISO-8859-6 (阿拉伯文)"
+        },
+        {
+          "index": 127,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2b5c98320f02ac1a5350275a0f53445b5bbb7a14d38d7aa7f490a45abe596841",
+          "target": "ISO-8859-7 (希腊文)"
+        },
+        {
+          "index": 128,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "01e0988756167e6f6c2ac61197f383b87f5ab6f66ffa3ecd89582e30885e13ea",
+          "target": "ISO-8859-8 (希伯来文)"
+        },
+        {
+          "index": 129,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "b3f7c1cdee69df4f41c47b2c444f237a5f3d8241a5c49900f06b1dfb072403ff",
+          "target": "ISO-8859-9 (土耳其文)"
+        },
+        {
+          "index": 130,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "fd1812d850eaa271ee309838b97826d0d11da2a0bc4982f3bf22d7024491ad8e",
+          "target": "ISO-8859-10 (北欧)"
+        },
+        {
+          "index": 131,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "63dd3d008e360ce798ee92c02c484a973135518e24d7debab0b90d1a0fa88c73",
+          "target": "ISO-8859-11 (泰文)"
+        },
+        {
+          "index": 132,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "bb06d512807cd01352f606dd3f16f85308b61813f2ae41707ff4936f465e7029",
+          "target": "ISO-8859-13 (波罗的海)"
+        },
+        {
+          "index": 133,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "16895c05dac2e2ddc61b4f1d069e71fbb81081da61e440477a4f30a9fa9bf2f0",
+          "target": "ISO-8859-14 (凯尔特文)"
+        },
+        {
+          "index": 134,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "4c6d63b08ff118c1dc8f4db60da525f78bb42a11e5ef1f5315b2c214bc24faef",
+          "target": "ISO-8859-15 (欧元)"
+        },
+        {
+          "index": 135,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "61939d5e28b0e82e4453636ed7a1b491d21a1eba6c6dabd7e32c9e5cd7a31339",
+          "target": "ISO-8859-16 (巴尔干)"
+        },
+        {
+          "index": 136,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "b7b4eadc6ead6d0a5e6840dceb4d52e7ec9cf9b2ba13031a2d92d8c3005d6968",
+          "target": "UTF-8 (统一码)"
+        },
+        {
+          "index": 137,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "7b7f0ded3e42f4d90dde8ef49da45ad16276c31f143787476bf74883953d18ee",
+          "target": "KOI8-R (俄文)"
+        },
+        {
+          "index": 138,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ccbb2c3c8a7886f68686664a060a486912e68e48b8b8567a25d328790e26e7da",
+          "target": "KOI8-U (乌克兰文)"
+        },
+        {
+          "index": 139,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "c1bd120c2ffb0a6e8b7a4749becdcf1de4212c721b08c5b2997efff2ce65eef9",
+          "target": "GBK (中文)"
+        },
+        {
+          "index": 140,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "8c3d226ebe1bef3d77f61f77b7e7afbd6093d1aa44bd98567c83686ab975387b",
+          "target": "Big5 (中文)"
+        },
+        {
+          "index": 141,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "f27e19b377bde3f6ec4b236a271b739947dd851b6b7a7492d1c8e879222e2933",
+          "target": "SJIS (日文)"
+        },
+        {
+          "index": 142,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "61fb557de87266225e18a03eb1473c515306ab8904dec2dcbfd13fd2de415df5",
+          "target": "eucKR (韩文)"
+        },
+        {
+          "index": 143,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "b3c18b86db51ad9d2b6c31b122721292f681069b3f5ae21c2d703e0d8eace710",
+          "target": "CP850 (OEM 代码页)"
+        },
+        {
+          "index": 144,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "b811948ebe542da634b4f4143ee1df6bef2e2f6b1f7413f8fe467f0a3f65e991",
+          "target": "Win1252 (西欧)"
+        },
+        {
+          "index": 145,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "97c3d57eeaf937b007a074c41086c73872b83b8fba9c47603a27a4687c855333",
+          "target": "Win1251 (西里尔文)"
+        },
+        {
+          "index": 146,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "3d0e3a4adcb0f6ecd969e732d287a2673fe79b12c0722491f5bd77154e31074e",
+          "target": "Win1250 (中欧)"
+        },
+        {
+          "index": 147,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "1fb1184f09874858d5f1e22b17a52715f84afd227805f4eadcad942dbd7764a7",
+          "target": "Win1253 (希腊文)"
+        },
+        {
+          "index": 148,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "dfc51112a96416b1c4790b3428371e77648fd61876d0af7062e5bfdd64ca8904",
+          "target": "Win1254 (土耳其文)"
+        },
+        {
+          "index": 149,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "bb03653121596e2280648a6749654f280e5b76a74b901d791debd1159258a954",
+          "target": "Win1255 (希伯来文)"
+        },
+        {
+          "index": 150,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "383fa4cec775deb4a19baa8f28430f9014375d4ebf05f69027dc856ca9c70d47",
+          "target": "Win1256 (阿拉伯文)"
+        },
+        {
+          "index": 151,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "7e44893444d66575d815c40ef51bea98ef53469a3e00787ec9ec9432060882b7",
+          "target": "Win1257 (波罗的海)"
+        },
+        {
+          "index": 152,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "bce26361f1892a44f6a52a25efdce8ceff5c2a11b9c1cf7551448e1ad45c3d67",
+          "target": "Win1258 (越南文)"
+        },
+        {
+          "index": 154,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "41445a2a36238fa337834dca2bbf7caf4ad127298b38cfff3216a076e1996881",
+          "target": "CP620 (马佐维亚)"
+        },
+        {
+          "index": 161,
+          "component": "FormFontSelector.sGroupBox1.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "dfad0eb844bfed6142170c5d95c5dc6862e30af44bc55e74570f7d4bde895a55",
+          "target": "使用字体编码"
         },
         {
           "index": 167,
@@ -1706,6 +2514,62 @@
       ]
     },
     {
+      "name": "TFORMHKFINGERPRINTDIALOG",
+      "language": 0,
+      "source_sha256": "5c130dbd044fab05cf80325615770d42915332c70f4ba109a9a6d9709646e081",
+      "target_sha256": "a44b989abcd3424b338932b5750bf38eb95e8b8d8db8da4e0c21da40d1c0cbf1",
+      "patches": [
+        {
+          "index": 3,
+          "component": "FormHKFingerprintDialog",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "efc7bbbbcd20746f3270d09770efb100864d66ca2bdcfac929c623b82b038392",
+          "target": "主机密钥验证 - 更多信息"
+        },
+        {
+          "index": 49,
+          "component": "FormHKFingerprintDialog.sBitBtn1",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "bd2cb76655122e2838be95e36284e38c7297167a09fd090834d99005b249cb58",
+          "target": "关闭"
+        },
+        {
+          "index": 68,
+          "component": "FormHKFingerprintDialog.sEdit1",
+          "property": "BoundLabel.Caption",
+          "source_type": 6,
+          "source_value_sha256": "aa4b83008d5e169f576019fdeed7f895448de0a9e50ceab307c1cde3dcac01e6",
+          "target": "SHA256 指纹：  "
+        },
+        {
+          "index": 76,
+          "component": "FormHKFingerprintDialog.sEdit2",
+          "property": "BoundLabel.Caption",
+          "source_type": 6,
+          "source_value_sha256": "3dcb3df918380ac4dee6e9c388df4e10efc8a1560c794422a40e7aa7169b392d",
+          "target": "MD5 指纹：  "
+        },
+        {
+          "index": 84,
+          "component": "FormHKFingerprintDialog.sMemo1",
+          "property": "BoundLabel.Caption",
+          "source_type": 6,
+          "source_value_sha256": "29f56e5b1b84706d3e04facc3d57b0a61eacc584ed2d85115cb982c303fd8e6f",
+          "target": "完整公钥：  "
+        },
+        {
+          "index": 92,
+          "component": "FormHKFingerprintDialog.sEdit3",
+          "property": "BoundLabel.Caption",
+          "source_type": 6,
+          "source_value_sha256": "7f27ca4c06da619d0575f1c725c4225defd653a6c675ce11965dda0cea50fda0",
+          "target": "请将预期的主机密钥粘贴到下方进行核验："
+        }
+      ]
+    },
+    {
       "name": "TFORMHOTKEYS",
       "language": 0,
       "source_sha256": "bb200ea2472a4f7213fd6b517f7cfc6cf05d44ea9431b7d26dae7182ab9bf3a6",
@@ -1789,7 +2653,7 @@
       "name": "TFORMIMPORTEXPORT",
       "language": 0,
       "source_sha256": "16bba8654271382bb5dcf5f4017ab839f52c450779238c8dfc2845b2826d6cf1",
-      "target_sha256": "1d93f7c48b1b57d8f55e0c42acaf5b7af3e55932723673f9340b6a0a8d773a8b",
+      "target_sha256": "8dab21aca638715cc836ab95f9c10475f7e9b72de043de4993ea471c5f20ad03",
       "patches": [
         {
           "index": 49,
@@ -1848,12 +2712,60 @@
           "target": "导出文件保护方式"
         },
         {
+          "index": 138,
+          "component": "FormImportExport.PC1.GB2.sComboBox1",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "a2a45f477a85278a7ea3938a1d7996712a2da72a53402efce299c59eeb1254a5",
+          "target": "使用密码加密整个文件"
+        },
+        {
+          "index": 140,
+          "component": "FormImportExport.PC1.GB2.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "a2a45f477a85278a7ea3938a1d7996712a2da72a53402efce299c59eeb1254a5",
+          "target": "使用密码加密整个文件"
+        },
+        {
+          "index": 141,
+          "component": "FormImportExport.PC1.GB2.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "8bc18eba981a07dc91a2e044fc8d1a9c22fcf9bc4495e433ac1af72256b78a2f",
+          "target": "仅加密密码和登录凭据"
+        },
+        {
           "index": 149,
           "component": "FormImportExport.PC1.GB2.sComboBox3",
           "property": "BoundLabel.Caption",
           "source_type": 6,
           "source_value_sha256": "8c707b4c2558fc1cbd871ad35083a9edb0bc7dddc1a12ec6a28350ae7e438b20",
           "target": "导出文件的密码："
+        },
+        {
+          "index": 156,
+          "component": "FormImportExport.PC1.GB2.sComboBox3",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "df04347948600eb5c8459a3fa148365380f082f49d754b1bfd0421ea3101052f",
+          "target": "输入用于保护此文件的密码"
+        },
+        {
+          "index": 158,
+          "component": "FormImportExport.PC1.GB2.sComboBox3",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "df04347948600eb5c8459a3fa148365380f082f49d754b1bfd0421ea3101052f",
+          "target": "输入用于保护此文件的密码"
+        },
+        {
+          "index": 159,
+          "component": "FormImportExport.PC1.GB2.sComboBox3",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "3a68748625389078fa29ec65bfe678537957e04dac0140e9b35bef09c5ab6bbd",
+          "target": "使用当前主密码"
         },
         {
           "index": 169,
@@ -2602,6 +3514,46 @@
       ]
     },
     {
+      "name": "TFORMMOBAPT",
+      "language": 0,
+      "source_sha256": "09622c75aa75667d90701804722a680d5dcb281b121e38ef8397909369ab7ac2",
+      "target_sha256": "b2240f7d2db40ce9e5d3ee36a4a0daea166cc0f5b6478a8883071dee4bab4928",
+      "patches": [
+        {
+          "index": 59,
+          "component": "FormMobApt.sBitBtn1",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "bd2cb76655122e2838be95e36284e38c7297167a09fd090834d99005b249cb58",
+          "target": "关闭"
+        },
+        {
+          "index": 75,
+          "component": "FormMobApt.sBitBtn2",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "2f8cb7bd35961dda869a6bab8a34edeece25b9ea175a0c0a026261e7345f6146",
+          "target": "安装／更新"
+        },
+        {
+          "index": 275,
+          "component": "FormMobApt.sBitBtn3",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "d0fdd0bff3b7241133f71de423b1bfe4c91042a3fa25d2dde522f634e87fdb90",
+          "target": "卸载"
+        },
+        {
+          "index": 292,
+          "component": "FormMobApt.sBitBtn4",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "f6486f6a9281f267f6e35b2e2bd82eba7b0aed0159e0d4c0981229a85af2a158",
+          "target": "创建插件"
+        }
+      ]
+    },
+    {
       "name": "TFORMMSGDIALOG",
       "language": 0,
       "source_sha256": "53b67f4113865efc57b1f2580532dac3fac0e933e7652583bf4835215d5bf776",
@@ -2853,7 +3805,7 @@
       "name": "TFORMPARAMS",
       "language": 0,
       "source_sha256": "66da2b833d13c87a075b19e844fd7b99af960aade08cdcf949512f111b40a659",
-      "target_sha256": "b67513267a4c7cc7f62f9b13ef8e38096fd32e9c7364e2c5e7b1806c7d7fa596",
+      "target_sha256": "7a75bbefacda9d2f500651ed0cf2066cb73c3f20ae52fc3450c9560620cf0356",
       "patches": [
         {
           "index": 3,
@@ -3120,12 +4072,92 @@
           "target": "根目录（/）位置："
         },
         {
+          "index": 481,
+          "component": "FormParams.PC36.OngletProGeneral.ComboPersistentRoot",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "b32ac0a9be23b8e979256801393a2a37545743d8c6bcf3d6a54e572918b1eeff",
+          "target": "<默认>"
+        },
+        {
+          "index": 483,
+          "component": "FormParams.PC36.OngletProGeneral.ComboPersistentRoot",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "b32ac0a9be23b8e979256801393a2a37545743d8c6bcf3d6a54e572918b1eeff",
+          "target": "<默认>"
+        },
+        {
+          "index": 484,
+          "component": "FormParams.PC36.OngletProGeneral.ComboPersistentRoot",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "a8c1859861eb516027c43d75a72f86f08acdcfeba1ce2e027e93a1be5f90fc67",
+          "target": "<临时目录>"
+        },
+        {
+          "index": 485,
+          "component": "FormParams.PC36.OngletProGeneral.ComboPersistentRoot",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2e2ceacd27d337d49c4206792b6bcfb7e3250758157f9126bbd1652d4578ed99",
+          "target": "<程序所在目录>"
+        },
+        {
+          "index": 486,
+          "component": "FormParams.PC36.OngletProGeneral.ComboPersistentRoot",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "d685684794221bbf881a940790a595c886a8d1ec2233c39b55221a0c432a50ce",
+          "target": "<自定义>"
+        },
+        {
           "index": 494,
           "component": "FormParams.PC36.OngletProGeneral.ComboPersistentHome",
           "property": "BoundLabel.Caption",
           "source_type": 6,
           "source_value_sha256": "2da2058e062a2669e5f23f5f011281548aed0d1f75087237d9564eb8a8cd4982",
           "target": "主目录位置："
+        },
+        {
+          "index": 500,
+          "component": "FormParams.PC36.OngletProGeneral.ComboPersistentHome",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "b32ac0a9be23b8e979256801393a2a37545743d8c6bcf3d6a54e572918b1eeff",
+          "target": "<默认>"
+        },
+        {
+          "index": 502,
+          "component": "FormParams.PC36.OngletProGeneral.ComboPersistentHome",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "b32ac0a9be23b8e979256801393a2a37545743d8c6bcf3d6a54e572918b1eeff",
+          "target": "<默认>"
+        },
+        {
+          "index": 503,
+          "component": "FormParams.PC36.OngletProGeneral.ComboPersistentHome",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "a8c1859861eb516027c43d75a72f86f08acdcfeba1ce2e027e93a1be5f90fc67",
+          "target": "<临时目录>"
+        },
+        {
+          "index": 504,
+          "component": "FormParams.PC36.OngletProGeneral.ComboPersistentHome",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2e2ceacd27d337d49c4206792b6bcfb7e3250758157f9126bbd1652d4578ed99",
+          "target": "<程序所在目录>"
+        },
+        {
+          "index": 505,
+          "component": "FormParams.PC36.OngletProGeneral.ComboPersistentHome",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "d685684794221bbf881a940790a595c886a8d1ec2233c39b55221a0c432a50ce",
+          "target": "<自定义>"
         },
         {
           "index": 519,
@@ -3142,6 +4174,30 @@
           "source_type": 6,
           "source_value_sha256": "7b7c3f24754a64c9da28c77cfeb2e71721ead7caaf0e668c6d6dc856c8cd2f9c",
           "target": "配置文件位置："
+        },
+        {
+          "index": 533,
+          "component": "FormParams.PC36.OngletProGeneral.ComboPersistentIni",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "b32ac0a9be23b8e979256801393a2a37545743d8c6bcf3d6a54e572918b1eeff",
+          "target": "<默认>"
+        },
+        {
+          "index": 535,
+          "component": "FormParams.PC36.OngletProGeneral.ComboPersistentIni",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "b32ac0a9be23b8e979256801393a2a37545743d8c6bcf3d6a54e572918b1eeff",
+          "target": "<默认>"
+        },
+        {
+          "index": 536,
+          "component": "FormParams.PC36.OngletProGeneral.ComboPersistentIni",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "d685684794221bbf881a940790a595c886a8d1ec2233c39b55221a0c432a50ce",
+          "target": "<自定义>"
         },
         {
           "index": 544,
@@ -5581,7 +6637,7 @@
       "name": "TFORMPORTFORWARDING",
       "language": 0,
       "source_sha256": "d43808d49cdb24171a31d523075a79389b6e614650c1c021b6cd3bc831cf1c6b",
-      "target_sha256": "0c41273511d02087058c312f50dab7b98ed23f8430644b8e87e3efb62f942396",
+      "target_sha256": "e88053ca2b5655579727f24950ff9ef22f90c0336502b753e41028253daec973",
       "patches": [
         {
           "index": 40,
@@ -5694,6 +6750,46 @@
           "source_type": 6,
           "source_value_sha256": "b58e3b330caf6ed285277555a1c81434022428c31952e26e6c21630af363eaaf",
           "target": "代理类型："
+        },
+        {
+          "index": 384,
+          "component": "FormPortForwarding.PanPrincipal.sScrollBox1.sPanel2.sComboBox1",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "45e7d2d7f0d6401fb57c46f74b39181bb7732d3f18f2e82494125df2b54c738f",
+          "target": "不使用代理"
+        },
+        {
+          "index": 386,
+          "component": "FormPortForwarding.PanPrincipal.sScrollBox1.sPanel2.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "45e7d2d7f0d6401fb57c46f74b39181bb7732d3f18f2e82494125df2b54c738f",
+          "target": "不使用代理"
+        },
+        {
+          "index": 387,
+          "component": "FormPortForwarding.PanPrincipal.sScrollBox1.sPanel2.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "5dc3666ac0ce805f37f5be5958f0d6dc17059f57c034dc9c3c6b7ad6ef02e492",
+          "target": "SOCKS4 代理"
+        },
+        {
+          "index": 388,
+          "component": "FormPortForwarding.PanPrincipal.sScrollBox1.sPanel2.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "6e84b492a051d0f44604b69f7be4861317ef182f31383f3c55c05340b15bfd1c",
+          "target": "SOCKS5 代理"
+        },
+        {
+          "index": 389,
+          "component": "FormPortForwarding.PanPrincipal.sScrollBox1.sPanel2.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "40f8802bd6d42a9ee0d11557edc697d65ab2e8d1302e5e4fa9aacc591f2ac000",
+          "target": "Web 代理"
         },
         {
           "index": 395,
@@ -6170,10 +7266,26 @@
       ]
     },
     {
+      "name": "TFORMSERVICES",
+      "language": 0,
+      "source_sha256": "f993da6aff771e0a311cf910fd514c91f7facc9919ca2ff8958d300cd4ff0e04",
+      "target_sha256": "8173181b1ca4f385d6add0de20bb071cf2d0dc6c50104a966ccd7f951e07eb48",
+      "patches": [
+        {
+          "index": 1748,
+          "component": "FormServices.sBitBtn4",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "3ebfd65382779a1e1b17e90d10c2797e3cff3c22739c9d78ca9f19b1fa01d2e0",
+          "target": "确定"
+        }
+      ]
+    },
+    {
       "name": "TFORMSESSIONEDIT",
       "language": 0,
       "source_sha256": "8f9bb12ae5ea37f91412cde676ca16922391847ac40744e6aec091c1ac0df169",
-      "target_sha256": "2df19970b258b4d1db73874b8185b7a260f0bfd3b06d423f97440bea61025f1d",
+      "target_sha256": "15ea39a2d36de4a795176cc4262b4e5f95650bcb121eb1e77374f976907b4574",
       "patches": [
         {
           "index": 4,
@@ -6296,6 +7408,198 @@
           "target": "远程桌面环境："
         },
         {
+          "index": 217,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "b9bcb8f1f386b540269289d1e54d5415d9d21701cb739ef276ab5e95a47af20c",
+          "target": "交互式 Shell"
+        },
+        {
+          "index": 218,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "b9bcb8f1f386b540269289d1e54d5415d9d21701cb739ef276ab5e95a47af20c",
+          "target": "交互式 Shell"
+        },
+        {
+          "index": 219,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "caff4f61b3a1348c072cdbff01cb33c9c3ec0c2096a7d0fa5def53ade6770f9e",
+          "target": "LXDE 桌面"
+        },
+        {
+          "index": 220,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "61dc3f4e7bc0b10c748bebcdb9cab5a5e67454b3486d5af6dc4e2b3e258b215f",
+          "target": "Gnome 桌面"
+        },
+        {
+          "index": 221,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "cd7dd18a18fb54e288dffefc749de54d623031c0d83dc7c000a1ba0c725c39d9",
+          "target": "KDE 桌面"
+        },
+        {
+          "index": 222,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "153c33ff002cb90ce109dcdd7756dae35a59086668381c6292e8a1b9749a8b6e",
+          "target": "Fvwm2 桌面"
+        },
+        {
+          "index": 223,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "79c6f4ad42d05d7a4ae2113af280a2071af3763fbd546ae81ce523266ef8aab4",
+          "target": "DWM 桌面"
+        },
+        {
+          "index": 224,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "cdf73782f0ab1e6c1381b273138ff19cde1bd397a4e72f5e67fc5b1312a5b26a",
+          "target": "i3 桌面"
+        },
+        {
+          "index": 225,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "df519a196f65bc96934f4fb4ff0efcea6b7645e22f96a21be82020c5a2517de7",
+          "target": "TWM 桌面"
+        },
+        {
+          "index": 226,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "40868fc77e2cbe01462f87fd4ac88ed05b139cea6cdb2afd52ae720e30b9f38b",
+          "target": "Awesome 桌面"
+        },
+        {
+          "index": 227,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "7a9d1a63335104155094a89f34297e419772e2e35f3450cb3c2e70ab2deb389c",
+          "target": "Xmonad 桌面"
+        },
+        {
+          "index": 228,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "840ec59389dddfa2a0fd05f67b171bdef11803c8c424d76713dce90c688c9149",
+          "target": "IceWM 桌面"
+        },
+        {
+          "index": 229,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2860bc9b7ace22fbc51cb0c066f30ee7ee5263ad6570bfe949a886b4c3dd3d2b",
+          "target": "WMaker 桌面"
+        },
+        {
+          "index": 230,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "bd769930deeeb2eaae7b9de6a44dd2e60d604367dce52ecbc0c874d9ccb8475b",
+          "target": "Blackbox 桌面"
+        },
+        {
+          "index": 231,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "548c22bbb8d1c3a9ad0498102e9f876fdeae725da523cecb736f2a2fdd0e23fe",
+          "target": "Fluxbox 桌面"
+        },
+        {
+          "index": 232,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ffa0819392c9b00b0368cd29558846cb67a7b49aee02cefdeecac43ddc4c3986",
+          "target": "Openbox 桌面"
+        },
+        {
+          "index": 233,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2e832dc49e16c014bf5b9c28555ad7d348c2ef219d49d4aee2edfe9bdc6419f4",
+          "target": "Xfce4 桌面"
+        },
+        {
+          "index": 234,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "19e8d5873836255a5b39c53eec263154cbb887b63065cd96a3d0b4dfef16bd94",
+          "target": "Enlightenment 桌面"
+        },
+        {
+          "index": 235,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "bed777019fd7a27bc72a16972daab82286ad4fd9fe9c0e581a41305d45b8a316",
+          "target": "CDE 桌面"
+        },
+        {
+          "index": 236,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "eef47b21e3e3202f27818eaa34ecfb8f41451114d8df41fd7c96d9f3359f5099",
+          "target": "MATE 桌面"
+        },
+        {
+          "index": 237,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "a35f4e76fb62c6a51aaaf52880d62282405cb807b8e49c045bf8ece102771b5b",
+          "target": "I3 桌面"
+        },
+        {
+          "index": 238,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "a33d3f808ae6660ee292764e633e978829e020ec1f79077add367d0dfec81c70",
+          "target": "WMII 桌面"
+        },
+        {
+          "index": 239,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "fa32f8d07933bbc0ddd0e08f2c547c0411a3ac9ddbe2ec1c57d1e5204e202f2f",
+          "target": "FLWM 桌面"
+        },
+        {
+          "index": 240,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox12",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "8457973d6ced476622e06d85b2177f7a971b79fa31151ab04e5d3b87527c7cf8",
+          "target": "Spectrwm 桌面"
+        },
+        {
           "index": 246,
           "component": "FormSessionEdit.PC1.TabSSH.sCheckBox23",
           "property": "Hint",
@@ -6358,6 +7662,46 @@
           "source_type": 6,
           "source_value_sha256": "0d0ba22e4032eed9c30e34e990e528fcd5898ff37161366280dd560c8d07e034",
           "target": "SSH 文件浏览器类型："
+        },
+        {
+          "index": 299,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox35",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "2ebdebae0d12317cc1a0d98592319054b03b20c5f82687aee61e68573fec18fe",
+          "target": "SFTP 协议"
+        },
+        {
+          "index": 300,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox35",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "5915b710c4b4752616e138b4794484a016af7aa965426b3a2aa8b62aa6e44472",
+          "target": "无"
+        },
+        {
+          "index": 301,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox35",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2ebdebae0d12317cc1a0d98592319054b03b20c5f82687aee61e68573fec18fe",
+          "target": "SFTP 协议"
+        },
+        {
+          "index": 302,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox35",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "622d35f53616036b7691220141abb417ce971ee39296e4ce43ee2e5976e9abd6",
+          "target": "SCP（高速）"
+        },
+        {
+          "index": 303,
+          "component": "FormSessionEdit.PC1.TabSSH.sComboBox35",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "f3c3eae6eadc64de78f0d62d72b73b3152a6adfa501cd27b9f14c6a847957c44",
+          "target": "SCP（普通速度）"
         },
         {
           "index": 309,
@@ -6448,6 +7792,30 @@
           "target": "协商模式："
         },
         {
+          "index": 418,
+          "component": "FormSessionEdit.PC1.TabTelnet.sPanel5.sComboBox40",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "b8bdc813a535f0fcd369a51f4b47eaff7769510c827360642679803cfed5d9aa",
+          "target": "主动模式"
+        },
+        {
+          "index": 419,
+          "component": "FormSessionEdit.PC1.TabTelnet.sPanel5.sComboBox40",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "b8bdc813a535f0fcd369a51f4b47eaff7769510c827360642679803cfed5d9aa",
+          "target": "主动模式"
+        },
+        {
+          "index": 420,
+          "component": "FormSessionEdit.PC1.TabTelnet.sPanel5.sComboBox40",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ae678495f4459c623a649c95f79823432c2b968f6c3b7a30e2fc733f2daf7892",
+          "target": "被动模式"
+        },
+        {
           "index": 423,
           "component": "FormSessionEdit.PC1.TabRlogin",
           "property": "Caption",
@@ -6504,12 +7872,124 @@
           "target": "显示"
         },
         {
+          "index": 502,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "33ef81cf13faf66a86164c3835316b8081c4ddaa5afd26ea8a58421a4f93c3e5",
+          "target": "自动"
+        },
+        {
+          "index": 504,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "33ef81cf13faf66a86164c3835316b8081c4ddaa5afd26ea8a58421a4f93c3e5",
+          "target": "自动"
+        },
+        {
+          "index": 507,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "175fa831a330163d009d8421099aea713717d376c844f109855f51d7bd3cfd2a",
+          "target": "DirectDraw 全屏"
+        },
+        {
+          "index": 508,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "9c19f9dc816047154ff125120c1e2b7cab5a835f8b323a175586d3c708644f88",
+          "target": "DirectDraw 全屏（8 位色）"
+        },
+        {
+          "index": 509,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "c5292adba692760606b6b5fb88da3c5b13ad948585d48975c427d670fbfd9f6f",
+          "target": "DirectDraw 全屏（16 位色）"
+        },
+        {
+          "index": 510,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "9e671e8025fca4d6e083e151131ccb97cd8984616dd46ced48b3b510c7d47f8c",
+          "target": "DirectDraw 全屏（24 位色）"
+        },
+        {
+          "index": 511,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "63c5d3d376c84d6a00eb9475ba83a8f35e993a9cc04e0fd3b9b98642baf4c2e8",
+          "target": "DirectDraw 全屏（32 位色）"
+        },
+        {
+          "index": 513,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "26c5f8a878256e8914bcb1d171652a75bc7904323407b3c5e813c92b253c3e5b",
+          "target": "DirectDraw4 全屏"
+        },
+        {
+          "index": 514,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2ab00aa719653691bef2c6132fad9c53eff712ca8ae503cb89876cd3b7299350",
+          "target": "DirectDraw4 全屏（8 位色）"
+        },
+        {
+          "index": 515,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "233feba93f51475eae67ed7907ee6ddcfa1b23d888d37b4b11a98f8d23180b3f",
+          "target": "DirectDraw4 全屏（16 位色）"
+        },
+        {
+          "index": 516,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2d8808d8d146a9f4cd52d48d9267a1ef5c395c2273e8b578b34f69729246855e",
+          "target": "DirectDraw4 全屏（24 位色）"
+        },
+        {
+          "index": 517,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox8",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "271b335cd47e9b705ec7079316e5f79a1102445ca31e41d2eb2bea86edd7384a",
+          "target": "DirectDraw4 全屏（32 位色）"
+        },
+        {
           "index": 525,
           "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox9",
           "property": "BoundLabel.Caption",
           "source_type": 6,
           "source_value_sha256": "53806d926369e093f3a5d41d685e9062e1d5094bde752d2ec1da34346fb33b86",
           "target": "键盘类型"
+        },
+        {
+          "index": 531,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox9",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "33ef81cf13faf66a86164c3835316b8081c4ddaa5afd26ea8a58421a4f93c3e5",
+          "target": "自动"
+        },
+        {
+          "index": 532,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox9",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "33ef81cf13faf66a86164c3835316b8081c4ddaa5afd26ea8a58421a4f93c3e5",
+          "target": "自动"
         },
         {
           "index": 629,
@@ -6574,6 +8054,38 @@
           "source_type": 6,
           "source_value_sha256": "59bcc540c0e8b117693cdac4a0926b23715a59084c39add6ea39af176dde8a5c",
           "target": "剪贴板"
+        },
+        {
+          "index": 707,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox22",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "ad42eec50f06f92aa5efa29e211aec9c975e9809cf9fe6a7172e6af3f8065e5d",
+          "target": "启用"
+        },
+        {
+          "index": 708,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox22",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "d309c9fce8ff2623ee237a696bf7588bb901a613331e0f02a07ec0374eb81626",
+          "target": "禁用"
+        },
+        {
+          "index": 709,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox22",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ad42eec50f06f92aa5efa29e211aec9c975e9809cf9fe6a7172e6af3f8065e5d",
+          "target": "启用"
+        },
+        {
+          "index": 710,
+          "component": "FormSessionEdit.PC1.TabXDMCP.sComboBox22",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "f9e812c7e047db54ff49c22e274443dd89a96aed0ae1da41adb36671fe2d3f3d",
+          "target": "禁用主选择区共享"
         },
         {
           "index": 716,
@@ -6664,12 +8176,60 @@
           "target": "分辨率"
         },
         {
+          "index": 842,
+          "component": "FormSessionEdit.PC1.TabRDP.sComboBox7",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "cf57996002a327dfad986caa41ac1adc37a523bb56eee179c930f450de093a42",
+          "target": "适应终端窗口"
+        },
+        {
+          "index": 843,
+          "component": "FormSessionEdit.PC1.TabRDP.sComboBox7",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "cf57996002a327dfad986caa41ac1adc37a523bb56eee179c930f450de093a42",
+          "target": "适应终端窗口"
+        },
+        {
+          "index": 844,
+          "component": "FormSessionEdit.PC1.TabRDP.sComboBox7",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ed3464d2b97a390f245ac01c9da7c702223c9ce20572c8a63d6301564a87c8c0",
+          "target": "适应屏幕"
+        },
+        {
           "index": 877,
           "component": "FormSessionEdit.PC1.TabRDP.CmbZoom",
           "property": "BoundLabel.Caption",
           "source_type": 6,
           "source_value_sha256": "754295a925b2e6c46bd1773aa344f8dc0ba078822abb66769a0f5a4e49425b2e",
           "target": "缩放"
+        },
+        {
+          "index": 883,
+          "component": "FormSessionEdit.PC1.TabRDP.CmbZoom",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "325e571e029677419860d41f95d124c08e211238040655336acbc90eb56c665f",
+          "target": "不缩放"
+        },
+        {
+          "index": 884,
+          "component": "FormSessionEdit.PC1.TabRDP.CmbZoom",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "325e571e029677419860d41f95d124c08e211238040655336acbc90eb56c665f",
+          "target": "不缩放"
+        },
+        {
+          "index": 885,
+          "component": "FormSessionEdit.PC1.TabRDP.CmbZoom",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "9fdd34866f77a3705954a4407a557880f99f194e52a766affcf3d08644e781c3",
+          "target": "自动"
         },
         {
           "index": 902,
@@ -6808,6 +8368,38 @@
           "target": "远程命令"
         },
         {
+          "index": 1009,
+          "component": "FormSessionEdit.PC1.TabRDP.sComboBox31",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "45a8934c94cc14e72a1fddd3914a90ec1bb2af7258a266e1172d259ab0eab0c3",
+          "target": "禁用音频"
+        },
+        {
+          "index": 1010,
+          "component": "FormSessionEdit.PC1.TabRDP.sComboBox31",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "45a8934c94cc14e72a1fddd3914a90ec1bb2af7258a266e1172d259ab0eab0c3",
+          "target": "禁用音频"
+        },
+        {
+          "index": 1011,
+          "component": "FormSessionEdit.PC1.TabRDP.sComboBox31",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "3503fb52c5559fe88f44395ca0134843bf6074056f1a1d3053d2eb61c5be485e",
+          "target": "重定向到本机"
+        },
+        {
+          "index": 1012,
+          "component": "FormSessionEdit.PC1.TabRDP.sComboBox31",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "c591af1fa587cc1bb05be9e3cd3e42f07df343bbe9cc8b94d429a0513cf25e8c",
+          "target": "在远程服务器播放"
+        },
+        {
           "index": 1019,
           "component": "FormSessionEdit.PC1.TabRDP.sCheckBox51",
           "property": "Hint",
@@ -6854,6 +8446,38 @@
           "source_type": 6,
           "source_value_sha256": "a252de00a458306c8e699f87bf6a1c1fa7a672f62249bea152450584727f7615",
           "target": "服务器身份验证"
+        },
+        {
+          "index": 1054,
+          "component": "FormSessionEdit.PC1.TabRDP.sComboBox39",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "52c4779d570956a12c709b949f236f7cbb0a25d6d101848b645cff4fe634064f",
+          "target": "0（无）"
+        },
+        {
+          "index": 1055,
+          "component": "FormSessionEdit.PC1.TabRDP.sComboBox39",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "52c4779d570956a12c709b949f236f7cbb0a25d6d101848b645cff4fe634064f",
+          "target": "0（无）"
+        },
+        {
+          "index": 1056,
+          "component": "FormSessionEdit.PC1.TabRDP.sComboBox39",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "1b0db583a67110ced4fe8be556cf6310e9132b13e3ba41892eadeb633cf457ec",
+          "target": "1（强制）"
+        },
+        {
+          "index": 1057,
+          "component": "FormSessionEdit.PC1.TabRDP.sComboBox39",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "130649c25baade7f705f8f0752dbd175948e3ba0a450044236a8c18425d8ca01",
+          "target": "2（询问）"
         },
         {
           "index": 1063,
@@ -7040,6 +8664,126 @@
           "target": "代理设置："
         },
         {
+          "index": 1255,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "45e7d2d7f0d6401fb57c46f74b39181bb7732d3f18f2e82494125df2b54c738f",
+          "target": "不使用代理"
+        },
+        {
+          "index": 1257,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "45e7d2d7f0d6401fb57c46f74b39181bb7732d3f18f2e82494125df2b54c738f",
+          "target": "不使用代理"
+        },
+        {
+          "index": 1258,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "71d7d88f0b45d06f85a3f67d8baee7820e7d27ad75093bf332fe4a9b04d52c5c",
+          "target": "USER SITE 代理"
+        },
+        {
+          "index": 1259,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "5d49361db4a6c654cae8f1b0cf4bdebab64175ed08b38761f0bcf9d674d26348",
+          "target": "SITE 代理"
+        },
+        {
+          "index": 1260,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "65ded45ee9f399e859b7e0effc34b4be36993a24fddd22e8072c81beabcb3c75",
+          "target": "OPEN 代理"
+        },
+        {
+          "index": 1261,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "4ef996cdae59650a4dba95232ae4a04aaa78311ada0d987cfce7b866d26c231a",
+          "target": "USERPATH 代理"
+        },
+        {
+          "index": 1262,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "70c1f9f38c2d1b0c86f9e059ffe11b7dc1d97c8a07f97637d252469d616efb6a",
+          "target": "透明代理"
+        },
+        {
+          "index": 1263,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "04b6a00f8587958d3fa12941abb5ae6cc25d3cd556ee96919d66796903504d9d",
+          "target": "SOCKS4 代理"
+        },
+        {
+          "index": 1264,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ec1ca5cbc43c486d3855be1c68a4f98a00a2fda7e534a2ad279249c3822605c3",
+          "target": "SOCKS4 代理（身份验证）"
+        },
+        {
+          "index": 1265,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "efa59b3ba1b3948a8cdba1711cad6f189bc2ae2d727180f5f2acfaa58acac5ad",
+          "target": "SOCKS5 代理"
+        },
+        {
+          "index": 1266,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ed655a0953af37c0ee363017185b7a501436733bd718fd24faa1f52f593b3254",
+          "target": "SOCKS5 代理（身份验证）"
+        },
+        {
+          "index": 1267,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2f70e96a5c6f67f4460cc6456351e8842b3d77f457a069a549cbec00b1e4abe8",
+          "target": "Web 代理"
+        },
+        {
+          "index": 1268,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "e99b343d063504713d4d3a3e3ffcf266d0521a3befe67fd8486d626aa7f7234e",
+          "target": "Web 代理（基本身份验证）"
+        },
+        {
+          "index": 1269,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "10b673f2b609b79e21e5935f17226bc0ed437f3341420884840f579345f67d30",
+          "target": "Web 代理（摘要身份验证）"
+        },
+        {
+          "index": 1270,
+          "component": "FormSessionEdit.PC1.TabFTP.sComboBox19",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "299efd839f7834feac1086f1eafde7890178212ab5ace84d99caf161c18e54f4",
+          "target": "Web 代理（NTLM 身份验证）"
+        },
+        {
           "index": 1280,
           "component": "FormSessionEdit.PC1.TabFTP.sEdit25",
           "property": "BoundLabel.Caption",
@@ -7142,6 +8886,86 @@
           "source_type": 6,
           "source_value_sha256": "4c9cefd1f30c1ed0c04b73273637a708d61f572cbf0b4bf234b2f52f0c7a2db9",
           "target": "代理设置："
+        },
+        {
+          "index": 1480,
+          "component": "FormSessionEdit.PC1.sTabSheet1.sComboBox21",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "45e7d2d7f0d6401fb57c46f74b39181bb7732d3f18f2e82494125df2b54c738f",
+          "target": "不使用代理"
+        },
+        {
+          "index": 1482,
+          "component": "FormSessionEdit.PC1.sTabSheet1.sComboBox21",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "45e7d2d7f0d6401fb57c46f74b39181bb7732d3f18f2e82494125df2b54c738f",
+          "target": "不使用代理"
+        },
+        {
+          "index": 1483,
+          "component": "FormSessionEdit.PC1.sTabSheet1.sComboBox21",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "04b6a00f8587958d3fa12941abb5ae6cc25d3cd556ee96919d66796903504d9d",
+          "target": "SOCKS4 代理"
+        },
+        {
+          "index": 1484,
+          "component": "FormSessionEdit.PC1.sTabSheet1.sComboBox21",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ec1ca5cbc43c486d3855be1c68a4f98a00a2fda7e534a2ad279249c3822605c3",
+          "target": "SOCKS4 代理（身份验证）"
+        },
+        {
+          "index": 1485,
+          "component": "FormSessionEdit.PC1.sTabSheet1.sComboBox21",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "efa59b3ba1b3948a8cdba1711cad6f189bc2ae2d727180f5f2acfaa58acac5ad",
+          "target": "SOCKS5 代理"
+        },
+        {
+          "index": 1486,
+          "component": "FormSessionEdit.PC1.sTabSheet1.sComboBox21",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ed655a0953af37c0ee363017185b7a501436733bd718fd24faa1f52f593b3254",
+          "target": "SOCKS5 代理（身份验证）"
+        },
+        {
+          "index": 1487,
+          "component": "FormSessionEdit.PC1.sTabSheet1.sComboBox21",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2f70e96a5c6f67f4460cc6456351e8842b3d77f457a069a549cbec00b1e4abe8",
+          "target": "Web 代理"
+        },
+        {
+          "index": 1488,
+          "component": "FormSessionEdit.PC1.sTabSheet1.sComboBox21",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "e99b343d063504713d4d3a3e3ffcf266d0521a3befe67fd8486d626aa7f7234e",
+          "target": "Web 代理（基本身份验证）"
+        },
+        {
+          "index": 1489,
+          "component": "FormSessionEdit.PC1.sTabSheet1.sComboBox21",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "10b673f2b609b79e21e5935f17226bc0ed437f3341420884840f579345f67d30",
+          "target": "Web 代理（摘要身份验证）"
+        },
+        {
+          "index": 1490,
+          "component": "FormSessionEdit.PC1.sTabSheet1.sComboBox21",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "299efd839f7834feac1086f1eafde7890178212ab5ace84d99caf161c18e54f4",
+          "target": "Web 代理（NTLM 身份验证）"
         },
         {
           "index": 1500,
@@ -7272,12 +9096,68 @@
           "target": "校验位"
         },
         {
+          "index": 1662,
+          "component": "FormSessionEdit.PC1.TabSerial.sComboBox15",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "5915b710c4b4752616e138b4794484a016af7aa965426b3a2aa8b62aa6e44472",
+          "target": "无校验"
+        },
+        {
+          "index": 1664,
+          "component": "FormSessionEdit.PC1.TabSerial.sComboBox15",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "5915b710c4b4752616e138b4794484a016af7aa965426b3a2aa8b62aa6e44472",
+          "target": "无校验"
+        },
+        {
+          "index": 1665,
+          "component": "FormSessionEdit.PC1.TabSerial.sComboBox15",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2921e4b40b4b9a24ea1856f7429bc16aa087d8a2f1424c48ebda7f68add4d5cc",
+          "target": "奇校验"
+        },
+        {
+          "index": 1666,
+          "component": "FormSessionEdit.PC1.TabSerial.sComboBox15",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "f75e749bde1fea99285b65f3a9f1edcaf454b0c5f51de71acf4651689a80f45b",
+          "target": "偶校验"
+        },
+        {
+          "index": 1667,
+          "component": "FormSessionEdit.PC1.TabSerial.sComboBox15",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "36adf2125b057b21a8cd3db3d7f6a028630ee2c829ebc70853aa8af82c37aaf9",
+          "target": "传号校验（1）"
+        },
+        {
+          "index": 1668,
+          "component": "FormSessionEdit.PC1.TabSerial.sComboBox15",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "fce615c87fcf5021568a161944316fbbb81afac054098b7f47baa7909dfb2ba4",
+          "target": "空号校验（0）"
+        },
+        {
           "index": 1677,
           "component": "FormSessionEdit.PC1.TabSerial.sComboBox16",
           "property": "BoundLabel.Caption",
           "source_type": 6,
           "source_value_sha256": "c0c978bb05f748554867ee36f2bc81e7416db27c81e1d6243ff04f9f1a69b133",
           "target": "流量控制"
+        },
+        {
+          "index": 1687,
+          "component": "FormSessionEdit.PC1.TabSerial.sComboBox16",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "5915b710c4b4752616e138b4794484a016af7aa965426b3a2aa8b62aa6e44472",
+          "target": "无"
         },
         {
           "index": 1696,
@@ -7310,6 +9190,38 @@
           "source_type": 6,
           "source_value_sha256": "ccec5647f6d4fe54af40260ac647bc20cba6f4be9fb36d3d9eac57a4c5d159dd",
           "target": "串口引擎："
+        },
+        {
+          "index": 1758,
+          "component": "FormSessionEdit.PC1.TabSerial.sComboBox17",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "7c24d37a3757edf4beb41bdd21815211488f6bd294a90d665f2e39d38c988dbb",
+          "target": "PuTTY（可手动设置 COM 端口）"
+        },
+        {
+          "index": 1760,
+          "component": "FormSessionEdit.PC1.TabSerial.sComboBox17",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "b82e242c8fff5f82782762ef631ebd95e7cbd964d61911e5dd6d3f1b0831b012",
+          "target": "Microcom（自动设置 COM 端口参数）"
+        },
+        {
+          "index": 1761,
+          "component": "FormSessionEdit.PC1.TabSerial.sComboBox17",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "6b848ec28cd73f4bcea8597ea4191a65f949fa7d6c199a6482e8d69b61d9ca7b",
+          "target": "Minicom（可手动设置 COM 端口）"
+        },
+        {
+          "index": 1762,
+          "component": "FormSessionEdit.PC1.TabSerial.sComboBox17",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "7c24d37a3757edf4beb41bdd21815211488f6bd294a90d665f2e39d38c988dbb",
+          "target": "PuTTY（可手动设置 COM 端口）"
         },
         {
           "index": 1764,
@@ -7464,6 +9376,22 @@
           "target": "模拟旧版 Internet Explorer："
         },
         {
+          "index": 2023,
+          "component": "FormSessionEdit.PC1.TabBrowser.sComboBox33",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "ec9504bcbf7f9600fee288ec591bb450d8f23747de787da833b183ca55eb63ee",
+          "target": "不模拟"
+        },
+        {
+          "index": 2024,
+          "component": "FormSessionEdit.PC1.TabBrowser.sComboBox33",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ec9504bcbf7f9600fee288ec591bb450d8f23747de787da833b183ca55eb63ee",
+          "target": "不模拟"
+        },
+        {
           "index": 2035,
           "component": "FormSessionEdit.PC1.TabBrowser.ComboWhichBrowser",
           "property": "Hint",
@@ -7478,6 +9406,22 @@
           "source_type": 6,
           "source_value_sha256": "9e133a7b29683d179737c9a037d4d30a59ea969e9bf1550132b8f170e6817ded",
           "target": "浏览器引擎："
+        },
+        {
+          "index": 2049,
+          "component": "FormSessionEdit.PC1.TabBrowser.ComboWhichBrowser",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "53d1fe3109c66056778b8e7aacf1f2118f01e257992541d2163a86b3aef7a42f",
+          "target": "Google Chrome（实验性）"
+        },
+        {
+          "index": 2050,
+          "component": "FormSessionEdit.PC1.TabBrowser.ComboWhichBrowser",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "d62ec455898de5120f62f201788c0a2d6e52c2e32ee9e372809f4472a57c4ede",
+          "target": "Mozilla Firefox（实验性）"
         },
         {
           "index": 2068,
@@ -7568,6 +9512,54 @@
           "target": " 代理配置 "
         },
         {
+          "index": 2151,
+          "component": "FormSessionEdit.PC1.TabBrowser.sPanel3.sGroupBox2.sComboBox38",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "529b3e221949e3b09b94cc4a5ef640b09080db41a18324ad9f16db8cbb3685c1",
+          "target": "使用系统代理设置"
+        },
+        {
+          "index": 2153,
+          "component": "FormSessionEdit.PC1.TabBrowser.sPanel3.sGroupBox2.sComboBox38",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "529b3e221949e3b09b94cc4a5ef640b09080db41a18324ad9f16db8cbb3685c1",
+          "target": "使用系统代理设置"
+        },
+        {
+          "index": 2154,
+          "component": "FormSessionEdit.PC1.TabBrowser.sPanel3.sGroupBox2.sComboBox38",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "275d315600a9e66df9da6ff2a3e56cb4f8697433e1fb402c3e8014bfd7acfe6c",
+          "target": "不使用代理（直接连接）"
+        },
+        {
+          "index": 2155,
+          "component": "FormSessionEdit.PC1.TabBrowser.sPanel3.sGroupBox2.sComboBox38",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "317781c704e9cd516b0fa1e33a04e1e11a84c9ae69f335a882fcb15722cf49c2",
+          "target": "自动检测代理"
+        },
+        {
+          "index": 2156,
+          "component": "FormSessionEdit.PC1.TabBrowser.sPanel3.sGroupBox2.sComboBox38",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "94cb65a6513e48f7622312cad61fe86cfda761e5b1e821aeb3a5e3f56456e936",
+          "target": "指定代理服务器"
+        },
+        {
+          "index": 2157,
+          "component": "FormSessionEdit.PC1.TabBrowser.sPanel3.sGroupBox2.sComboBox38",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2db22aee6064b30ddfe142033a7371065260183df39ebc81c5bbb69cc660284c",
+          "target": "指定代理脚本"
+        },
+        {
           "index": 2166,
           "component": "FormSessionEdit.PC1.TabBrowser.sPanel3.sGroupBox2.EdProxyServer",
           "property": "BoundLabel.Caption",
@@ -7600,12 +9592,60 @@
           "target": "字符编码："
         },
         {
+          "index": 2200,
+          "component": "FormSessionEdit.PC1.TabMosh.sComboBox24",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "9fdd34866f77a3705954a4407a557880f99f194e52a766affcf3d08644e781c3",
+          "target": "自动"
+        },
+        {
+          "index": 2201,
+          "component": "FormSessionEdit.PC1.TabMosh.sComboBox24",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "9fdd34866f77a3705954a4407a557880f99f194e52a766affcf3d08644e781c3",
+          "target": "自动"
+        },
+        {
           "index": 2477,
           "component": "FormSessionEdit.PC1.TabMosh.sComboBox25",
           "property": "BoundLabel.Caption",
           "source_type": 6,
           "source_value_sha256": "398916f8451d12952a185c78c7da934ab41d2ebc169c2296a25ce43c5462f45c",
           "target": "输入预测类型："
+        },
+        {
+          "index": 2483,
+          "component": "FormSessionEdit.PC1.TabMosh.sComboBox25",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "041236ab4c6f571b56f2f5bc3f0656065efc5b4df4d6d3f75872feffe83fc73f",
+          "target": "自适应"
+        },
+        {
+          "index": 2484,
+          "component": "FormSessionEdit.PC1.TabMosh.sComboBox25",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "041236ab4c6f571b56f2f5bc3f0656065efc5b4df4d6d3f75872feffe83fc73f",
+          "target": "自适应"
+        },
+        {
+          "index": 2485,
+          "component": "FormSessionEdit.PC1.TabMosh.sComboBox25",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "fd33738a3312b513354923071c2dd1ff5c63a3748e4e52f568b6bc433a9e57f1",
+          "target": "始终"
+        },
+        {
+          "index": 2486,
+          "component": "FormSessionEdit.PC1.TabMosh.sComboBox25",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "7720df28db8061d53d51b9be29ee0e33f960e4121214fb32147228f1c76222e9",
+          "target": "从不"
         },
         {
           "index": 2500,
@@ -7720,6 +9760,174 @@
           "target": "图形环境（实验功能）："
         },
         {
+          "index": 2655,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "b9bcb8f1f386b540269289d1e54d5415d9d21701cb739ef276ab5e95a47af20c",
+          "target": "交互式 Shell"
+        },
+        {
+          "index": 2657,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "b9bcb8f1f386b540269289d1e54d5415d9d21701cb739ef276ab5e95a47af20c",
+          "target": "交互式 Shell"
+        },
+        {
+          "index": 2658,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "51f56bc3b27d091454fe3a7e7c955b8daf38d4fc2865d4c564b5c40d71aa16f5",
+          "target": "XFCE4 桌面"
+        },
+        {
+          "index": 2659,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "eef47b21e3e3202f27818eaa34ecfb8f41451114d8df41fd7c96d9f3359f5099",
+          "target": "MATE 桌面"
+        },
+        {
+          "index": 2660,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "caff4f61b3a1348c072cdbff01cb33c9c3ec0c2096a7d0fa5def53ade6770f9e",
+          "target": "LXDE 桌面"
+        },
+        {
+          "index": 2661,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "548c22bbb8d1c3a9ad0498102e9f876fdeae725da523cecb736f2a2fdd0e23fe",
+          "target": "Fluxbox 桌面"
+        },
+        {
+          "index": 2662,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "840ec59389dddfa2a0fd05f67b171bdef11803c8c424d76713dce90c688c9149",
+          "target": "IceWM 桌面"
+        },
+        {
+          "index": 2663,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ffa0819392c9b00b0368cd29558846cb67a7b49aee02cefdeecac43ddc4c3986",
+          "target": "Openbox 桌面"
+        },
+        {
+          "index": 2664,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "153c33ff002cb90ce109dcdd7756dae35a59086668381c6292e8a1b9749a8b6e",
+          "target": "Fvwm2 桌面"
+        },
+        {
+          "index": 2665,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "cdf73782f0ab1e6c1381b273138ff19cde1bd397a4e72f5e67fc5b1312a5b26a",
+          "target": "i3 桌面"
+        },
+        {
+          "index": 2666,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "df519a196f65bc96934f4fb4ff0efcea6b7645e22f96a21be82020c5a2517de7",
+          "target": "TWM 桌面"
+        },
+        {
+          "index": 2667,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "40868fc77e2cbe01462f87fd4ac88ed05b139cea6cdb2afd52ae720e30b9f38b",
+          "target": "Awesome 桌面"
+        },
+        {
+          "index": 2668,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "7a9d1a63335104155094a89f34297e419772e2e35f3450cb3c2e70ab2deb389c",
+          "target": "Xmonad 桌面"
+        },
+        {
+          "index": 2669,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2860bc9b7ace22fbc51cb0c066f30ee7ee5263ad6570bfe949a886b4c3dd3d2b",
+          "target": "WMaker 桌面"
+        },
+        {
+          "index": 2670,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "bd769930deeeb2eaae7b9de6a44dd2e60d604367dce52ecbc0c874d9ccb8475b",
+          "target": "Blackbox 桌面"
+        },
+        {
+          "index": 2671,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "19e8d5873836255a5b39c53eec263154cbb887b63065cd96a3d0b4dfef16bd94",
+          "target": "Enlightenment 桌面"
+        },
+        {
+          "index": 2672,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "a33d3f808ae6660ee292764e633e978829e020ec1f79077add367d0dfec81c70",
+          "target": "WMII 桌面"
+        },
+        {
+          "index": 2673,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "fa32f8d07933bbc0ddd0e08f2c547c0411a3ac9ddbe2ec1c57d1e5204e202f2f",
+          "target": "FLWM 桌面"
+        },
+        {
+          "index": 2674,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "8457973d6ced476622e06d85b2177f7a971b79fa31151ab04e5d3b87527c7cf8",
+          "target": "Spectrwm 桌面"
+        },
+        {
+          "index": 2675,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "cd7dd18a18fb54e288dffefc749de54d623031c0d83dc7c000a1ba0c725c39d9",
+          "target": "KDE 桌面"
+        },
+        {
+          "index": 2676,
+          "component": "FormSessionEdit.PC1.sTabSheet18.sComboBox36",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "61dc3f4e7bc0b10c748bebcdb9cab5a5e67454b3486d5af6dc4e2b3e258b215f",
+          "target": "Gnome 桌面"
+        },
+        {
           "index": 2687,
           "component": "FormSessionEdit.PC1.sTabSheet18.WslStartupDir",
           "property": "BoundLabel.Caption",
@@ -7790,6 +9998,14 @@
           "source_type": 6,
           "source_value_sha256": "c7d550c02fa47136c61e7d1c032efeaaa72b958a9cca67e460d2605078edbbf0",
           "target": "字符编码："
+        },
+        {
+          "index": 2799,
+          "component": "FormSessionEdit.PC1.TabTerminal.sComboBox4",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ecdc62c30074c14b6899216ab6d5a18e95ce6e6f0d3cd4228fd2aa23a3b390f1",
+          "target": "使用字体编码"
         },
         {
           "index": 2805,
@@ -7872,6 +10088,62 @@
           "target": "光标样式："
         },
         {
+          "index": 2928,
+          "component": "FormSessionEdit.PC1.TabTerminal.sPanel9.sComboBox2",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "33746848dceb647ad67c056bb19ebac007eaaecb1775793cf1a3d1e06f548350",
+          "target": "块状"
+        },
+        {
+          "index": 2930,
+          "component": "FormSessionEdit.PC1.TabTerminal.sPanel9.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "33746848dceb647ad67c056bb19ebac007eaaecb1775793cf1a3d1e06f548350",
+          "target": "块状"
+        },
+        {
+          "index": 2931,
+          "component": "FormSessionEdit.PC1.TabTerminal.sPanel9.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "cbf04bf1f039ca4d5611b4df3c06f2bc17a58872f1b11b127750a3b8bcc0c83f",
+          "target": "下划线"
+        },
+        {
+          "index": 2932,
+          "component": "FormSessionEdit.PC1.TabTerminal.sPanel9.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "3d8c835e94df12e640a971dee059298699456e8475adca99999f82ff00a75c32",
+          "target": "竖线"
+        },
+        {
+          "index": 2933,
+          "component": "FormSessionEdit.PC1.TabTerminal.sPanel9.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "7bc407cbf8ed06a3e2776cf2f8d64aeec587067054fbd0d49752c6e89d559216",
+          "target": "闪烁块状"
+        },
+        {
+          "index": 2934,
+          "component": "FormSessionEdit.PC1.TabTerminal.sPanel9.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "b7681016364f7ba4ada549130e536722027f4bf61f35fc0676698f97da9b9a71",
+          "target": "闪烁下划线"
+        },
+        {
+          "index": 2935,
+          "component": "FormSessionEdit.PC1.TabTerminal.sPanel9.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "4af832c0442d28a08e437aa870bc1ab606eeb2c94f88fe959866ecddd01917a9",
+          "target": "闪烁竖线"
+        },
+        {
           "index": 2958,
           "component": "FormSessionEdit.PC1.TabTerminal.sSpinEdit15",
           "property": "BoundLabel.Caption",
@@ -7896,6 +10168,62 @@
           "target": "语法高亮："
         },
         {
+          "index": 2999,
+          "component": "FormSessionEdit.PC1.TabTerminal.sComboBox32",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "0403c5d19487d3150aae02c79239defbc34fd420c252f025f6cfed088d646083",
+          "target": "标准关键字（OK / 警告 / 错误等）"
+        },
+        {
+          "index": 3000,
+          "component": "FormSessionEdit.PC1.TabTerminal.sComboBox32",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "5915b710c4b4752616e138b4794484a016af7aa965426b3a2aa8b62aa6e44472",
+          "target": "无"
+        },
+        {
+          "index": 3001,
+          "component": "FormSessionEdit.PC1.TabTerminal.sComboBox32",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "0403c5d19487d3150aae02c79239defbc34fd420c252f025f6cfed088d646083",
+          "target": "标准关键字（OK / 警告 / 错误等）"
+        },
+        {
+          "index": 3002,
+          "component": "FormSessionEdit.PC1.TabTerminal.sComboBox32",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "79cae804adad62d307ea43cdd94a7a170f0b2b63f50460b248a43a75c90c970b",
+          "target": "Unix Shell 脚本"
+        },
+        {
+          "index": 3003,
+          "component": "FormSessionEdit.PC1.TabTerminal.sComboBox32",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "8d4b58cfa0935f78075138528a9cce777b2c4490bcb96928e5a73af928003874",
+          "target": "Cisco（网络配置）"
+        },
+        {
+          "index": 3004,
+          "component": "FormSessionEdit.PC1.TabTerminal.sComboBox32",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "74f03b9dc8643d70d91ada4ee2b09f5f7f07dc8acfbfba2a37bfd3f3e26d4524",
+          "target": "Perl 语法"
+        },
+        {
+          "index": 3005,
+          "component": "FormSessionEdit.PC1.TabTerminal.sComboBox32",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ceac97ac50d0287f57f3cfb90b9cd93c8820f986466ff1348a23122eb148ae3b",
+          "target": "SQL 语法"
+        },
+        {
           "index": 3011,
           "component": "FormSessionEdit.PC1.TabTerminal.sComboBox34",
           "property": "Hint",
@@ -7910,6 +10238,30 @@
           "source_type": 6,
           "source_value_sha256": "b85ff2abd3dbe4d2514f512fe4c3b34dbe24a08f783388d10a37d06d6e6fbbf9",
           "target": "粘贴延迟："
+        },
+        {
+          "index": 3022,
+          "component": "FormSessionEdit.PC1.TabTerminal.sComboBox34",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "6bc3e3742b6ef201ec8a83bd260edcb95b8877e98736b240cc491e0bb21313b4",
+          "target": "自动"
+        },
+        {
+          "index": 3023,
+          "component": "FormSessionEdit.PC1.TabTerminal.sComboBox34",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "6bc3e3742b6ef201ec8a83bd260edcb95b8877e98736b240cc491e0bb21313b4",
+          "target": "自动"
+        },
+        {
+          "index": 3024,
+          "component": "FormSessionEdit.PC1.TabTerminal.sComboBox34",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "55ae87aaecd3b6de179f98e4e53b365c33eec34124d4d58250401b03f161de2f",
+          "target": "无延迟"
         },
         {
           "index": 3042,
@@ -7958,6 +10310,46 @@
           "source_type": 6,
           "source_value_sha256": "b58e3b330caf6ed285277555a1c81434022428c31952e26e6c21630af363eaaf",
           "target": "代理类型："
+        },
+        {
+          "index": 3085,
+          "component": "FormSessionEdit.PC1.TabNetwork.sGroupBox1.sComboBox20",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "5915b710c4b4752616e138b4794484a016af7aa965426b3a2aa8b62aa6e44472",
+          "target": "无"
+        },
+        {
+          "index": 3087,
+          "component": "FormSessionEdit.PC1.TabNetwork.sGroupBox1.sComboBox20",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "5915b710c4b4752616e138b4794484a016af7aa965426b3a2aa8b62aa6e44472",
+          "target": "无"
+        },
+        {
+          "index": 3092,
+          "component": "FormSessionEdit.PC1.TabNetwork.sGroupBox1.sComboBox20",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ca046ed5ee7c2d678e40ad005b104077787d3748b266d85be21837be00c32c8c",
+          "target": "本地"
+        },
+        {
+          "index": 3093,
+          "component": "FormSessionEdit.PC1.TabNetwork.sGroupBox1.sComboBox20",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "0aa08be03e57d24a60dd1bfa274e4ab8cf2e4f25c015257cbde65acd6612eb17",
+          "target": "SSH 转发"
+        },
+        {
+          "index": 3094,
+          "component": "FormSessionEdit.PC1.TabNetwork.sGroupBox1.sComboBox20",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ffa57c5d3a713d01b10e5f6ea19ba447b0927bf0252fcdd2a8e85c7276d9ad29",
+          "target": "SSH 命令"
         },
         {
           "index": 3100,
@@ -8118,6 +10510,46 @@
           "source_type": 6,
           "source_value_sha256": "ab7ee7ff48d37119e85eee77ad32cc4418b54527b7d40e23d066ba6e6e3005e0",
           "target": "会话打开位置"
+        },
+        {
+          "index": 3297,
+          "component": "FormSessionEdit.PC1.TabSession.sComboBox10",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "e70deaf3f16a13c614289c6a29cbde76d60e50dcee535a425708b77decc72f4c",
+          "target": "普通标签页"
+        },
+        {
+          "index": 3298,
+          "component": "FormSessionEdit.PC1.TabSession.sComboBox10",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "e70deaf3f16a13c614289c6a29cbde76d60e50dcee535a425708b77decc72f4c",
+          "target": "普通标签页"
+        },
+        {
+          "index": 3299,
+          "component": "FormSessionEdit.PC1.TabSession.sComboBox10",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "7ec36662e2d3f5e4fc601d962dbcda66c4f62fdf8521b56618957e8e59f4155d",
+          "target": "独立窗口"
+        },
+        {
+          "index": 3300,
+          "component": "FormSessionEdit.PC1.TabSession.sComboBox10",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "4ee061d5e247ae3ec22afbd1e3be9a960f2f36e5341951a3d04dc695169212d4",
+          "target": "最大化独立窗口"
+        },
+        {
+          "index": 3301,
+          "component": "FormSessionEdit.PC1.TabSession.sComboBox10",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "d6011a86ab1e0d6c279e999e4055ba24756f222ef66a8882cc1795c0ea7e27f8",
+          "target": "全屏"
         },
         {
           "index": 3313,
@@ -8920,6 +11352,46 @@
           "target": "运行方式"
         },
         {
+          "index": 4407,
+          "component": "FormSessionEdit.PC0.sTabSheet17.sComboBox23",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "5582e45910d27914c3c15eb55b6c9acb516faa8b6ffc5d96bc865fcaa12760b6",
+          "target": "自动检测"
+        },
+        {
+          "index": 4408,
+          "component": "FormSessionEdit.PC0.sTabSheet17.sComboBox23",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "5582e45910d27914c3c15eb55b6c9acb516faa8b6ffc5d96bc865fcaa12760b6",
+          "target": "自动检测"
+        },
+        {
+          "index": 4409,
+          "component": "FormSessionEdit.PC0.sTabSheet17.sComboBox23",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "25fc2e86b482c0e4b66ccc95b5a3bf7344c058a69f3e3a5c9ce86fdd342a4c94",
+          "target": "连接本地主机"
+        },
+        {
+          "index": 4410,
+          "component": "FormSessionEdit.PC0.sTabSheet17.sComboBox23",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "f825d330af25648a86cf4ef583ef62b98564c7a9bc4a22b59975391bf524fecb",
+          "target": "原生连接器"
+        },
+        {
+          "index": 4411,
+          "component": "FormSessionEdit.PC0.sTabSheet17.sComboBox23",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "2c511ef197552463e0690cded577580e93ca246bd8759f4b7b43c2a8fc512ade",
+          "target": "Wsl 命令"
+        },
+        {
           "index": 4417,
           "component": "FormSessionEdit.sBitBtn7",
           "property": "Caption",
@@ -8957,7 +11429,7 @@
       "name": "TFORMSHAREDSESSIONS",
       "language": 0,
       "source_sha256": "8b614966247b4cc4bd6b0e3e4600da0b919a35d90a8934590467602ee94e9437",
-      "target_sha256": "3e3c3e4f3f560ec7871b900ac93ab0a27a55cb181b1e708d699919effa17ecd8",
+      "target_sha256": "4cc7d414110697369daa7317bc3ec478954449a7e0f3dae1ee3783bfe6a6866a",
       "patches": [
         {
           "index": 3,
@@ -9128,6 +11600,22 @@
           "target": "存储协议："
         },
         {
+          "index": 264,
+          "component": "FormSharedSessions.sPageControl1.TabEditSharedSession.sGroupBox1.sComboBox1",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "c31a09a6c0ff6ebe5ed02c1157348f0ba0909b774eeba8680fb3b66b26b03ebc",
+          "target": "共享文件夹"
+        },
+        {
+          "index": 266,
+          "component": "FormSharedSessions.sPageControl1.TabEditSharedSession.sGroupBox1.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "c31a09a6c0ff6ebe5ed02c1157348f0ba0909b774eeba8680fb3b66b26b03ebc",
+          "target": "共享文件夹"
+        },
+        {
           "index": 278,
           "component": "FormSharedSessions.sPageControl1.TabEditSharedSession.sGroupBox1.sEdit3",
           "property": "BoundLabel.Caption",
@@ -9246,6 +11734,38 @@
           "source_type": 6,
           "source_value_sha256": "cac6d576e5876d2a17b8f33ba941fb4e906e47fa0fd959311f4971d9031a1b1e",
           "target": " 注意：此选项仅适用于 shared folder 存储方式"
+        },
+        {
+          "index": 437,
+          "component": "FormSharedSessions.sComboBox2",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "961909be70059c54109edd3d6a22464b64ab035d2d568ea55a770a3740c8a306",
+          "target": "不自动刷新共享会话"
+        },
+        {
+          "index": 438,
+          "component": "FormSharedSessions.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "961909be70059c54109edd3d6a22464b64ab035d2d568ea55a770a3740c8a306",
+          "target": "不自动刷新共享会话"
+        },
+        {
+          "index": 439,
+          "component": "FormSharedSessions.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "d6088a35fe428a4bf910b8b18479c817e5ae257e0800daee85d4e7d5004f72de",
+          "target": "共享会话更新时更改图标"
+        },
+        {
+          "index": 440,
+          "component": "FormSharedSessions.sComboBox2",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "a8431141d8469c160ab23f26eaa735c22ead618103ba769137e28f7e9f402b90",
+          "target": "自动刷新共享会话"
         },
         {
           "index": 446,
@@ -9581,7 +12101,7 @@
       "name": "TFORMSSHPROTOSETTINGS",
       "language": 0,
       "source_sha256": "c2a0adc6047181b883ac7e85ef1cd97aa443d8753f43a441e16c5cf94b4089cd",
-      "target_sha256": "5a3a87844f1c7802fbf12fe7ba6b02f49c847ba1d7dae7cef8c586313c171427",
+      "target_sha256": "41a7590965b99b659ca71f405dd75d185db715f90587fcd7ef14c558bba23dee",
       "patches": [
         {
           "index": 3,
@@ -9606,6 +12126,30 @@
           "source_type": 6,
           "source_value_sha256": "b092ad983b3d837f84e0a6fdd452e0aff0e6fe6f2d67133ba4af6857aa4701d9",
           "target": "SSH 协议版本："
+        },
+        {
+          "index": 108,
+          "component": "FormSSHProtoSettings.sComboBox1",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "9fdd34866f77a3705954a4407a557880f99f194e52a766affcf3d08644e781c3",
+          "target": "自动"
+        },
+        {
+          "index": 109,
+          "component": "FormSSHProtoSettings.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "9fdd34866f77a3705954a4407a557880f99f194e52a766affcf3d08644e781c3",
+          "target": "自动"
+        },
+        {
+          "index": 111,
+          "component": "FormSSHProtoSettings.sComboBox1",
+          "property": "Items.Strings[]",
+          "source_type": 6,
+          "source_value_sha256": "ec11a28fec061d0a1b0c7f2028b6c2e57962af1fec2a09267a00eb471bc9c8b8",
+          "target": "SSHv1（不安全）"
         },
         {
           "index": 134,
@@ -14038,6 +16582,62 @@
           "source_type": 6,
           "source_value_sha256": "1466a3fb29ba791bffe2e29392ac93826b05598798291410954e5b1ec8e6b9d3",
           "target": "重命名终端"
+        }
+      ]
+    },
+    {
+      "name": "TPATHDIALOGFORM",
+      "language": 0,
+      "source_sha256": "5bf99a455cbf9c5317de3aee0b268b9187bcb508d6c8132aafa972c2f4c17e5b",
+      "target_sha256": "6bddd93302c35571ea7a156e10f50826582b0a5bdadeb40f3b4611b27b183eda",
+      "patches": [
+        {
+          "index": 30,
+          "component": "PathDialogForm.sBitBtn1",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "3ebfd65382779a1e1b17e90d10c2797e3cff3c22739c9d78ca9f19b1fa01d2e0",
+          "target": "确定"
+        },
+        {
+          "index": 42,
+          "component": "PathDialogForm.sBitBtn2",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "b6c90794b80b9e16b333bca3e974490e73410c565bba6a4dbb44ab8e38d792c5",
+          "target": "取消"
+        },
+        {
+          "index": 52,
+          "component": "PathDialogForm.sBitBtn3",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "370c32b20f85e510a926ec700b91359e92d96cc2704d476095d7f6618d9c650a",
+          "target": "新建"
+        }
+      ]
+    },
+    {
+      "name": "TSCOLORDIALOGFORM",
+      "language": 0,
+      "source_sha256": "1bd330790e125b7f1157fa24f6e4c4efa22274b8ef1081f98d3ec087a396f844",
+      "target_sha256": "db64b17aa295d99c8489722d490c3a24b0e040ebe0216ff69d8d2f212d9f70c7",
+      "patches": [
+        {
+          "index": 65,
+          "component": "sColorDialogForm.sBitBtn1",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "3ebfd65382779a1e1b17e90d10c2797e3cff3c22739c9d78ca9f19b1fa01d2e0",
+          "target": "确定"
+        },
+        {
+          "index": 75,
+          "component": "sColorDialogForm.sBitBtn2",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "b6c90794b80b9e16b333bca3e974490e73410c565bba6a4dbb44ab8e38d792c5",
+          "target": "取消"
         }
       ]
     }

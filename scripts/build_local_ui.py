@@ -17,7 +17,7 @@ def main():
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--source-zip", type=Path)
     source.add_argument("--source-dir", type=Path)
-    parser.add_argument("--output", type=Path, default=REPO / "dist" / "R2.10")
+    parser.add_argument("--output", type=Path, default=REPO / "dist" / "R2.13")
     args = parser.parse_args()
     report = build_local_ui(REPO, args.output, args.source_zip, args.source_dir)
     launcher = build_launcher(REPO, args.output, report["main_file"])
