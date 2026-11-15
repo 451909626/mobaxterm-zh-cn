@@ -2,6 +2,8 @@
   "schema": 1,
   "upstream_version": "26.6.0.5560",
   "localization_release": "R2.13",
+  "release_status": "stable",
+  "release_status_date": "2026-11-15",
   "official_download_page": "https://mobaxterm.mobatek.net/download-home-edition.html",
   "official_archive_url": "https://download.mobatek.net/2662026100713843/MobaXterm_Portable_v26.6.zip",
   "upstream_license_url": "https://mobaxterm.mobatek.net/license.html",
@@ -33,7 +35,7 @@
     "仅在显示阶段转换通用提示，保留英文消息标识、不再显示选项、更多信息判断及原生弹窗返回结果；动态主机、账号、指纹和证书字段按原字节保留。",
     "补译主机密钥详情窗口与主密码错误、强度及遗失警告，保留已发布的工具栏自定义保存、全局设置下拉框及保存提示修复。"
   ],
-  "release_validation_note": "42 项 Windows 测试、封装工具自检与官方原包重建通过。新增会话及二级窗口适配通过 1588 组原值读取/查找和 120 组赋值检查；连接提示通过 534 组匹配、26 组生命周期及保存凭据优先匹配检查，核对原生返回值、消息标识、变量字节与关闭后的内部标题恢复。此前工具栏及全局设置操作已由用户复测；新增二级窗口、会话栏动态菜单及连接弹窗的完整实屏验收仍待完成，本修订标为预发布。",
+  "release_validation_note": "42 项 Windows 测试、封装工具自检与官方原包重建通过。新增会话及二级窗口适配通过 1588 组原值读取/查找和 120 组赋值检查；连接提示通过 534 组匹配、26 组生命周期及保存凭据优先匹配检查，核对原生返回值、消息标识、变量字节与关闭后的内部标题恢复。此前工具栏及全局设置操作已由用户复测；新增二级窗口、会话栏动态菜单及连接弹窗的完整实屏验收仍待完成，本修订于2026-11-15按维护者确认转为正式发布。",
   "session_combo_controls": 35,
   "session_combo_item_labels": 162,
   "session_value_sites": 59,

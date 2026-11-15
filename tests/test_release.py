@@ -165,6 +165,44 @@ class DesktopPackageTests(unittest.TestCase):
 
 
 class ReleaseUpdateTests(unittest.TestCase):
+    def test_publication_status_controls_the_command_without_changing_visual_validation(self):
+        with tempfile.TemporaryDirectory(prefix="moba-publication-status-") as temporary:
+            assets = Path(temporary)
+            upstream = "26.6.0.5560"
+            tool_name = asset_name(upstream) + ".zip"
+            portable_name = portable_asset_name(upstream) + ".zip"
+            tool_sha, portable_sha = "a" * 64, "b" * 64
+            report = {"tag": "v26.6", "upstream_version": upstream,
+                      "self_test": {"ok": True}, "portable_self_test": {"ok": True},
+                      "launcher_sha256": "synthetic-launcher",
+                      "assets": [{"kind": "tool", "filename": tool_name, "sha256": tool_sha},
+                                 {"kind": "portable", "filename": portable_name, "sha256": portable_sha}]}
+            (assets / "release-build-report.json").write_text(json.dumps(report), encoding="utf-8")
+            (assets / "SHA256SUMS.txt").write_text(tool_sha + "  " + tool_name + "\n" + portable_sha + "  " + portable_name + "\n", encoding="ascii")
+            with zipfile.ZipFile(assets / tool_name, "w") as archive:
+                archive.writestr("tool/release-manifest.json", json.dumps({
+                    "upstream_version": upstream, "launcher_sha256": report["launcher_sha256"]}))
+            version = {"visual_validation": {"status": "pending"}}
+            with patch.object(publisher, "load_spec", return_value=(version, {}, {})), \
+                    patch.object(publisher, "audit_archive", return_value={"sha256": tool_sha}), \
+                    patch.object(publisher, "audit_portable_archive", return_value={"sha256": portable_sha}), \
+                    patch.object(publisher, "manifests", return_value=[{"upstream_version": upstream}]):
+                for status, visual, stable in (("stable", "pending", True), ("prerelease", "passed", False),
+                                                (None, "pending", False), (None, "passed", True)):
+                    with self.subTest(release_status=status, visual_validation=visual):
+                        version["visual_validation"]["status"] = visual
+                        if status is None:
+                            version.pop("release_status", None)
+                        else:
+                            version["release_status"] = status
+                        command = publisher.release_command("v26.6", "owner/repo", assets)
+                        self.assertEqual("--prerelease" in command, not stable)
+                        self.assertIn("--latest=" + str(stable).lower(), command)
+                        self.assertEqual(version["visual_validation"]["status"], visual)
+                version["release_status"] = "unreviewed-status"
+                with self.assertRaisesRegex(ValueError, "release_status"):
+                    publisher.release_command("v26.6", "owner/repo", assets)
+
     def test_immutable_release_cannot_be_replaced(self):
         response = SimpleNamespace(returncode=0, stdout=json.dumps({"immutable": True}), stderr="")
         with patch.object(publisher.subprocess, "run", return_value=response) as run:

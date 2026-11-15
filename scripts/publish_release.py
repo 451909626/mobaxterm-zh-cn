@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
-from mobaxterm_zh.release import asset_name, portable_asset_name, audit_archive, audit_portable_archive, parse_tag, official_version
+from mobaxterm_zh.release import asset_name, portable_asset_name, audit_archive, audit_portable_archive, parse_tag, official_version, is_prerelease
 from mobaxterm_zh.patcher import load_spec
 from mobaxterm_zh.upstream import manifests
 
@@ -43,12 +43,12 @@ def release_command(tag, repository, assets):
         info = json.loads(z.read(next(n for n in z.namelist() if n.endswith("/release-manifest.json"))))
         if info["upstream_version"] != upstream or info["launcher_sha256"] != report["launcher_sha256"]:
             raise ValueError("Tool and portable launcher do not match")
-    validated = version.get("visual_validation", {}).get("status") == "passed"
-    latest = validated and upstream == manifests(REPO)[-1]["upstream_version"]
+    prerelease = is_prerelease(version)
+    latest = not prerelease and upstream == manifests(REPO)[-1]["upstream_version"]
     command = ["gh", "release", "create", tag, str(archive), str(portable), str(checksum), "--repo", repository,
                "--verify-tag", "--title", short,
                "--notes-file", str(assets / "release-notes.md"), "--latest=" + str(latest).lower()]
-    if not validated:
+    if prerelease:
         command.append("--prerelease")
     return command
 

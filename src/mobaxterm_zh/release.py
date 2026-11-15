@@ -9,6 +9,16 @@ LAUNCHER_NAME = "MobaXterm_zh-CN.exe"
 TAG = re.compile(r"v(\d+\.\d+)\Z")
 
 
+def is_prerelease(version):
+    """Keep the maintainer's publication decision separate from visual QA results."""
+    status = version.get("release_status")
+    if status is None:
+        return version.get("visual_validation", {}).get("status") != "passed"
+    if status not in ("stable", "prerelease"):
+        raise ValueError("Unknown release_status; expected stable or prerelease")
+    return status == "prerelease"
+
+
 def toolbar_notice(version):
     if version.get("toolbar_caption_labels", 0):
         text = "常用工具栏按钮支持中文标题、自定义和保存。"
