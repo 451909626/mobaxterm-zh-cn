@@ -45,7 +45,7 @@ git push origin v26.6
 
 发布状态优先读取版本清单中的 `release_status`：`stable` 为正式发布，`prerelease` 为预发布；维护者明确确认后更新该字段及 `release_status_date`。缺少该字段的旧清单继续根据 `visual_validation.status` 判断：`passed` 为正式发布，其余为预发布。未知的发布状态会停止处理。正式发布的最新适配构建可标记 Latest；预发布不标记 Latest。
 
-`visual_validation` 单独记录实际界面验收结果。维护者确认正式发布不代表尚未执行的检查已经通过，不应为更改发布标签而把该字段改为 `passed`。26.6 R2.13 已于 2026-11-15 按维护者确认转为正式发布；清单保留原有实屏验收范围，后续自动发布会遵循 `release_status: stable`。
+`visual_validation` 单独记录实际界面验收结果。维护者确认正式发布不代表尚未执行的检查已经通过，不应为更改发布标签而把该字段改为 `passed`。26.6 R2.13 已于 2026-11-15 按维护者确认转为正式发布；同日 R2.14 会话上限提示补译按维护者要求继续保持正式版与 Latest。清单保留原有实屏验收范围，后续自动发布遵循 `release_status: stable`。
 
 ## 修订同一官方版本
 

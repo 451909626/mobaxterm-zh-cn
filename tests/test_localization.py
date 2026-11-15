@@ -26,7 +26,7 @@ class ManifestTests(unittest.TestCase):
         changes = [item for form in forms["forms"] for item in form["patches"]]
         self.assertEqual(sum(isinstance(item["target"], str) for item in changes), count)
         self.assertEqual(sum(type(item["target"]) is int for item in changes), 1)
-        self.assertEqual(len(literals["literals"]), 54 if name == "26.6.0.5560" else 21)
+        self.assertEqual(len(literals["literals"]), 55 if name == "26.6.0.5560" else 21)
         self.assertEqual(version["literal_display_locations"], len(literals["literals"]))
         self.assertEqual(version["total_display_locations"], count + len(literals["literals"]) + 36
                          + version.get("toolbar_caption_labels", 0) + version.get("runtime_button_labels", 0)
