@@ -11,7 +11,7 @@ import unittest
 
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
-from mobaxterm_zh.launcher import build_launcher
+from mobaxterm_zh.launcher import build_launcher, read_application_icons
 from mobaxterm_zh.patcher import resources, update_resources
 from mobaxterm_zh.release import LAUNCHER_NAME
 
@@ -110,6 +110,11 @@ class LauncherSelectionTests(unittest.TestCase):
         with pefile.PE(str(launcher)) as executable:
             actual = {key: data for key, data in resources(executable).items() if key[0] in (3, 14)}
         self.assertEqual(actual, expected)
+        self.assertEqual(read_application_icons(launcher), read_application_icons(source))
+
+    def test_missing_application_icon_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, "both icon images and an icon group"):
+            read_application_icons(self.program)
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-"""Build the independent menu launcher and support icons for local builds."""
+"""Build the independent menu launcher with an optional application icon."""
 from pathlib import Path
 import json
 import os
@@ -8,19 +8,26 @@ import tempfile
 from .release import LAUNCHER_NAME
 
 
-def embed_application_icon(launcher, source_exe):
-    """Copy the icon images and icon groups into a staged launcher."""
+def read_application_icons(executable):
+    """Read the executable's native icon images and groups."""
     import pefile
-    from .patcher import resources, update_resources
+    from .patcher import resources
 
     icon_types = {pefile.RESOURCE_TYPE["RT_ICON"], pefile.RESOURCE_TYPE["RT_GROUP_ICON"]}
-    with pefile.PE(str(source_exe)) as source:
+    with pefile.PE(str(executable)) as source:
         if not hasattr(source, "DIRECTORY_ENTRY_RESOURCE"):
             raise ValueError("The icon source has no executable resources")
         icons = {key: data for key, data in resources(source).items() if key[0] in icon_types}
     if {key[0] for key in icons} != icon_types:
         raise ValueError("The icon source must contain both icon images and an icon group")
-    update_resources(launcher, icons)
+    return icons
+
+
+def embed_application_icon(launcher, source_exe):
+    """Copy the icon images and icon groups into a staged launcher."""
+    from .patcher import update_resources
+
+    update_resources(launcher, read_application_icons(source_exe))
 
 
 def build_launcher(repo, output, executable_name=None, *, icon_from=None):

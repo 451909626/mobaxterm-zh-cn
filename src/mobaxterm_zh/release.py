@@ -4,7 +4,7 @@ import hashlib
 import re
 import zipfile
 
-TOOL_VERSION = "2.6.12"
+TOOL_VERSION = "2.6.13"
 LAUNCHER_NAME = "MobaXterm_zh-CN.exe"
 TAG = re.compile(r"v(\d+\.\d+)\Z")
 

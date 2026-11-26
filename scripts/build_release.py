@@ -14,7 +14,7 @@ import zipfile
 
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
-from mobaxterm_zh.launcher import build_launcher
+from mobaxterm_zh.launcher import build_launcher, read_application_icons
 from mobaxterm_zh.patcher import load_spec
 from mobaxterm_zh.release import (TOOL_VERSION, LAUNCHER_NAME, PORTABLE_NOTICES, asset_name, portable_asset_name,
                                  audit_archive, audit_portable_archive, official_version, upstream_for_tag, toolbar_notice)
@@ -46,7 +46,7 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
     short = official_version(upstream_version)
     version, _, _ = load_spec(REPO, upstream_version)
     source_zip = Path(source_zip).resolve() if source_zip else download_upstream(REPO, upstream_version, REPO / ".local" / "upstream")
-    actual, _ = select_upstream(REPO, source_zip=source_zip)
+    actual, upstream_files = select_upstream(REPO, source_zip=source_zip)
     if actual["upstream_version"] != upstream_version:
         raise ValueError("The official ZIP does not match this release version")
     output = Path(output).resolve()
@@ -68,7 +68,12 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
             shutil.copyfile(REPO / "patches" / upstream_version / filename, payload / "patches" / upstream_version / filename)
         (payload / "translations").mkdir()
         shutil.copyfile(REPO / "translations" / "terminal-menu.json", payload / "translations" / "terminal-menu.json")
-        launcher = build_launcher(REPO, work / "compiled-launcher", version["main_output_name"])
+        # Keep the verified original outside the release payload.
+        icon_source = work / version["upstream_main_name"]
+        icon_source.write_bytes(upstream_files[icon_source.name])
+        launcher = build_launcher(REPO, work / "compiled-launcher", version["main_output_name"], icon_from=icon_source)
+        if read_application_icons(launcher) != read_application_icons(icon_source):
+            raise ValueError("Release launcher icon resources differ from the verified original")
         (payload / "launcher").mkdir()
         shutil.copyfile(launcher, payload / "launcher" / launcher.name)
         info = {"schema": 1, "tool_version": tool_version, "localization_release": version["localization_release"],
@@ -104,7 +109,7 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
                         "1. 从官网下载对应版本的 Home 便携版 ZIP，保留原包，无需解压。\n"
                         "2. 双击本发布包中的“MobaXterm汉化工具.exe”。\n"
                         "3. 选择官方 ZIP，指定一个新的输出文件夹，点击“开始汉化”。\n"
-                        f"4. 完成后打开输出目录，双击“{LAUNCHER_NAME}”。以后均从此入口使用。\n\n"
+                        f"4. 完成后打开输出目录，双击“{LAUNCHER_NAME}”。从此入口创建桌面快捷方式时会自动使用内置图标。\n\n"
                         + toolbar_notice(version) + "\n"
                         "工具只生成独立副本；官方原包与已有配置保留原样。输出采用新配置，旧会话需单独迁移。\n"
                         "本发布包包含自编工具与翻译数据，不包含 MobaXterm 本体、CygUtils 插件或完整汉化成品。\n"
@@ -128,6 +133,7 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
             "汉化说明.txt": ("MobaXterm " + short + " 非官方简体中文便携版\n\n"
                           "汉化修订：" + version["localization_release"] + "；工具构建：" + tool_version + "。\n"
                           f"解压到独立目录后双击“{LAUNCHER_NAME}”。无需运行汉化工具或安装 Python。\n"
+                          "汉化启动器内置对应官方原包图标，创建桌面快捷方式时自动显示。\n"
                           "前三个程序文件沿用官方便携包的名称和根目录结构；主程序已汉化，两个 CygUtils 组件保留原版。\n"
                           "终端右键菜单中文由附带启动器提供；直接打开主 EXE 不会自动启用该菜单功能。\n"
                           + toolbar_notice(version) + "\n"
@@ -142,7 +148,7 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
             "组件许可说明.txt": ("CygUtils.plugin 与 CygUtils64.plugin 为对应官方便携包的原文件，未做修改。\n"
                               "MobaXterm 内置与外部组件分别适用其上游许可：\nhttps://mobaxterm.mobatek.net/license.html\n"
                               "组件源码及许可：https://download.mobatek.net/sources/\n"
-                              "中文启动器为独立编写的 .NET Framework 程序，适用附带 MIT 许可；操作系统运行组件不随包附带。\n"),
+                              "中文启动器为独立编写的 .NET Framework 程序，自编代码适用附带 MIT 许可。内置的官方图标由 Mobatek 享有相应权利；操作系统运行组件不随包附带。\n"),
         }
         portable_archive = output / (portable_asset_name(upstream_version) + ".zip")
         with zipfile.ZipFile(portable_archive, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as z:
@@ -154,7 +160,8 @@ def build_release(upstream_version, tool_version, output, source_zip=None):
         sums = audit["sha256"] + "  " + archive.name + "\n" + portable_audit["sha256"] + "  " + portable_archive.name + "\n"
         (output / "SHA256SUMS.txt").write_text(sums, encoding="ascii")
         pending = "\n" + short + " 已通过构建及静态校验，完整实屏回归仍待补做。\n" if version.get("visual_validation", {}).get("status") != "passed" else ""
-        changes = version.get("release_changes", ["补齐关闭运行中会话确认框的正文、“终端”前缀及运行时确认按钮，保留会话名称。"])
+        changes = ["汉化启动器内置经过校验的官方原包图标，创建桌面快捷方式时自动显示。"]
+        changes += version.get("release_changes", ["补齐关闭运行中会话确认框的正文、“终端”前缀及运行时确认按钮，保留会话名称。"])
         change_notes = "\n".join("- " + item for item in changes) + "\n\n"
         validation = version.get("release_validation_note", "")
         validation_notes = "验证：" + validation + "\n\n" if validation else ""
