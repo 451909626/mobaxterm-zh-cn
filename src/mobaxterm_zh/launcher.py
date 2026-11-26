@@ -1,13 +1,29 @@
-"""Build the independent menu launcher without copying vendor icons or binaries."""
+"""Build the independent menu launcher and support icons for local builds."""
 from pathlib import Path
 import json
 import os
 import subprocess
+import tempfile
 
 from .release import LAUNCHER_NAME
 
 
-def build_launcher(repo, output, executable_name=None):
+def embed_application_icon(launcher, source_exe):
+    """Copy the icon images and icon groups into a staged launcher."""
+    import pefile
+    from .patcher import resources, update_resources
+
+    icon_types = {pefile.RESOURCE_TYPE["RT_ICON"], pefile.RESOURCE_TYPE["RT_GROUP_ICON"]}
+    with pefile.PE(str(source_exe)) as source:
+        if not hasattr(source, "DIRECTORY_ENTRY_RESOURCE"):
+            raise ValueError("The icon source has no executable resources")
+        icons = {key: data for key, data in resources(source).items() if key[0] in icon_types}
+    if {key[0] for key in icons} != icon_types:
+        raise ValueError("The icon source must contain both icon images and an icon group")
+    update_resources(launcher, icons)
+
+
+def build_launcher(repo, output, executable_name=None, *, icon_from=None):
     repo, output = Path(repo).resolve(), Path(output).resolve()
     if executable_name is not None:
         if (Path(executable_name).name != executable_name or "/" in executable_name
@@ -36,15 +52,20 @@ def build_launcher(repo, output, executable_name=None):
     generated.mkdir(exist_ok=True)
     temporary_source = generated / "MenuLauncher.cs"
     temporary_source.write_text(source, encoding="utf-8-sig")
-    args = [str(compiler), "/nologo", "/target:winexe", "/platform:anycpu", "/optimize+",
-            "/reference:System.Windows.Forms.dll", "/reference:System.Web.Extensions.dll",
-            "/out:" + str(destination), str(temporary_source)]
-    # No vendor icon, resource, original executable, or plugin is embedded.
-    subprocess.run(args, check=True, cwd=repo, capture_output=True, text=True)
     catalog_path = generated / "terminal-menu.json"
-    subprocess.run([str(destination), "--catalog", str(catalog_path)], check=True, cwd=output)
-    actual = json.loads(catalog_path.read_text(encoding="utf-8-sig"))
     expected = json.loads((repo / "translations" / "terminal-menu.json").read_text(encoding="utf-8"))
-    if actual != expected:
-        raise ValueError("The compiled launcher catalog does not match the reviewed translations")
+    with tempfile.TemporaryDirectory(prefix="moba-launcher-") as temporary:
+        candidate = Path(temporary) / LAUNCHER_NAME
+        args = [str(compiler), "/nologo", "/target:winexe", "/platform:anycpu", "/optimize+",
+                "/reference:System.Windows.Forms.dll", "/reference:System.Web.Extensions.dll",
+                "/out:" + str(candidate), str(temporary_source)]
+        subprocess.run(args, check=True, cwd=repo, capture_output=True, text=True)
+        if icon_from is not None:
+            embed_application_icon(candidate, icon_from)
+        subprocess.run([str(candidate), "--catalog", str(catalog_path)], check=True, cwd=output)
+        actual = json.loads(catalog_path.read_text(encoding="utf-8-sig"))
+        if actual != expected:
+            raise ValueError("The compiled launcher catalog does not match the reviewed translations")
+        with destination.open("xb") as compiled:
+            compiled.write(candidate.read_bytes())
     return destination

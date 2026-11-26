@@ -157,11 +157,11 @@ def update_resources(destination, patches):
     if not handle:
         raise ctypes.WinError(ctypes.get_last_error())
     try:
-        for form, language, data in patches:
-            name = ctypes.create_unicode_buffer(form)
+        for (resource_type, name, language), data in patches.items():
+            name_pointer = ctypes.c_wchar_p(name) if isinstance(name, str) else ctypes.c_void_p(name)
             blob = ctypes.create_string_buffer(data)
-            if not kernel.UpdateResourceW(handle, ctypes.c_void_p(10), ctypes.cast(name, ctypes.c_void_p),
-                                          language, blob, len(data)):
+            if not kernel.UpdateResourceW(handle, ctypes.c_void_p(resource_type),
+                                          ctypes.cast(name_pointer, ctypes.c_void_p), language, blob, len(data)):
                 raise ctypes.WinError(ctypes.get_last_error())
     except BaseException:
         kernel.EndUpdateResourceW(handle, True)
@@ -180,8 +180,10 @@ def build_local_ui(repo, output, source_zip=None, source_dir=None):
     original = files[version["upstream_main_name"]]
     p0 = pefile.PE(data=original)
     before = resources(p0)
-    patches = [(f["name"], f["language"], patch_form(before[(10, f["name"], f["language"])], f))
-               for f in forms["forms"]]
+    patches = {}
+    for form in forms["forms"]:
+        key = (10, form["name"], form["language"])
+        patches[key] = patch_form(before[key], form)
     expected_code = patch_literals(original, p0, literals)
     data = bytearray(expected_code)
     security = p0.OPTIONAL_HEADER.DATA_DIRECTORY[4]
@@ -278,8 +280,7 @@ def build_local_ui(repo, output, source_zip=None, source_dir=None):
     if not p1.verify_checksum():
         raise ValueError("PE checksum verification failed")
     after = resources(p1)
-    changed = {(10, name, lang) for name, lang, _ in patches}
-    if before.keys() != after.keys() or {k for k in before if before[k] != after[k]} != changed:
+    if before.keys() != after.keys() or {k for k in before if before[k] != after[k]} != patches.keys():
         raise ValueError("Unexpected resource change")
     added_sections = (([b".zhui"] if toolbar_report else []) + ([b".zhset"] if settings_report else [])
                       + ([b".zhss"] if session_report else []) + ([b".zhpr"] if prompt_report else []))

@@ -3,6 +3,7 @@ from pathlib import Path
 import json
 import os
 import shutil
+import struct
 import subprocess
 import sys
 import tempfile
@@ -11,6 +12,7 @@ import unittest
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "src"))
 from mobaxterm_zh.launcher import build_launcher
+from mobaxterm_zh.patcher import resources, update_resources
 from mobaxterm_zh.release import LAUNCHER_NAME
 
 
@@ -95,6 +97,19 @@ class LauncherSelectionTests(unittest.TestCase):
     def test_launcher_cannot_select_itself(self):
         self.supply("26.5.0.5542")
         self.assertFalse(self.inspect("--exe", self.program.name)["ok"])
+
+    def test_local_launcher_embeds_the_source_icon(self):
+        import pefile
+
+        source = self.directory / self.supply("26.6.0.5560")
+        image = struct.pack("<IiiHHIIiiII", 40, 1, 2, 1, 32, 0, 8, 0, 0, 0, 0) + b"\x11\x22\x33\xff" + bytes(4)
+        group = struct.pack("<HHHBBBBHHIH", 0, 1, 1, 1, 1, 0, 0, 1, 32, len(image), 1)
+        expected = {(3, 1, 0): image, (14, "MAINICON", 0): group}
+        update_resources(source, expected)
+        launcher = build_launcher(REPO, self.directory / "with-icon", icon_from=source)
+        with pefile.PE(str(launcher)) as executable:
+            actual = {key: data for key, data in resources(executable).items() if key[0] in (3, 14)}
+        self.assertEqual(actual, expected)
 
 
 if __name__ == "__main__":

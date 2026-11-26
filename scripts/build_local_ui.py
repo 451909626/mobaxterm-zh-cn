@@ -20,7 +20,8 @@ def main():
     parser.add_argument("--output", type=Path, default=REPO / "dist" / "R2.14")
     args = parser.parse_args()
     report = build_local_ui(REPO, args.output, args.source_zip, args.source_dir)
-    launcher = build_launcher(REPO, args.output, report["main_file"])
+    main_file = report["main_file"]
+    launcher = build_launcher(REPO, args.output, main_file, icon_from=args.output / main_file)
     report["launcher_sha256"] = hashlib.sha256(launcher.read_bytes()).hexdigest()
     report["upstream_binaries_in_git"] = False
     report["distribution"] = "Local build only. Upstream redistribution rights are separate."
