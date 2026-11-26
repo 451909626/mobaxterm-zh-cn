@@ -46,6 +46,11 @@ DISPLAY_LISTS = {
     ("TFORMSYNTAX", "FormSyntax.sTabControl1", "Tabs.Strings[]"),
 }
 LIST_HEIGHT = ("TFORMADVANCEDTERMSETTINGS", "FormAdvancedTermSettings.sGroupBox2.ChkListFeatures", "Height")
+MOBAPT_DISPLAY_FIELDS = {
+    # The form and the runtime filter handler must use the same placeholder.
+    ("FormMobApt.sPanel2.sPanel3.sPanel1.EdSearch", "Text"): ("<Filter packages>", "<筛选软件包>"),
+    ("FormMobApt.sPanel2.sGauge2", "Suffix"): ("%  (Updating packages list)", "%（正在更新软件包列表）"),
+}
 COMMAND_HINTS = {"ctris", "TCPCapture --showdata yes", "MobaTaskList", "dwm", "fvwm", "twm",
                  "MobaHwInfo", "MobaSwInfo", "cmd.exe", "powershell.exe", "vim", "ascii",
                  "mathomatic", "nedit", "soliterm", "termwalk", "sudoku", "nimesweeper",
@@ -59,6 +64,8 @@ def permitted(form, value, target):
         return (form, component, prop) == LIST_HEIGHT and value["value"] == 70 and target == 67
     if not isinstance(target, str) or value["type"] not in (6, 12, 18, 20):
         return False
+    if form == "TFORMMOBAPT" and (component, prop) in MOBAPT_DISPLAY_FIELDS:
+        return (value["value"], target) == MOBAPT_DISPLAY_FIELDS[(component, prop)]
     if prop == "Hint" and value["value"] in COMMAND_HINTS:
         return False
     if (form == "TFORMCOLORSSELECTOR" and prop == "Hint"

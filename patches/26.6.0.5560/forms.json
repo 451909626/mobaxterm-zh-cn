@@ -3517,8 +3517,32 @@
       "name": "TFORMMOBAPT",
       "language": 0,
       "source_sha256": "09622c75aa75667d90701804722a680d5dcb281b121e38ef8397909369ab7ac2",
-      "target_sha256": "b2240f7d2db40ce9e5d3ee36a4a0daea166cc0f5b6478a8883071dee4bab4928",
+      "target_sha256": "2f0ae3c0d7f4bdb8c58442f6879550532b237f41b7527844b1335aa415e1465f",
       "patches": [
+        {
+          "index": 7,
+          "component": "FormMobApt",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "c039788a8ebcc432212494dc98ec41767d7783e71c756896dd13ec0b3ab61b72",
+          "target": "MobaXterm 软件包管理器"
+        },
+        {
+          "index": 33,
+          "component": "FormMobApt.sLabel1",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "345f6b95947b9b6d9486c90f0e062ebb8fba828ab0cc6b78f8fe7a6fdf9b3aca",
+          "target": "MobApt 软件包管理器"
+        },
+        {
+          "index": 48,
+          "component": "FormMobApt.sLabel2",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "070805431e5d9f420dacd3d4b327324e75d075f68d545ec487dd79fc7435412f",
+          "target": "此工具处于实验阶段，安装的软件包可能无法正常运行"
+        },
         {
           "index": 59,
           "component": "FormMobApt.sBitBtn1",
@@ -3534,6 +3558,118 @@
           "source_type": 6,
           "source_value_sha256": "2f8cb7bd35961dda869a6bab8a34edeece25b9ea175a0c0a026261e7345f6146",
           "target": "安装／更新"
+        },
+        {
+          "index": 94,
+          "component": "FormMobApt.sPanel2",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "9ef46e1cfa846d7fe0173f95eb42fbd15f0fc627e80d3f07a09f53d4a2578bee",
+          "target": "正在生成软件包列表，请稍候…"
+        },
+        {
+          "index": 129,
+          "component": "FormMobApt.sPanel2.sGauge2",
+          "property": "Suffix",
+          "source_type": 6,
+          "source_value_sha256": "ef38711cfca0ecd1e6b56eeae5de5e6edb441a0f722cfc622f22f3eb8aa4bf12",
+          "target": "%（正在更新软件包列表）"
+        },
+        {
+          "index": 148,
+          "component": "FormMobApt.sPanel2.sPanel3.sPanel1.sCheckBox1",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "b1b391ade772172a63f452835edc0d55a6c7aa0d514a13b6bf96fdfd55e923ae",
+          "target": "显示已安装的软件包"
+        },
+        {
+          "index": 159,
+          "component": "FormMobApt.sPanel2.sPanel3.sPanel1.sCheckBox2",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "6fd8ed9c472fd9ee1f0f726306067c1416b967d96b2968100a8d95a7f1b62049",
+          "target": "显示可更新的软件包"
+        },
+        {
+          "index": 170,
+          "component": "FormMobApt.sPanel2.sPanel3.sPanel1.sCheckBox3",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "c64f432048a090dcc5ad2a1df5b49a79aed2142b2aa90446e1877f145a52f33e",
+          "target": "显示可安装的软件包"
+        },
+        {
+          "index": 189,
+          "component": "FormMobApt.sPanel2.sPanel3.sPanel1.EdSearch",
+          "property": "Text",
+          "source_type": 6,
+          "source_value_sha256": "eb9a688685410c04d579396f6b87e61404d18a774983a9085ff197542a833916",
+          "target": "<筛选软件包>"
+        },
+        {
+          "index": 207,
+          "component": "FormMobApt.sPanel2.sPanel3.sPanel1.sCheckBox5",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "8c4acab84824e47703c9c123849b9d4b01760eb0c6065d9aaf69bf3a430a766c",
+          "target": "显示 cygwinports 镜像中的非官方软件包"
+        },
+        {
+          "index": 217,
+          "component": "FormMobApt.sPanel2.sPanel3.sPanel1.sCheckBox6",
+          "property": "Caption",
+          "source_type": 6,
+          "source_value_sha256": "4e9312c38e7776ab98f90aed881e8dd9f4db63b4dbaae0ca6b715893d381e55c",
+          "target": "显示库和开发软件包"
+        },
+        {
+          "index": 226,
+          "component": "FormMobApt.sPanel2.sPanel3.SrcList",
+          "property": "Columns.Caption",
+          "source_type": 6,
+          "source_value_sha256": "89e79c96edeaf43ac47461f728ce8ea4b617e854f72db37bb0db69f5600f005d",
+          "target": "软件包名称"
+        },
+        {
+          "index": 229,
+          "component": "FormMobApt.sPanel2.sPanel3.SrcList",
+          "property": "Columns.Caption",
+          "source_type": 6,
+          "source_value_sha256": "94e55ba20709ecf6d1423887bdf84d7e841512fa26f77969826cb7f0a58a70ad",
+          "target": "描述"
+        },
+        {
+          "index": 231,
+          "component": "FormMobApt.sPanel2.sPanel3.SrcList",
+          "property": "Columns.Caption",
+          "source_type": 6,
+          "source_value_sha256": "46dafec829dac0153b770c60103688487f288b975a37f0a7801b436c5f8c286f",
+          "target": "版本"
+        },
+        {
+          "index": 250,
+          "component": "FormMobApt.sPanel2.sPanel3.sListView1",
+          "property": "Columns.Caption",
+          "source_type": 6,
+          "source_value_sha256": "89e79c96edeaf43ac47461f728ce8ea4b617e854f72db37bb0db69f5600f005d",
+          "target": "软件包名称"
+        },
+        {
+          "index": 253,
+          "component": "FormMobApt.sPanel2.sPanel3.sListView1",
+          "property": "Columns.Caption",
+          "source_type": 6,
+          "source_value_sha256": "94e55ba20709ecf6d1423887bdf84d7e841512fa26f77969826cb7f0a58a70ad",
+          "target": "描述"
+        },
+        {
+          "index": 255,
+          "component": "FormMobApt.sPanel2.sPanel3.sListView1",
+          "property": "Columns.Caption",
+          "source_type": 6,
+          "source_value_sha256": "46dafec829dac0153b770c60103688487f288b975a37f0a7801b436c5f8c286f",
+          "target": "版本"
         },
         {
           "index": 275,

@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "upstream_version": "26.6.0.5560",
-  "localization_release": "R2.14",
+  "localization_release": "R2.15",
   "release_status": "stable",
   "release_status_date": "2026-11-15",
   "official_download_page": "https://mobaxterm.mobatek.net/download-home-edition.html",
@@ -13,22 +13,23 @@
     "CygUtils.plugin": "65c17f095ecbbab4c8015e24aa02bc7de1c098704aec3d8b4b7ec81b28a56602",
     "CygUtils64.plugin": "4750dc32ba3372fa7f4b8ca38583f98d9d0477d9b0686966fee40aa181bff915"
   },
-  "localized_exe_sha256": "5a5375938bf0c24687828d406a5e3171fa1cd33f5f1dbacb5f94cbfe1b44196f",
-  "resource_display_locations": 2023,
-  "literal_display_locations": 55,
+  "localized_exe_sha256": "28d687702dda092dfcb9dc77c9f0ea31921098a9acba3e102fe06a61f3ee8af7",
+  "resource_display_locations": 2040,
+  "literal_display_locations": 83,
   "terminal_menu_labels": 36,
-  "total_display_locations": 2202,
+  "total_display_locations": 2247,
   "main_output_name": "MobaXterm_Personal_26.6.exe",
   "upstream_main_name": "MobaXterm_Personal_26.6.exe",
   "visual_validation": {
     "status": "pending",
     "report": "docs/VALIDATION.md",
-    "scope": "Connection prompt rendering, original modal results and native message keys checked; actual connection-popup visual acceptance pending. Earlier R2.11/R2.12 visual acceptance remains pending. R2.14 saved-session limit warning visually checked on the current local profile; other pending scope unchanged."
+    "scope": "Connection prompt rendering, original modal results and native message keys checked; actual connection-popup visual acceptance pending. Earlier R2.11/R2.12 visual acceptance remains pending. R2.14 saved-session limit warning visually checked on the current local profile; other pending scope unchanged. R2.15 paste and MobApt text is covered by resource and guarded byte comparisons; visual checks pending."
   },
   "toolbar_caption_labels": 14,
   "settings_combo_controls": 25,
   "settings_combo_item_labels": 85,
   "release_changes": [
+    "补译终端粘贴确认的运行时警告，以及 MobApt 的界面、操作确认和 64 位切换提示。",
     "补译新建会话窗口在达到个人版保存上限时动态显示的两句警告，仅替换显示文字，保持官方会话计数、保存限制与订阅链接。",
     "合并 R2.11 至 R2.13：补译 35 个会话下拉控件的 162 条选项、15 个二级窗口下拉控件的 83 条选项及遗漏按钮，连接参数和保存值继续使用原格式。",
     "修正会话窗口、目录及颜色选择器中的运行时英文按钮，并补译左侧会话栏右键菜单的 22 处动态文字，保留会话名称、数量和操作事件。",
@@ -36,7 +37,7 @@
     "仅在显示阶段转换通用提示，保留英文消息标识、不再显示选项、更多信息判断及原生弹窗返回结果；动态主机、账号、指纹和证书字段按原字节保留。",
     "补译主机密钥详情窗口与主密码错误、强度及遗失警告，保留已发布的工具栏自定义保存、全局设置下拉框及保存提示修复。"
   ],
-  "release_validation_note": "R2.14 按维护者要求保持正式发布。43 项 Windows 检查、官方原包完整重建与独立 R2.13 基线一致性检查通过；新建会话上限警告已在现用 14 条会话配置中实屏确认中文完整显示。仅改原字符串存储与 PE 校验和，官方计数和限制判断不变；14 条会话及凭据配置保留。其他验收范围沿用 R2.13，详见 docs/VALIDATION.md。",
+  "release_validation_note": "R2.15 已核对新增窗体资源、运行时字符串及原有功能代码。实际界面验收范围见 docs/VALIDATION.md。",
   "session_combo_controls": 35,
   "session_combo_item_labels": 162,
   "session_value_sites": 59,

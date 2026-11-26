@@ -15,7 +15,7 @@ from mobaxterm_zh.profiles import migrate
 
 class ManifestTests(unittest.TestCase):
     def test_reviewed_scope_and_fixed_size_literals(self):
-        for version, count in [("26.5.0.5542", 1594), ("26.6.0.5560", 2023)]:
+        for version, count in [("26.5.0.5542", 1594), ("26.6.0.5560", 2040)]:
             with self.subTest(version=version):
                 self.check_manifest(version, count)
 
@@ -26,7 +26,7 @@ class ManifestTests(unittest.TestCase):
         changes = [item for form in forms["forms"] for item in form["patches"]]
         self.assertEqual(sum(isinstance(item["target"], str) for item in changes), count)
         self.assertEqual(sum(type(item["target"]) is int for item in changes), 1)
-        self.assertEqual(len(literals["literals"]), 55 if name == "26.6.0.5560" else 21)
+        self.assertEqual(len(literals["literals"]), 83 if name == "26.6.0.5560" else 21)
         self.assertEqual(version["literal_display_locations"], len(literals["literals"]))
         self.assertEqual(version["total_display_locations"], count + len(literals["literals"]) + 36
                          + version.get("toolbar_caption_labels", 0) + version.get("runtime_button_labels", 0)
@@ -47,6 +47,31 @@ class ManifestTests(unittest.TestCase):
             start = item["offset"]
             self.assertTrue(all(start >= b or a >= start + len(before) for a, b in spans))
             spans.append((start, start + len(before)))
+
+    def test_paste_confirmation_includes_runtime_warnings(self):
+        _, _, spec = load_spec(REPO, "26.6.0.5560")
+        warnings = [item for item in spec["literals"] if item.get("purpose") == "paste_confirmation_warning"]
+        self.assertEqual(len(warnings), 13)
+        multiline = next(item for item in warnings if "paste several lines" in item["english"])
+        self.assertIn("粘贴多行", multiline["chinese"])
+        self.assertIn("依次执行", multiline["chinese"])
+        for item in warnings:
+            self.assertEqual(len(item["references"]), 1)
+            self.assertEqual(item["english"].count("\r"), item["chinese"].count("\r"))
+
+    def test_mobapt_filter_and_architecture_notice(self):
+        _, forms, spec = load_spec(REPO, "26.6.0.5560")
+        form = next(form for form in forms["forms"] if form["name"] == "TFORMMOBAPT")
+        edit = next(item for item in form["patches"] if item["component"].endswith(".EdSearch"))
+        placeholder = next(item for item in spec["literals"] if item.get("purpose") == "mobapt_filter_placeholder")
+        self.assertEqual((edit["property"], edit["target"]), ("Text", placeholder["chinese"]))
+        notices = {item["english"]: item["chinese"] for item in spec["literals"]
+                   if item.get("purpose") == "mobapt_display"}
+        body = next(translation for original, translation in notices.items() if "using the local terminal in 32-bit" in original)
+        self.assertTrue(all(token in body for token in ("32 位", "64 位", "重启 MobaXterm")))
+        self.assertEqual((notices["Yes"], notices["No"]), ("是", "否"))
+        self.assertNotIn("Bash (64 bit)", notices)
+        self.assertNotIn("LocalShell", notices)
 
     def test_sidebar_context_menu_keeps_selection_counts_and_source_session_names(self):
         version, _, spec = load_spec(REPO, "26.6.0.5560")
@@ -119,7 +144,10 @@ class ManifestTests(unittest.TestCase):
                 self.assertEqual((item["english"], item["chinese"]), ("Yes", "是"))
                 self.assertEqual(len(item["references"]), 1)
                 self.assertEqual(bytes.fromhex(item["before_hex"]), struct.pack("<I", 3) + b"Yes\0")
-                self.assertEqual([p for p in spec["literals"] if p["english"] == "Yes"], entries)
+                allowed_dialogs = ["session_close_confirmation_button"]
+                if name == "26.6.0.5560":
+                    allowed_dialogs.append("mobapt_display")
+                self.assertCountEqual([p["purpose"] for p in spec["literals"] if p["english"] == "Yes"], allowed_dialogs)
                 form = next(f for f in forms["forms"] if f["name"] == "TFORMTERMCONFIRMCLOSE")
                 captions = {p["component"].rsplit(".", 1)[-1]: p["target"] for p in form["patches"] if p["property"] == "Caption"}
                 self.assertEqual(captions["sBitBtn1"], "是")

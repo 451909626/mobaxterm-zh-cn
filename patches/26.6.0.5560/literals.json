@@ -632,6 +632,316 @@
         5014799
       ],
       "purpose": "saved_session_limit_warning"
+    },
+    {
+      "offset": 5523704,
+      "english": " character detected. Possible homograph attack (impersonation of a trusted character).",
+      "chinese": " 检测到此字符，可能有人用同形字符伪装可信字符。",
+      "before_hex": "56000000206368617261637465722064657465637465642e20506f737369626c6520686f6d6f67726170682061747461636b2028696d706572736f6e6174696f6e206f662061207472757374656420636861726163746572292e00",
+      "after_hex": "2f00000020bcecb2e2b5bdb4cbd7d6b7fba3acbfc9c4dcd3d0c8cbd3c3cdacd0ced7d6b7fbceb1d7b0bfc9d0c5d7d6b7fba1a300000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5517859
+      ],
+      "purpose": "paste_confirmation_warning"
+    },
+    {
+      "offset": 5523800,
+      "english": ": the ",
+      "chinese": ": ",
+      "before_hex": "060000003a207468652000",
+      "after_hex": "020000003a200000000000",
+      "references": [
+        5517916
+      ],
+      "purpose": "paste_confirmation_warning"
+    },
+    {
+      "offset": 5523816,
+      "english": " character resembles \"",
+      "chinese": " 与“",
+      "before_hex": "160000002063686172616374657220726573656d626c6573202200",
+      "after_hex": "0500000020d3eba1b0000000000000000000000000000000000000",
+      "references": [
+        5517931
+      ],
+      "purpose": "paste_confirmation_warning"
+    },
+    {
+      "offset": 5523848,
+      "english": "\". Possible homograph attack (impersonation of a trusted character).",
+      "chinese": "”相似，可能是同形字符欺骗。",
+      "before_hex": "44000000222e20506f737369626c6520686f6d6f67726170682061747461636b2028696d706572736f6e6174696f6e206f662061207472757374656420636861726163746572292e00",
+      "after_hex": "1c000000a1b1cfe0cbc6a3acbfc9c4dccac7cdacd0ced7d6b7fbc6dbc6ada1a30000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5517956
+      ],
+      "purpose": "paste_confirmation_warning"
+    },
+    {
+      "offset": 5523980,
+      "english": ": a command is piped to an interpreter. Verify that the command or script is safe before running it.",
+      "chinese": "：命令通过管道传给解释器。请确认命令或脚本安全后再运行。",
+      "before_hex": "640000003a206120636f6d6d616e6420697320706970656420746f20616e20696e7465727072657465722e2056657269667920746861742074686520636f6d6d616e64206f72207363726970742069732073616665206265666f72652072756e6e696e672069742e00",
+      "after_hex": "38000000a3bac3fcc1eecda8b9fdb9dcb5c0b4abb8f8bde2cacdc6f7a1a3c7ebc8b7c8cfc3fcc1eebbf2bdc5b1beb0b2c8abbaf3d4d9d4cbd0d0a1a3000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5519458
+      ],
+      "purpose": "paste_confirmation_warning"
+    },
+    {
+      "offset": 5524092,
+      "english": ": a command is redirected to a profile script. Verify that the command or script is safe before running it.",
+      "chinese": "：命令重定向到启动配置脚本。请在运行前确认命令或脚本安全。",
+      "before_hex": "6b0000003a206120636f6d6d616e64206973207265646972656374656420746f20612070726f66696c65207363726970742e2056657269667920746861742074686520636f6d6d616e64206f72207363726970742069732073616665206265666f72652072756e6e696e672069742e00",
+      "after_hex": "3a000000a3bac3fcc1eed6d8b6a8cff2b5bdc6f4b6afc5e4d6c3bdc5b1bea1a3c7ebd4dad4cbd0d0c7b0c8b7c8cfc3fcc1eebbf2bdc5b1beb0b2c8aba1a30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5519974
+      ],
+      "purpose": "paste_confirmation_warning"
+    },
+    {
+      "offset": 5524208,
+      "english": ": a command is redirected to a SSH config file. Verify that the command or script is safe before running it.",
+      "chinese": "：命令重定向到 SSH 配置文件。请在运行前确认命令或脚本安全。",
+      "before_hex": "6c0000003a206120636f6d6d616e64206973207265646972656374656420746f20612053534820636f6e6669672066696c652e2056657269667920746861742074686520636f6d6d616e64206f72207363726970742069732073616665206265666f72652072756e6e696e672069742e00",
+      "after_hex": "3b000000a3bac3fcc1eed6d8b6a8cff2b5bd2053534820c5e4d6c3cec4bcfea1a3c7ebd4dad4cbd0d0c7b0c8b7c8cfc3fcc1eebbf2bdc5b1beb0b2c8aba1a30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5520070
+      ],
+      "purpose": "paste_confirmation_warning"
+    },
+    {
+      "offset": 5524380,
+      "english": ": the command unpacks files into the \"",
+      "chinese": "：命令会将文件解包到“",
+      "before_hex": "260000003a2074686520636f6d6d616e6420756e7061636b732066696c657320696e746f20746865202200",
+      "after_hex": "16000000a3bac3fcc1eebbe1bdabcec4bcfebde2b0fcb5bda1b00000000000000000000000000000000000",
+      "references": [
+        5520972
+      ],
+      "purpose": "paste_confirmation_warning"
+    },
+    {
+      "offset": 5524428,
+      "english": "\" folder. Verify that this will not replace some system files.",
+      "chinese": "”目录，请确认不会覆盖系统文件。",
+      "before_hex": "3e0000002220666f6c6465722e20566572696679207468617420746869732077696c6c206e6f74207265706c61636520736f6d652073797374656d2066696c65732e00",
+      "after_hex": "20000000a1b1c4bfc2bca3acc7ebc8b7c8cfb2bbbbe1b8b2b8c7cfb5cdb3cec4bcfea1a300000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5521027
+      ],
+      "purpose": "paste_confirmation_warning"
+    },
+    {
+      "offset": 5524500,
+      "english": ": short URL detected. Verify it before downloading or executing content.",
+      "chinese": "：检测到短链接。请在下载或执行内容前核对链接。",
+      "before_hex": "480000003a2073686f72742055524c2064657465637465642e20566572696679206974206265666f726520646f776e6c6f6164696e67206f7220657865637574696e6720636f6e74656e742e00",
+      "after_hex": "2e000000a3babcecb2e2b5bdb6ccc1b4bdd3a1a3c7ebd4dacfc2d4d8bbf2d6b4d0d0c4dac8ddc7b0bacbb6d4c1b4bdd3a1a3000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5521401
+      ],
+      "purpose": "paste_confirmation_warning"
+    },
+    {
+      "offset": 5524584,
+      "english": ": unprotected URL detected (HTTP instead of HTTPS). Your connection may be intercepted.",
+      "chinese": "：检测到未加密的 HTTP 链接，连接可能被截获。",
+      "before_hex": "570000003a20756e70726f7465637465642055524c20646574656374656420284854545020696e7374656164206f66204854545053292e20596f757220636f6e6e656374696f6e206d617920626520696e7465726365707465642e00",
+      "after_hex": "2c000000a3babcecb2e2b5bdceb4bcd3c3dcb5c4204854545020c1b4bdd3a3acc1acbdd3bfc9c4dcb1bbbdd8bbf1a1a30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5521710
+      ],
+      "purpose": "paste_confirmation_warning"
+    },
+    {
+      "offset": 5524856,
+      "english": " Line ",
+      "chinese": " 行 ",
+      "before_hex": "06000000204c696e652000",
+      "after_hex": "0400000020d0d020000000",
+      "references": [
+        5522328
+      ],
+      "purpose": "paste_confirmation_warning"
+    },
+    {
+      "offset": 5524872,
+      "english": " You are about to paste several lines. Each line may be executed one by one if you are inside an interactive shell.",
+      "chinese": " 即将粘贴多行内容。若正在使用交互式 Shell，每一行都可能被依次执行。",
+      "before_hex": "7300000020596f75206172652061626f757420746f207061737465207365766572616c206c696e65732e2045616368206c696e65206d6179206265206578656375746564206f6e65206279206f6e6520696620796f752061726520696e7369646520616e20696e746572616374697665207368656c6c2e00",
+      "after_hex": "4300000020bcb4bdabd5b3ccf9b6e0d0d0c4dac8dda1a3c8f4d5fdd4dacab9d3c3bdbbbba5cabd205368656c6ca3acc3bfd2bbd0d0b6bcbfc9c4dcb1bbd2c0b4ced6b4d0d0a1a300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5522407
+      ],
+      "purpose": "paste_confirmation_warning"
+    },
+    {
+      "offset": 5436088,
+      "english": "<Filter packages>",
+      "chinese": "<筛选软件包>",
+      "before_hex": "110000003c46696c746572207061636b616765733e00",
+      "after_hex": "0c0000003cc9b8d1a1c8edbcfeb0fc3e000000000000",
+      "references": [
+        8273396
+      ],
+      "purpose": "mobapt_filter_placeholder"
+    },
+    {
+      "offset": 5437900,
+      "english": "  [unofficial]",
+      "chinese": "  [非官方]",
+      "before_hex": "0e00000020205b756e6f6666696369616c5d00",
+      "after_hex": "0a00000020205bb7c7b9d9b7bd5d0000000000",
+      "references": [
+        5437050
+      ],
+      "purpose": "mobapt_display"
+    },
+    {
+      "offset": 5439652,
+      "english": "  [unofficial]",
+      "chinese": "  [非官方]",
+      "before_hex": "0e00000020205b756e6f6666696369616c5d00",
+      "after_hex": "0a00000020205bb7c7b9d9b7bd5d0000000000",
+      "references": [
+        5439161
+      ],
+      "purpose": "mobapt_display"
+    },
+    {
+      "offset": 5441908,
+      "english": "Are you sure you want to install ",
+      "chinese": "确定要安装 ",
+      "before_hex": "2100000041726520796f75207375726520796f752077616e7420746f20696e7374616c6c2000",
+      "after_hex": "0b000000c8b7b6a8d2aab0b2d7b0200000000000000000000000000000000000000000000000",
+      "references": [
+        5441415
+      ],
+      "purpose": "mobapt_display"
+    },
+    {
+      "offset": 5441964,
+      "english": "Are you sure you want to remove ",
+      "chinese": "确定要卸载 ",
+      "before_hex": "2000000041726520796f75207375726520796f752077616e7420746f2072656d6f76652000",
+      "after_hex": "0b000000c8b7b6a8d2aad0b6d4d82000000000000000000000000000000000000000000000",
+      "references": [
+        5441459
+      ],
+      "purpose": "mobapt_display"
+    },
+    {
+      "offset": 5442008,
+      "english": "Please, confirm installation/update of the following package(s):\r\r",
+      "chinese": "请确认安装或更新以下软件包\r\r",
+      "before_hex": "42000000506c656173652c20636f6e6669726d20696e7374616c6c6174696f6e2f757064617465206f662074686520666f6c6c6f77696e67207061636b6167652873293a0d0d00",
+      "after_hex": "1c000000c7ebc8b7c8cfb0b2d7b0bbf2b8fcd0c2d2d4cfc2c8edbcfeb0fc0d0d000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5441512
+      ],
+      "purpose": "mobapt_display"
+    },
+    {
+      "offset": 5442084,
+      "english": "Please, confirm removal of the following package(s):\r\r",
+      "chinese": "请确认卸载以下软件包\r\r",
+      "before_hex": "36000000506c656173652c20636f6e6669726d2072656d6f76616c206f662074686520666f6c6c6f77696e67207061636b6167652873293a0d0d00",
+      "after_hex": "16000000c7ebc8b7c8cfd0b6d4d8d2d4cfc2c8edbcfeb0fc0d0d000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5441527
+      ],
+      "purpose": "mobapt_display"
+    },
+    {
+      "offset": 5444048,
+      "english": "Are you sure you want to create a plugin containing the package ",
+      "chinese": "确定要创建一个包含以下软件包的插件 ",
+      "before_hex": "4000000041726520796f75207375726520796f752077616e7420746f20637265617465206120706c7567696e20636f6e7461696e696e6720746865207061636b6167652000",
+      "after_hex": "23000000c8b7b6a8d2aab4b4bda8d2bbb8f6b0fcbaacd2d4cfc2c8edbcfeb0fcb5c4b2e5bcfe20000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5443698
+      ],
+      "purpose": "mobapt_display"
+    },
+    {
+      "offset": 5444136,
+      "english": "Please, confirm the creation of a plugin that will contain the following package(s):\r\r",
+      "chinese": "请确认创建包含以下软件包的插件\r\r",
+      "before_hex": "56000000506c656173652c20636f6e6669726d20746865206372656174696f6e206f66206120706c7567696e20746861742077696c6c20636f6e7461696e2074686520666f6c6c6f77696e67207061636b6167652873293a0d0d00",
+      "after_hex": "20000000c7ebc8b7c8cfb4b4bda8b0fcbaacd2d4cfc2c8edbcfeb0fcb5c4b2e5bcfe0d0d00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5443742
+      ],
+      "purpose": "mobapt_display"
+    },
+    {
+      "offset": 5937464,
+      "storage": "pansichar",
+      "english": "MobaXterm is currently running in \"portable mode\": if you install new packages, they will be deleted when closing MobaXterm.\r\rIf you want to avoid this, you will need to set a persistent \"/\" directory in \"Settings\" --> \"Configuration\" --> \"Persistent root directory\".\r\rDo you want to launch MobApt Package Manager anyway?",
+      "chinese": "当前使用临时根目录。通过 MobApt 安装的软件包会在退出 MobaXterm 时删除。\r\r如需保留软件包，请在设置中配置持久化根目录（/）。\r\r仍要打开 MobApt 软件包管理器吗？",
+      "before_hex": "4d6f6261587465726d2069732063757272656e746c792072756e6e696e6720696e2022706f727461626c65206d6f6465223a20696620796f7520696e7374616c6c206e6577207061636b616765732c20746865792077696c6c2062652064656c65746564207768656e20636c6f73696e67204d6f6261587465726d2e0d0d496620796f752077616e7420746f2061766f696420746869732c20796f752077696c6c206e65656420746f2073657420612070657273697374656e7420222f22206469726563746f727920696e202253657474696e677322202d2d3e2022436f6e66696775726174696f6e22202d2d3e202250657273697374656e7420726f6f74206469726563746f7279222e0d0d446f20796f752077616e7420746f206c61756e6368204d6f62417074205061636b616765204d616e6167657220616e797761793f00",
+      "after_hex": "b5b1c7b0cab9d3c3c1d9cab1b8f9c4bfc2bca1a3cda8b9fd204d6f6241707420b0b2d7b0b5c4c8edbcfeb0fcbbe1d4dacdcbb3f6204d6f6261587465726d20cab1c9beb3fda1a30d0dc8e7d0e8b1a3c1f4c8edbcfeb0fca3acc7ebd4dac9e8d6c3d6d0c5e4d6c3b3d6bec3bbafb8f9c4bfc2bca3a82fa3a9a1a30d0dc8d4d2aab4f2bfaa204d6f6241707420c8edbcfeb0fcb9dcc0edc6f7c2f0a3bf00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5927387
+      ],
+      "purpose": "mobapt_display"
+    },
+    {
+      "offset": 5937864,
+      "english": "MobApt package manager",
+      "chinese": "MobApt 软件包管理器",
+      "before_hex": "160000004d6f62417074207061636b616765206d616e6167657200",
+      "after_hex": "130000004d6f6241707420c8edbcfeb0fcb9dcc0edc6f700000000",
+      "references": [
+        5927490
+      ],
+      "purpose": "mobapt_display"
+    },
+    {
+      "offset": 5937896,
+      "english": "Yes",
+      "chinese": "是",
+      "before_hex": "0300000059657300",
+      "after_hex": "02000000cac70000",
+      "references": [
+        5927495
+      ],
+      "purpose": "mobapt_display"
+    },
+    {
+      "offset": 5937908,
+      "english": "No",
+      "chinese": "否",
+      "before_hex": "020000004e6f00",
+      "after_hex": "02000000b7f100",
+      "references": [
+        5927500
+      ],
+      "purpose": "mobapt_display"
+    },
+    {
+      "offset": 5937920,
+      "english": "You are currently using the local terminal in 32-bit mode.\rThe packages provided here will not be up to date,\rbecause 32-bit Cygwin packages are not maintained anymore.\r\rIf you want to have up to date packages, you can switch\ryour local terminal to 64-bit mode.\r\r\rDo you want to switch to this new local terminal?\rWARNING: this will restart MobaXterm!",
+      "chinese": "当前使用的是 32 位本地终端。\r32 位 Cygwin 软件包已停止维护，\r此处的软件包可能不是最新版本。\r\r如需获取较新的软件包，\r可以将本地终端切换为 64 位模式。\r\r\r是否切换到 64 位本地终端？\r注意，切换会重启 MobaXterm！",
+      "before_hex": "5f010000596f75206172652063757272656e746c79207573696e6720746865206c6f63616c207465726d696e616c20696e2033322d626974206d6f64652e0d546865207061636b616765732070726f766964656420686572652077696c6c206e6f7420626520757020746f20646174652c0d626563617573652033322d6269742043796777696e207061636b6167657320617265206e6f74206d61696e7461696e656420616e796d6f72652e0d0d496620796f752077616e7420746f206861766520757020746f2064617465207061636b616765732c20796f752063616e207377697463680d796f7572206c6f63616c207465726d696e616c20746f2036342d626974206d6f64652e0d0d0d446f20796f752077616e7420746f2073776974636820746f2074686973206e6577206c6f63616c207465726d696e616c3f0d5741524e494e473a20746869732077696c6c2072657374617274204d6f6261587465726d2100",
+      "after_hex": "ce000000b5b1c7b0cab9d3c3b5c4cac720333220cebbb1beb5d8d6d5b6cba1a30d333220cebb2043796777696e20c8edbcfeb0fcd2d1cda3d6b9ceacbba4a3ac0db4cbb4a6b5c4c8edbcfeb0fcbfc9c4dcb2bbcac7d7eed0c2b0e6b1bea1a30d0dc8e7d0e8bbf1c8a1bdcfd0c2b5c4c8edbcfeb0fca3ac0dbfc9d2d4bdabb1beb5d8d6d5b6cbc7d0bbbbceaa20363420cebbc4a3cabda1a30d0d0dcac7b7f1c7d0bbbbb5bd20363420cebbb1beb5d8d6d5b6cba3bf0dd7a2d2e2a3acc7d0bbbbbbe1d6d8c6f4204d6f6261587465726da3a10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5927542
+      ],
+      "purpose": "mobapt_display"
+    },
+    {
+      "offset": 5938456,
+      "storage": "pansichar",
+      "english": "MobApt did not manage to download the package index from cygwin mirror.\rYou may not have access to the online repository from this computer...\r\rIf you still want to install additional packages into MobaXterm,\ryou can create a plugin from a computer that has internet access\rby using the \"apt plugin <packagename>\" command.",
+      "chinese": "MobApt 无法从 Cygwin 镜像下载软件包索引。\r此计算机可能无法访问软件源。\r\r如仍需安装软件包，\r可在能访问互联网的计算机上创建插件，\r命令为 apt plugin <packagename>。",
+      "before_hex": "4d6f6241707420646964206e6f74206d616e61676520746f20646f776e6c6f616420746865207061636b61676520696e6465782066726f6d2063796777696e206d6972726f722e0d596f75206d6179206e6f7420686176652061636365737320746f20746865206f6e6c696e65207265706f7369746f72792066726f6d207468697320636f6d70757465722e2e2e0d0d496620796f75207374696c6c2077616e7420746f20696e7374616c6c206164646974696f6e616c207061636b6167657320696e746f204d6f6261587465726d2c0d796f752063616e20637265617465206120706c7567696e2066726f6d206120636f6d707574657220746861742068617320696e7465726e6574206163636573730d6279207573696e6720746865202261707420706c7567696e203c7061636b6167656e616d653e2220636f6d6d616e642e00",
+      "after_hex": "4d6f6241707420cedeb7a8b4d32043796777696e20beb5cff1cfc2d4d8c8edbcfeb0fccbf7d2fda1a30db4cbbcc6cbe3bbfabfc9c4dccedeb7a8b7c3cecac8edbcfed4b4a1a30d0dc8e7c8d4d0e8b0b2d7b0c8edbcfeb0fca3ac0dbfc9d4dac4dcb7c3cecabba5c1aacdf8b5c4bcc6cbe3bbfac9cfb4b4bda8b2e5bcfea3ac0dc3fcc1eeceaa2061707420706c7567696e203c7061636b6167656e616d653ea1a3000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "references": [
+        5928000
+      ],
+      "purpose": "mobapt_display"
     }
   ]
 }
